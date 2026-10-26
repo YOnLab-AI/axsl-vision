@@ -21,6 +21,8 @@
 
 [원격 소스 CI](https://github.com/YOnLab-AI/axsl-vision/actions/runs/40323411899)도 구현 revision `02897725c629bed9ff3aaa61764a28625980fabd`에서 성공했습니다. 범위는 Python 시험, runtime 다운로드, Android 호스트 단위시험과 lint입니다. 기기 추론은 별도 검사이며 문서만 바꾼 후속 커밋과 구현 revision을 구분합니다.
 
+공개 태그 `v0.1-build21`의 revision `09953494be06ac51a4fcf4d61409f6961c3fa727`에서도 [릴리스 CI](https://github.com/YOnLab-AI/axsl-vision/actions/runs/40332654250)가 성공했습니다. 해당 태그와 main에 반영한 구현 소스는 같으며, 이후 게시 상태를 기록하는 변경은 문서에만 적용합니다.
+
 ## 모델을 고정하는 경로와 엔진 행렬
 
 - 일반 UI6건은 실제 화면 조작으로 안내5필드, 조건별6개·전체 목록, 가로·세로 전환, 같은 모델의 기록과 복귀를 확인했습니다. 가로 화면은 실제 캡처 크기2376×968과 rotation1도 확인했습니다.
@@ -89,6 +91,6 @@ CER은 `NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1` �
 
 ## 공개 배포 단계
 
-실기기 수락과 공개 검증 문서 준비를 완료했습니다. 최종 main 반영·태그·APK 게시는 additive release **`v0.1-build21`**로 진행합니다. 이전 `v0.1`과 자산 lock은 덮어쓰지 않습니다. 실제 배포 파일과 체크섬은 [해당 Release](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21)에서 확인합니다.
+실기기 수락, main 반영과 **`v0.1-build21`** 공개 릴리스 게시를 완료했습니다. 이전 `v0.1`과 자산 lock은 보존했습니다. 실제 배포 APK·체크섬의 GitHub 서버 SHA-256이 로컬 파일과 일치하며, 비로그인 다운로드 응답도 확인했습니다. APK 전체를 다시 다운로드한 검사는 아닙니다. 배포 파일과 체크섬은 [해당 Release](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21)에서 확인합니다.
 
 전체19기능·68개 ID의 정확도, 모든 기기·보드, 장시간 운영, 기계적 접힘·펼침, 가속기·발열·전력은 이번 수락 범위가 아닙니다. [전체 검증 문서](VALIDATION.md)와 [모델 시험 안내](MODEL_TESTING.md)에 범위를 구분했습니다.
