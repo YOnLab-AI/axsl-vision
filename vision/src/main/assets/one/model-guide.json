@@ -1,0 +1,570 @@
+{
+  "schema": "axsl-vision-in-app-model-guide-v1",
+  "source": "docs/model-catalog.json",
+  "scope": "Execution identity and runtime metadata; no benchmark or accuracy claims",
+  "models": {
+    "android-media": {
+      "title": "Android Media",
+      "kind": "code_engine",
+      "runtime": "Android ImageView / VideoView",
+      "features": [
+        "signage"
+      ]
+    },
+    "blazeface-full-sface": {
+      "title": "BlazeFace Full · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0 + LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis",
+        "signage"
+      ]
+    },
+    "blazeface-short-sface": {
+      "title": "BlazeFace Short · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0 + LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis",
+        "signage"
+      ]
+    },
+    "blazepose-full": {
+      "title": "BlazePose Full",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ]
+    },
+    "coach-blazepose": {
+      "title": "BlazePose Full",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ]
+    },
+    "coach-mlkit": {
+      "title": "ML Kit Pose",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection:18.0.0-beta5",
+      "features": [
+        "coach"
+      ]
+    },
+    "coach-mlkit-accurate": {
+      "title": "ML Kit Pose Accurate",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection-accurate:18.0.0-beta5",
+      "features": [
+        "coach"
+      ]
+    },
+    "coach-movenet-lightning": {
+      "title": "MoveNet Lightning",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ]
+    },
+    "coach-movenet-thunder": {
+      "title": "MoveNet Thunder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ]
+    },
+    "coach-posenet": {
+      "title": "PoseNet MobileNet",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ]
+    },
+    "deeplab-v3": {
+      "title": "DeepLabV3 MobileNet",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "segment"
+      ]
+    },
+    "doc-ocr-ko": {
+      "title": "ML Kit Korean OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition-korean:16.0.1",
+      "features": [
+        "document"
+      ]
+    },
+    "doc-ocr-latin": {
+      "title": "ML Kit Latin OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition:16.0.1",
+      "features": [
+        "document"
+      ]
+    },
+    "doc-paddle-v5-ko": {
+      "title": "PaddleOCR v5-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "document"
+      ]
+    },
+    "doc-paddle-v6-ko": {
+      "title": "PaddleOCR v6-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "document"
+      ]
+    },
+    "doc-paddle-v6-tiny": {
+      "title": "PaddleOCR v6-tiny",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "document"
+      ]
+    },
+    "efficientdet-lite0": {
+      "title": "EfficientDet Lite0 COCO",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ]
+    },
+    "efficientdet-lite1": {
+      "title": "EfficientDet-Lite1 384",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ]
+    },
+    "efficientnet-lite0-f32": {
+      "title": "EfficientNet Lite0 FP32",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "classify"
+      ]
+    },
+    "efficientnet-lite0-i8": {
+      "title": "EfficientNet Lite0 INT8",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "classify"
+      ]
+    },
+    "face-landmarker-478": {
+      "title": "Face landmarks 478",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU + OpenCV 4.13.0",
+      "features": [
+        "drive"
+      ]
+    },
+    "face-mesh-468": {
+      "title": "Face landmarks 468",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU + OpenCV 4.13.0",
+      "features": [
+        "drive"
+      ]
+    },
+    "mlkit-barcode": {
+      "title": "ML Kit Barcode",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed barcode-scanning:17.3.0",
+      "features": [
+        "qr"
+      ]
+    },
+    "mlkit-face-contours": {
+      "title": "ML Kit Face Contours",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed face-detection:16.1.7",
+      "features": [
+        "drive"
+      ]
+    },
+    "mlkit-ocr-ko": {
+      "title": "ML Kit Korean OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition-korean:16.0.1",
+      "features": [
+        "ocr"
+      ]
+    },
+    "mlkit-ocr-latin": {
+      "title": "ML Kit Latin OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition:16.0.1",
+      "features": [
+        "ocr"
+      ]
+    },
+    "mlkit-pose": {
+      "title": "ML Kit Pose",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection:18.0.0-beta5",
+      "features": [
+        "pose"
+      ]
+    },
+    "mlkit-pose-accurate": {
+      "title": "ML Kit Pose Accurate",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection-accurate:18.0.0-beta5",
+      "features": [
+        "pose"
+      ]
+    },
+    "mlkit-sface-2023": {
+      "title": "ML Kit · YuNet · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis"
+      ]
+    },
+    "mobilenet-v2-2022": {
+      "title": "MobileNetV2 FP32",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "classify"
+      ]
+    },
+    "mobilenet-v4-fp32": {
+      "title": "MobileNetV4 Small FP32",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "classify"
+      ]
+    },
+    "movenet-lightning": {
+      "title": "MoveNet Lightning",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ]
+    },
+    "movenet-thunder": {
+      "title": "MoveNet Thunder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ]
+    },
+    "nanodet-plus": {
+      "title": "NanoDet-Plus m1.5x 416",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ]
+    },
+    "opencv-qr": {
+      "title": "OpenCV QR",
+      "kind": "code_engine",
+      "runtime": "OpenCV 4.13.0",
+      "features": [
+        "qr"
+      ]
+    },
+    "opencv-qr-aruco": {
+      "title": "OpenCV QR ArUco",
+      "kind": "code_engine",
+      "runtime": "OpenCV 4.13.0",
+      "features": [
+        "qr"
+      ]
+    },
+    "paddle-ocr-v5-ko": {
+      "title": "PaddleOCR v5-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "ocr"
+      ]
+    },
+    "paddle-ocr-v6-ko": {
+      "title": "PaddleOCR v6-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "ocr"
+      ]
+    },
+    "paddle-ocr-v6-tiny": {
+      "title": "PaddleOCR v6-tiny",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "ocr"
+      ]
+    },
+    "panns-cnn10": {
+      "title": "PANNs CNN10",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "sound"
+      ]
+    },
+    "panns-cnn6": {
+      "title": "PANNs CNN6",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "sound"
+      ]
+    },
+    "posenet-mobilenet": {
+      "title": "PoseNet MobileNet",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ]
+    },
+    "pphumanseg-2023": {
+      "title": "PPHumanSeg",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "segment"
+      ]
+    },
+    "resnet18-v1": {
+      "title": "ResNet-18 v1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "classify"
+      ]
+    },
+    "search-mobilenet-v3-large": {
+      "title": "MobileNetV3 Large Embedder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "search"
+      ]
+    },
+    "search-mobilenet-v3-small": {
+      "title": "MobileNetV3 Small Embedder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "search"
+      ]
+    },
+    "search-resnet18": {
+      "title": "ResNet-18 v1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "search"
+      ]
+    },
+    "search-squeezenet": {
+      "title": "SqueezeNet1.1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "search"
+      ]
+    },
+    "search-tinyclip-q8": {
+      "title": "TinyCLIP ViT 8M INT8",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "search"
+      ]
+    },
+    "segment-modnet": {
+      "title": "MODNet portrait matting",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "segment"
+      ]
+    },
+    "segment-selfie-landscape": {
+      "title": "MediaPipe Selfie Segmentation Landscape",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "segment"
+      ]
+    },
+    "selfie-segmentation": {
+      "title": "ML Kit Selfie Segmentation",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed segmentation-selfie:16.0.0-beta6",
+      "features": [
+        "segment"
+      ]
+    },
+    "squeezenet1-1": {
+      "title": "SqueezeNet1.1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "classify"
+      ]
+    },
+    "ssd-mobilenet-v1": {
+      "title": "SSD MobileNet COCO",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ]
+    },
+    "studio-modnet": {
+      "title": "MODNet portrait matting",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "studio"
+      ]
+    },
+    "studio-pphuman": {
+      "title": "PPHumanSeg",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "studio"
+      ]
+    },
+    "studio-selfie": {
+      "title": "ML Kit Selfie Segmentation",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed segmentation-selfie:16.0.0-beta6",
+      "features": [
+        "studio"
+      ]
+    },
+    "studio-selfie-landscape": {
+      "title": "MediaPipe Selfie Segmentation Landscape",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "studio"
+      ]
+    },
+    "vosk-en-us-small-0.15": {
+      "title": "Vosk English",
+      "kind": "trained_pipeline",
+      "runtime": "Vosk Android 0.3.75 + JNA 5.18.1",
+      "features": [
+        "speech"
+      ]
+    },
+    "vosk-ko-small-0.22": {
+      "title": "Vosk 한국어",
+      "kind": "trained_pipeline",
+      "runtime": "Vosk Android 0.3.75 + JNA 5.18.1",
+      "features": [
+        "speech"
+      ]
+    },
+    "whisper-base-multilingual-int8": {
+      "title": "Whisper Base Multilingual INT8",
+      "kind": "trained_pipeline",
+      "runtime": "sherpa-onnx 2.0.0 local AAR / CPU",
+      "features": [
+        "speech"
+      ]
+    },
+    "whisper-small-multilingual-int8": {
+      "title": "Whisper Small Multilingual INT8",
+      "kind": "trained_pipeline",
+      "runtime": "sherpa-onnx 2.0.0 local AAR / CPU",
+      "features": [
+        "speech"
+      ]
+    },
+    "whisper-tiny-multilingual-int8": {
+      "title": "Whisper Tiny Multilingual INT8",
+      "kind": "trained_pipeline",
+      "runtime": "sherpa-onnx 2.0.0 local AAR / CPU",
+      "features": [
+        "speech"
+      ]
+    },
+    "yamnet-classifier": {
+      "title": "YAMNet Mobile INT8",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "sound"
+      ]
+    },
+    "yamnet-original": {
+      "title": "YAMNet Original FP32",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "sound"
+      ]
+    },
+    "yolox-nano": {
+      "title": "YOLOX Nano",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "detect",
+        "flow"
+      ]
+    },
+    "yunet-2026-sface": {
+      "title": "YuNet 2026 · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0 + ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis"
+      ]
+    },
+    "zxing-qr": {
+      "title": "ZXing QR / Barcode",
+      "kind": "code_engine",
+      "runtime": "ZXing 3.5.3",
+      "features": [
+        "qr"
+      ]
+    }
+  }
+}

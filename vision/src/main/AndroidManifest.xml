@@ -19,6 +19,7 @@
     <activity android:name="com.yonlab.vision.OneReportsActivity" android:exported="false" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden" />
     <activity android:name="com.yonlab.vision.OneSettingsActivity" android:exported="false" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
     <activity android:name="com.yonlab.vision.DemoLibraryActivity" android:exported="false" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden" />
+    <activity android:name="com.yonlab.vision.ModelTestActivity" android:exported="false" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden" />
     <activity android:name="com.yonlab.vision.ModelBenchActivity" android:exported="false" android:windowSoftInputMode="stateAlwaysHidden|adjustResize" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboardHidden" />
   </application>
   <uses-permission android:name="android.permission.INTERNET" />

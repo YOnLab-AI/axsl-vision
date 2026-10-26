@@ -15,11 +15,19 @@ AXSL Vision 0.1은 하나의 Android application과 두 Android library 모듈�
 
 ## 작업 시작과 입력
 
+code21의 모델 중심 진입점은 [ModelTestActivity](../vision/src/main/java/com/yonlab/vision/ModelTestActivity.java)입니다. 현재 기기의 실행 ID를 중복 없이 모으고 ID를 지원하는 기능만 제시합니다. [OneTestSamples](../vision/src/main/java/com/yonlab/vision/OneTestSamples.java)는 자료의 난도·그룹·형식·조건 태그로 필터와 다양성 선택을 수행합니다. 이는 모델 정확도 예측이 아닙니다. 사용자 흐름은 [MODEL_TESTING](MODEL_TESTING.md)에 있습니다.
+
+[OneGuidance](../vision/src/main/java/com/yonlab/vision/OneGuidance.java)는 현재 기능·모델 ID·runtime·입력 조건·결과 해석을 공통 native panel로 표시합니다. 작은 [model-guide.json](../vision/src/main/assets/one/model-guide.json)은 문서 카탈로그의 실행 메타데이터에서 [sync_model_guide.py](../tools/sync_model_guide.py)로 생성하며, 과거 시험 결과나 성능 순위를 포함하지 않습니다.
+
 1. [OneCatalog](../vision/src/main/java/com/yonlab/vision/OneCatalog.java)가 19개 기능의 ID·입력 형식을 정의합니다.
 2. [OneModels](../vision/src/main/java/com/yonlab/vision/OneModels.java)는 기능·API·KO/GO 맥락에 맞는 실행 ID와 저장 선택을 구합니다. base 정책은 [OneModelPolicy](../vision/src/main/java/com/yonlab/vision/OneModelPolicy.java), 추가 선택은 [ModelPlusPolicy](../vision/src/main/java/com/yonlab/vision/ModelPlusPolicy.java), 음성은 [VoiceModels](../offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java)가 소유합니다.
 3. [OneInputs](../vision/src/main/java/com/yonlab/vision/OneInputs.java)는 내부 자료 라이브러리를 엽니다. 내 파일 가져오기는 명시적인 별도 입력입니다.
 4. [DemoStore](../vision/src/main/java/com/yonlab/vision/DemoStore.java)는 데모 ID·encoded SHA·bytes·자료 형식·언어 그룹·출처·정답 정보를 읽고 실제 자료 사본의 URI를 제공합니다.
-5. [OneLaunch](../vision/src/main/java/com/yonlab/vision/OneLaunch.java)가 기능·model ID·content URI·demo ID·group을 적절한 controller에 전달합니다. 이미지·음성 비교는 사용자가 비교 시작을 누른 뒤 실행하며 내부 검증 controller의 명시적 auto-start는 별도 맥락입니다.
+5. [OneLaunch](../vision/src/main/java/com/yonlab/vision/OneLaunch.java)가 기능·model ID·content URI·demo ID·group을 적절한 controller에 전달합니다. 실행 여부는 진입점이 명시적으로 전달합니다. 사용자의 **이 자료로 시험** 동작, controller의 시작 버튼, 비공개 검증 도구의 명시적 auto-start를 서로 구분합니다.
+
+모델 시험의 `OneLaunch.openTest`는 사용자가 고른 실제 ID와 `keep_model` 맥락을 전달합니다. [OneModelTestPolicy](../vision/src/main/java/com/yonlab/vision/OneModelTestPolicy.java)는 입력 변경 시 ID·선택 집합을 유지하고, 자료 언어로 모델을 대신 고르지 않게 합니다. 정지 사진은 `ModelBenchActivity`, 음성은 `VoiceCompareActivity`, 소리는 `SoundBenchActivity`, 영상은 영상 controller를 사용합니다. 단일 사진의 모델 구성 시험과 전용 두 얼굴 대조·시간 집계 등 전체 기능 흐름은 구분합니다.
+
+모델 시험의 기록 진입점은 `OneReportsActivity`에 `model_id`를 전달합니다. 같은 ID의 행을 먼저 모은 뒤 화면 필터·HTML/CSV 공유에 적용하므로 다른 모델의 기록을 같은 모델의 입력별 결과로 섞지 않습니다.
 
 content URI 권한을 전달하고 원본 입력 식별을 유지합니다. 같은 원본으로 다른 기능을 열 때 encoded SHA를 보존합니다. 가공 결과 PNG는 별도 결과물이며 입력 원본의 hash로 바꾸지 않습니다. `FileProvider` 설정은 [vision manifest](../vision/src/main/AndroidManifest.xml)에 있습니다.
 

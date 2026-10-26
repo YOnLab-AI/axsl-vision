@@ -7,7 +7,11 @@ side-by-side comparison, and inspectable results in one native application.
 It is intended for developers learning how to integrate models and reproduce
 their behavior on a real device. The application UI is currently Korean.
 
-[한국어](README.ko.md) · [Download 0.1](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1) · [Feature guide](docs/FEATURES.md) · [Model catalogue](docs/MODEL_CATALOG.md)
+[한국어](README.ko.md) · [Releases](https://github.com/YOnLab-AI/axsl-vision/releases) · [Model testing](docs/MODEL_TESTING.md) · [Feature guide](docs/FEATURES.md) · [Model catalogue](docs/MODEL_CATALOG.md)
+
+The model-testing update keeps versionName **0.1** and uses Android **code21**.
+Its build/device evidence is recorded separately in [Validation](docs/VALIDATION.md).
+The code20 results below remain evidence for the previous public APK.
 
 ## What you can explore
 
@@ -30,11 +34,16 @@ person's nationality. Each item retains its own attribution and license.
 
 ## Try the app
 
-1. Install the reference APK from [v0.1 Releases](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1) after checking `SHA256SUMS.txt`.
-2. Choose a feature and model, then select a bundled example or your own input.
-3. Run analysis or compare supported models on the same input. Inspect model
-   IDs, output, input hashes, and the recorded time before exporting a report.
-4. For presentation playback, open **매장·행사 안내판**, add media, choose a
+1. Install a reference APK from [Releases](https://github.com/YOnLab-AI/axsl-vision/releases) after checking its `SHA256SUMS.txt` and build number.
+2. Open **모델 시험**, choose one execution ID, then choose a supported feature.
+3. Vary the input using metadata-based sets of up to six diverse examples, or
+   the complete list with twelve more items per expansion. Filter by data group,
+   input type, and declared difficulty, or use your own file. Changing the input
+   preserves the chosen model instead of selecting another by data language.
+4. Open **이 모델의 시험 기록** to inspect input-specific results for the same ID.
+   Model comparison on one input remains available. Inspect outputs, hashes,
+   status, and timing scope before exporting a report.
+5. For presentation playback, open **매장·행사 안내판**, add media, choose a
    playlist, and enter full-screen mode. Its playback engine is not an AI model.
 
 The release is a development reference build. It retains the historical Android
@@ -90,6 +99,7 @@ docs/          Feature/model analysis, architecture, data terms, validation
 
 | Documentation | Contents |
 |---|---|
+| [Model testing](docs/MODEL_TESTING.md) | Model-first input variation, shared guidance, exact-ID history, component versus workflow tests |
 | [Features](docs/FEATURES.md) | All 19 workflows: inputs, models, processing, outputs, use cases, limitations |
 | [Model catalogue](docs/MODEL_CATALOG.md) | All 68 IDs, 87 slots, runtimes, tensor/pipeline contracts, weights, source and license bindings |
 | [Architecture](docs/ARCHITECTURE.md) | Registries, input ownership, engine lifecycle, cancellation, records and exports |

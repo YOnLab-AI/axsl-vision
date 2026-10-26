@@ -13,7 +13,7 @@ final class OneHomeShortcut {
     static final String ID = "yonlab_one_home";
     static final String NAME = "AXSL Vision";
     static final String MANUAL_INSTRUCTION = "앱 목록에서 AXSL Vision을 길게 눌러 홈 화면에 배치하세요.";
-    private static final String BRAND_REVISION = "axsl-vision-0.1-20";
+    private static final String BRAND_REVISION = "axsl-vision-0.1-21";
     private static final AtomicBoolean REFRESH_ATTEMPTED = new AtomicBoolean();
     enum State { READY, PINNED, REQUESTED, UNSUPPORTED, UNAVAILABLE }
 
