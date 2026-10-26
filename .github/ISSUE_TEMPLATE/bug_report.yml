@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible issue in the reference app.
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach private images, face embeddings, recordings, transcripts, credentials, or full device dumps.
+  - type: input
+    id: version
+    attributes:
+      label: App version and build source
+      placeholder: '0.1 / release APK or local commit'
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model and Android API
+  - type: input
+    id: feature
+    attributes:
+      label: Feature and model ID
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps, expected behavior, and actual behavior
+      description: Include a public demo ID or a non-sensitive input hash when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence and relevant logs

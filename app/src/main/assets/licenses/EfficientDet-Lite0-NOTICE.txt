@@ -1,0 +1,8 @@
+EfficientDet Lite0 V1
+Model SHA256 2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b
+Author: TensorFlow
+License: Apache License 2.0, as embedded in this exact TFLite ModelMetadata.license.
+Original model URL: https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/object_detection/android/lite-model_efficientdet_lite0_detection_metadata_1.tflite
+Official primary-source model card: https://github.com/tensorflow/tfhub.dev/blob/master/assets/docs/tensorflow/models/efficientdet/lite0/detection/metadata/lite/1.md
+Paper: Mingxing Tan, Ruoming Pang, Quoc V. Le, EfficientDet: Scalable and Efficient Object Detection, CVPR2020, https://arxiv.org/abs/1911.09070
+Private evaluation candidate only. No inference/device acceptance or product replacement is claimed.

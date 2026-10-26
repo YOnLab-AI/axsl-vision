@@ -1,0 +1,1 @@
+package com.yonlab.vision; public final class OneUiPolicyTest { @org.junit.Test public void registryExportAndBoard(){OneUiPolicyHost.main(new String[0]);} @org.junit.Test public void signedSimilarityReport(){OneReportNumberHost.main(new String[0]);} @org.junit.Test public void canonicalEventFeature(){OneReportEventHost.main(new String[0]);} }

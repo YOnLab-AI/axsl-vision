@@ -1,0 +1,747 @@
+{
+  "schemaVersion": 1,
+  "family": "facepose",
+  "modelWeights": [
+    {
+      "name": "blazeface-short.tflite",
+      "source": "https://storage.googleapis.com/mediapipe-assets/face_detection_short_range.tflite",
+      "bytes": 229032,
+      "sha256": "3bc182eb9f33925d9e58b5c8d59308a760f4adea8f282370e428c51212c26633",
+      "modelIds": [
+        "blazeface-short-sface",
+        "face-mesh-468",
+        "face-landmarker-478"
+      ],
+      "asset": "one/modelplus/facepose/blazeface-short.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-MediaPipe-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://storage.googleapis.com/mediapipe-assets/MediaPipe%20BlazeFace%20Model%20Card%20(Short%20Range).pdf",
+        "page": 1,
+        "license": "Apache-2.0",
+        "documentSha256": "cd335c06fc0de7807cd815a0777a697932598bcdb28fa98adaaabf847485f758"
+      },
+      "preprocessing": "RGB (value - 127.5) / 127.5; 128 square letterbox",
+      "inferenceExecuted": false
+    },
+    {
+      "name": "blazeface-full-sparse.tflite",
+      "source": "https://storage.googleapis.com/mediapipe-assets/face_detection_full_range_sparse.tflite",
+      "bytes": 676746,
+      "sha256": "2c3728e6da56f21e21a320433396fb06d40d9088f2247c05e5635a688d45dfe1",
+      "modelIds": [
+        "blazeface-full-sface"
+      ],
+      "asset": "one/modelplus/facepose/blazeface-full-sparse.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-MediaPipe-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://drive.google.com/file/d/1aZtpSwsBhA1Epd-ZDfwoQYSTQwEfLm5Z/view",
+        "page": 1,
+        "license": "Apache-2.0",
+        "documentSha256": "4cdd65ecd8850c42b1cebcc2ddc70592c0682f7e96a71ef54e578d0735c067fb"
+      },
+      "preprocessing": "RGB (value - 127.5) / 127.5; 192 square letterbox",
+      "inferenceExecuted": false
+    },
+    {
+      "name": "face-mesh-468.tflite",
+      "source": "https://storage.googleapis.com/mediapipe-assets/face_landmark.tflite",
+      "bytes": 1242398,
+      "sha256": "1055cb9d4a9ca8b8c688902a3a5194311138ba256bcc94e336d8373a5f30c814",
+      "modelIds": [
+        "face-mesh-468"
+      ],
+      "asset": "one/modelplus/facepose/face-mesh-468.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-MediaPipe-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://drive.google.com/file/d/1QvwWNfFoweGVjsXF3DXzcrCnz-mx-Lha/view",
+        "page": 2,
+        "license": "Apache-2.0",
+        "documentSha256": "3c886807aeb39ddf11ea25d8285a4d8a4e0c6d32267ae47a88075b12dd4b6bb9"
+      },
+      "preprocessing": "RGB value / 255; eyes-aligned 192 square crop with 25% margin on each side",
+      "inferenceExecuted": false
+    },
+    {
+      "name": "blazepose-full.tflite",
+      "source": "https://storage.googleapis.com/mediapipe-assets/pose_landmark_full.tflite",
+      "bytes": 6440512,
+      "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+      "modelIds": [
+        "blazepose-full",
+        "coach-blazepose"
+      ],
+      "asset": "one/modelplus/facepose/blazepose-full.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-MediaPipe-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://drive.google.com/file/d/10WlcTvrQnR_R2TdTmKw0nkyRLqrwNkWU/view",
+        "page": 2,
+        "license": "Apache-2.0",
+        "documentSha256": "e982460cedece5ad9a46aa8f13523328e9ab95d7d5b2b8c99b33f13f6a79ca86"
+      },
+      "preprocessing": "RGB value / 255; hip-centered, upright 256 square crop; detector virtual radius x 2 x 1.25",
+      "inferenceExecuted": false
+    },
+    {
+      "name": "blazepose-detector.tflite",
+      "source": "https://storage.googleapis.com/mediapipe-assets/pose_detection.tflite",
+      "bytes": 2959046,
+      "sha256": "9ba9dd3d42efaaba86b4ff0122b06f29c4122e756b329d89dca1e297fd8f866c",
+      "modelIds": [
+        "blazepose-full",
+        "coach-blazepose"
+      ],
+      "asset": "one/modelplus/facepose/blazepose-detector.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-MediaPipe-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://drive.google.com/file/d/10WlcTvrQnR_R2TdTmKw0nkyRLqrwNkWU/view",
+        "page": 2,
+        "license": "Apache-2.0",
+        "documentSha256": "e982460cedece5ad9a46aa8f13523328e9ab95d7d5b2b8c99b33f13f6a79ca86"
+      },
+      "preprocessing": "RGB (value - 127.5) / 127.5; 224 square letterbox",
+      "inferenceExecuted": false
+    },
+    {
+      "name": "posenet-mobile.tflite",
+      "source": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite",
+      "bytes": 13269068,
+      "sha256": "7bcc1efa3010de45640406a4ce0acc2ef89a742021f11adacdca2fd6e494fa07",
+      "modelIds": [
+        "posenet-mobilenet",
+        "coach-posenet"
+      ],
+      "asset": "one/modelplus/facepose/posenet-mobile.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-PoseNet-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://www.kaggle.com/models/tensorflow/posenet-mobilenet",
+        "license": "Apache-2.0",
+        "officialExample": "https://github.com/tensorflow/examples/tree/master/lite/examples/posenet/android",
+        "licenseUrl": "https://github.com/tensorflow/examples/blob/master/LICENSE",
+        "exactWeightDownloadFromExample": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite"
+      },
+      "preprocessing": "RGB (value - 128) / 128; 257 square letterbox",
+      "inferenceExecuted": false
+    },
+    {
+      "name": "face-landmarker-478.tflite",
+      "source": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+      "bytes": 2553590,
+      "sha256": "c7d54204ce0448474c7f3fa9af494787c0965cbdd6f20fc72867e43046bd43d5",
+      "extraction": {
+        "entry": "face_landmarks_detector.tflite",
+        "archiveSha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+        "archiveBytes": 3758596,
+        "modifiedWeights": false
+      },
+      "modelIds": [
+        "face-landmarker-478"
+      ],
+      "asset": "one/modelplus/facepose/face-landmarker-478.tflite",
+      "license": "Apache-2.0",
+      "licenseFile": "one/licenses/modelplus-facepose-MediaPipe-Apache-2.0.txt",
+      "licenseEvidence": {
+        "modelCardUrl": "https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf",
+        "page": 1,
+        "license": "Apache-2.0",
+        "documentSha256": "c6add060f4ebfb37b2690136b6c711c7e5fcb7038baa2649ae3338b83979565a"
+      },
+      "preprocessing": "RGB value / 255; eyes-aligned 256 square crop with 25% margin on each side",
+      "inferenceExecuted": false
+    }
+  ],
+  "tensorSchemas": [
+    {
+      "name": "blazeface-full-sparse.tflite",
+      "sha256": "2c3728e6da56f21e21a320433396fb06d40d9088f2247c05e5635a688d45dfe1",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "input_1",
+          "shape": [
+            1,
+            192,
+            192,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 576,
+          "name": "Identity",
+          "shape": [
+            1,
+            2304,
+            16
+          ],
+          "type": 0
+        },
+        {
+          "index": 562,
+          "name": "Identity_1",
+          "shape": [
+            1,
+            2304,
+            1
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 34,
+          "custom": null
+        },
+        {
+          "op": 6,
+          "custom": null
+        },
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        },
+        {
+          "op": 124,
+          "custom": null
+        },
+        {
+          "op": 0,
+          "custom": null
+        },
+        {
+          "op": 23,
+          "custom": null
+        },
+        {
+          "op": 5,
+          "custom": null
+        },
+        {
+          "op": 22,
+          "custom": null
+        }
+      ]
+    },
+    {
+      "name": "blazeface-short.tflite",
+      "sha256": "3bc182eb9f33925d9e58b5c8d59308a760f4adea8f282370e428c51212c26633",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "input",
+          "shape": [
+            1,
+            128,
+            128,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 175,
+          "name": "regressors",
+          "shape": [
+            1,
+            896,
+            16
+          ],
+          "type": 0
+        },
+        {
+          "index": 174,
+          "name": "classificators",
+          "shape": [
+            1,
+            896,
+            1
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 19,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        },
+        {
+          "op": 0,
+          "custom": null
+        },
+        {
+          "op": 34,
+          "custom": null
+        },
+        {
+          "op": 17,
+          "custom": null
+        },
+        {
+          "op": 22,
+          "custom": null
+        },
+        {
+          "op": 2,
+          "custom": null
+        },
+        {
+          "op": 6,
+          "custom": null
+        }
+      ]
+    },
+    {
+      "name": "blazepose-detector.tflite",
+      "sha256": "9ba9dd3d42efaaba86b4ff0122b06f29c4122e756b329d89dca1e297fd8f866c",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "input_1",
+          "shape": [
+            1,
+            224,
+            224,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 441,
+          "name": "Identity",
+          "shape": [
+            1,
+            2254,
+            12
+          ],
+          "type": 0
+        },
+        {
+          "index": 429,
+          "name": "Identity_1",
+          "shape": [
+            1,
+            2254,
+            1
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 34,
+          "custom": null
+        },
+        {
+          "op": 6,
+          "custom": null
+        },
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        },
+        {
+          "op": 124,
+          "custom": null
+        },
+        {
+          "op": 0,
+          "custom": null
+        },
+        {
+          "op": 5,
+          "custom": null
+        },
+        {
+          "op": 23,
+          "custom": null
+        },
+        {
+          "op": 22,
+          "custom": null
+        },
+        {
+          "op": 2,
+          "custom": null
+        }
+      ]
+    },
+    {
+      "name": "blazepose-full.tflite",
+      "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "input_1",
+          "shape": [
+            1,
+            256,
+            256,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 337,
+          "name": "Identity",
+          "shape": [
+            1,
+            195
+          ],
+          "type": 0
+        },
+        {
+          "index": 342,
+          "name": "Identity_1",
+          "shape": [
+            1,
+            1
+          ],
+          "type": 0
+        },
+        {
+          "index": 297,
+          "name": "Identity_2",
+          "shape": [
+            1,
+            256,
+            256,
+            1
+          ],
+          "type": 0
+        },
+        {
+          "index": 298,
+          "name": "Identity_3",
+          "shape": [
+            1,
+            64,
+            64,
+            39
+          ],
+          "type": 0
+        },
+        {
+          "index": 339,
+          "name": "Identity_4",
+          "shape": [
+            1,
+            117
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 34,
+          "custom": null
+        },
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        },
+        {
+          "op": 0,
+          "custom": null
+        },
+        {
+          "op": 23,
+          "custom": null
+        },
+        {
+          "op": 17,
+          "custom": null
+        },
+        {
+          "op": 22,
+          "custom": null
+        },
+        {
+          "op": 14,
+          "custom": null
+        },
+        {
+          "op": 6,
+          "custom": null
+        }
+      ]
+    },
+    {
+      "name": "face-landmarker-478.tflite",
+      "sha256": "c7d54204ce0448474c7f3fa9af494787c0965cbdd6f20fc72867e43046bd43d5",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "input_12",
+          "shape": [
+            1,
+            256,
+            256,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 473,
+          "name": "Identity",
+          "shape": [
+            1,
+            1,
+            1,
+            1434
+          ],
+          "type": 0
+        },
+        {
+          "index": 472,
+          "name": "Identity_1",
+          "shape": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "type": 0
+        },
+        {
+          "index": 475,
+          "name": "Identity_2",
+          "shape": [
+            1,
+            1
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 54,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        },
+        {
+          "op": 0,
+          "custom": null
+        },
+        {
+          "op": 17,
+          "custom": null
+        },
+        {
+          "op": 34,
+          "custom": null
+        },
+        {
+          "op": 14,
+          "custom": null
+        },
+        {
+          "op": 22,
+          "custom": null
+        },
+        {
+          "op": 6,
+          "custom": null
+        }
+      ]
+    },
+    {
+      "name": "face-mesh-468.tflite",
+      "sha256": "1055cb9d4a9ca8b8c688902a3a5194311138ba256bcc94e336d8373a5f30c814",
+      "inputs": [
+        {
+          "index": 0,
+          "name": "input_1",
+          "shape": [
+            1,
+            192,
+            192,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 213,
+          "name": "conv2d_21",
+          "shape": [
+            1,
+            1,
+            1,
+            1404
+          ],
+          "type": 0
+        },
+        {
+          "index": 210,
+          "name": "conv2d_31",
+          "shape": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 54,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        },
+        {
+          "op": 0,
+          "custom": null
+        },
+        {
+          "op": 17,
+          "custom": null
+        },
+        {
+          "op": 34,
+          "custom": null
+        },
+        {
+          "op": 6,
+          "custom": null
+        }
+      ]
+    },
+    {
+      "name": "posenet-mobile.tflite",
+      "sha256": "7bcc1efa3010de45640406a4ce0acc2ef89a742021f11adacdca2fd6e494fa07",
+      "inputs": [
+        {
+          "index": 93,
+          "name": "sub_2",
+          "shape": [
+            1,
+            257,
+            257,
+            3
+          ],
+          "type": 0
+        }
+      ],
+      "outputs": [
+        {
+          "index": 87,
+          "name": "MobilenetV1/heatmap_2/BiasAdd",
+          "shape": [
+            1,
+            9,
+            9,
+            17
+          ],
+          "type": 0
+        },
+        {
+          "index": 90,
+          "name": "MobilenetV1/offset_2/BiasAdd",
+          "shape": [
+            1,
+            9,
+            9,
+            34
+          ],
+          "type": 0
+        },
+        {
+          "index": 84,
+          "name": "MobilenetV1/displacement_fwd_2/BiasAdd",
+          "shape": [
+            1,
+            9,
+            9,
+            32
+          ],
+          "type": 0
+        },
+        {
+          "index": 81,
+          "name": "MobilenetV1/displacement_bwd_2/BiasAdd",
+          "shape": [
+            1,
+            9,
+            9,
+            32
+          ],
+          "type": 0
+        }
+      ],
+      "opcodes": [
+        {
+          "op": 3,
+          "custom": null
+        },
+        {
+          "op": 4,
+          "custom": null
+        }
+      ]
+    }
+  ],
+  "pipelineContracts": {
+    "faceDetection": "BlazeFace boxes are the selected detections. Actual YuNet five-point alignment is matched by box IoU before SFace128D embeddings. Unmatched detections retain no embedding. Existing ML Kit supplies optional attributes. No mouth corners are synthesized from BlazeFace six points.",
+    "driver": "Largest face; 468 or 478 actual landmark network outputs. Eye aspect ratio (EAR), inner lip gap / mouth width, geometric solvePnP angles. EAR < 0.18 is the app geometric eye-closure criterion; no learned eye-open probability is fabricated.",
+    "poseNet": "COCO17 -> existing ML Kit33 ID mapping, heatmap argmax + Y/X offsets, true sigmoid heatmap confidence, stride 32, unused joints omitted.",
+    "blazePose": "Published pose detector + full landmark weights; first 33 landmarks, confidence is min(sigmoid(visibility), sigmoid(presence)), global model pose probability gate 0.5; no fabricated joint likelihood.",
+    "execution": "Existing CPU thread setting; bounded input/output buffers, SHA-256 verified assets, per-owner close and cancellation; no date/license-time gate."
+  },
+  "validation": {
+    "sha256": true,
+    "flatbufferTensorSchemas": true,
+    "standardBuiltinOperatorsOnly": true,
+    "onDeviceInference": false,
+    "performanceMeasured": false
+  }
+}

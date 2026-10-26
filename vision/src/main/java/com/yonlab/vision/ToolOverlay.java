@@ -1,0 +1,8 @@
+package com.yonlab.vision;
+import android.app.Activity;import android.graphics.*;import android.view.View;import java.util.*;
+final class ToolOverlay extends View {
+ private int width=1,height=1;private List<PhotoVisionEngine.TextBox> text=Collections.emptyList();private List<PoseGeometry.Point> points=Collections.emptyList();private final Paint paint=new Paint(Paint.ANTI_ALIAS_FLAG);private final float density;
+ ToolOverlay(Activity a){super(a);density=a.getResources().getDisplayMetrics().density;setContentDescription("텍스트와 자세 관측 영역");}
+ void show(int w,int h,List<PhotoVisionEngine.TextBox> boxes,List<PoseGeometry.Point> pose){width=Math.max(1,w);height=Math.max(1,h);text=boxes==null?Collections.emptyList():new ArrayList<>(boxes);points=pose==null?Collections.emptyList():new ArrayList<>(pose);invalidate();}
+ protected void onDraw(Canvas canvas){super.onDraw(canvas);float scale=Math.min(getWidth()/(float)width,getHeight()/(float)height),w=width*scale,h=height*scale,x=(getWidth()-w)/2,y=(getHeight()-h)/2;canvas.save();canvas.clipRect(x,y,x+w,y+h);paint.setColor(Ui.SUCCESS);paint.setStyle(Paint.Style.STROKE);paint.setStrokeWidth(2*density);for(PhotoVisionEngine.TextBox b:text)canvas.drawRect(x+b.left*w,y+b.top*h,x+b.right*w,y+b.bottom*h,paint);for(PoseGeometry.Point[] edge:PoseGeometry.edges(points))canvas.drawLine(x+edge[0].x*w,y+edge[0].y*h,x+edge[1].x*w,y+edge[1].y*h,paint);for(PoseGeometry.Point p:PoseGeometry.visible(points)){paint.setStyle(Paint.Style.FILL);paint.setColor(Color.WHITE);canvas.drawCircle(x+p.x*w,y+p.y*h,3.5f*density,paint);paint.setStyle(Paint.Style.STROKE);paint.setColor(Ui.SUCCESS);canvas.drawCircle(x+p.x*w,y+p.y*h,3.5f*density,paint);}canvas.restore();}
+}

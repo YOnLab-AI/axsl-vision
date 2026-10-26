@@ -1,0 +1,25 @@
+YOnLab One — Additional Vision Models
+
+All six bundled vision model assets in this extension use Apache License 2.0.
+The corresponding unmodified license texts are included alongside this notice.
+
+NanoDet-Plus: original NanoDet authors and OpenCV Zoo / OpenCV model distribution.
+Source: https://github.com/opencv/opencv_zoo/tree/main/models/object_detection_nanodet
+Distribution: https://huggingface.co/opencv/object_detection_nanodet
+
+EfficientDet-Lite1: Google / TensorFlow Authors.
+Source: https://www.kaggle.com/models/tensorflow/efficientdet/tfLite/lite1-detection-default/1
+
+ResNet-18 v1 and SqueezeNet1.1: ONNX Model Zoo contributors; underlying architectures by their respective research authors.
+Source: https://github.com/onnx/models/tree/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification
+YOnLab changes: appended a read-only pooled feature output for image retrieval; original trained tensors and classifier output retained. Exact transformation and original/bundled SHA-256 are recorded in one/modelplus/vision/catalog.json.
+
+MODNet: Zhanghan Ke and MODNet contributors, Apache2 release for code, models and demos.
+Source: https://github.com/ZHKKKe/MODNet
+ONNX conversion: https://huggingface.co/Xenova/modnet
+
+MediaPipe Selfie Segmentation Landscape: Google / MediaPipe Authors.
+Source: https://github.com/google-ai-edge/mediapipe
+ONNX conversion: https://huggingface.co/onnx-community/mediapipe_selfie_segmentation_landscape
+
+Model filenames, immutable distribution revisions, full SHA-256, input/output and app preprocessing contracts: one/modelplus/vision/catalog.json

@@ -1,0 +1,5 @@
+AXSL Vision original category illustrations
+Copyright 2026 AXSL Vision Contributors
+Licensed under the Apache License, Version 2.0.
+These geometric UI illustrations are not inference photographs or model outputs.
+See original-illustrations.json for original source and file hashes.

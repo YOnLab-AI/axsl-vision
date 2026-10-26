@@ -1,0 +1,38 @@
+OpenCV native component scope and attribution
+
+The actual OpenCV4.13.0 AAR arm64-v8a libopencv_java4.so embeds a build report
+listing libjpeg-turbo, WebP, PNG, TIFF, OpenJPEG, OpenEXR, Protobuf, Flatbuffers,
+Android cpufeatures, ADE, TBB, ITT, Carotene and KleidiCV. The matching upstream
+4.13.0 source or configured download revision supplies the individual texts.
+ITT source headers offer GPL-2.0-only OR BSD-3-Clause; the BSD option is used.
+JNA likewise offers an Apache alternative, whose full text is included.
+This software is based in part on the work of the Independent JPEG Group.
+
+KleidiCV: Arm's original publisher identifies its project as Apache License2.0:
+https://developer.arm.com/community/arm-community-blogs/b/ai-blog/posts/kleidicv
+https://developer.arm.com/community/arm-community-blogs/b/ai-blog/posts/what-s-new-in-kleidicv-26-03-for-computer-vision-on-arm-cpus
+OpenCV4.13.0's pinned downloader specifies KleidiCV0.7.0. The original Arm
+GitLab tag0.7.0 was retrieved via HTTPS Git using Windows Schannel certificate
+verification. Its original LICENSES/Apache-2.0.txt and verbatim file copyright
+lines are included separately. Original license SHA256:
+074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff
+Tag/commit: 1e8fe7008c2292657b9689d70ea5d30db0e57767
+All455 inline SPDX expressions in461 original source files are Apache-2.0;
+the5 JSON/text files without inline expressions have original .license sidecars.
+The source archive contains no separate NOTICE file. Copyright lines also
+retain upstream OpenCV contributor attributions present in source/test files.
+Official OpenCV4.13.0 Android SDK ZIP has31 license entries and no KleidiCV
+license entry; this omission is filled from the original Arm versioned source.
+The SDK index and small license entries were range-fetched; the318MB SDK itself
+was not completely downloaded, so its publisher full-file hash is not asserted
+as locally verified. The SDK arm64-v8a native member was independently extracted
+and is byte-identical to the actual Maven AAR native library, SHA256:
+d331aac20d0a76981ea652f7df7978e3b82ccc46d5926dc7c394d33c813694ab
+All original SDK attributions are preserved or bound to identical texts already
+included, except the unselected ITT GPL alternative (BSD alternative retained).
+Actual x86/x86_64 build reports list Intel IPP with its separate Intel Simplified
+Software License. Its original EULA, copyright and third-party text accompany
+the pack. ARM64 uses KleidiCV instead. No native source/binary execution occurred.
+
+The bundled runtime notices are independent of demo media licenses.
+Build/source hash evidence: component-origins.json / nativeComponentBinding.

@@ -1,0 +1,9 @@
+YOnLab One additional face and pose model notices
+
+Copyright The MediaPipe Authors. MediaPipe BlazeFace (short and sparse full range), Face Mesh468, Face Mesh V2 478, BlazePose detector and Full33 weights are licensed under Apache License, Version 2.0. The official model cards state this license. Source URLs, original bundle/extracted-entry SHA-256 and model-card page numbers are in one/modelplus/facepose/catalog.json.
+
+Copyright 2018 The TensorFlow Authors. PoseNet MobileNetV1 100 257x257 is obtained from the official TensorFlow Lite PoseNet Android sample download. The source sample and official TensorFlow PoseNet model listing identify Apache-2.0.
+
+Full license copies: modelplus-facepose-MediaPipe-Apache-2.0.txt and modelplus-facepose-PoseNet-Apache-2.0.txt.
+
+Model weights are unchanged. The Face Landmarker V2 TFLite model is extracted unchanged from the original official version1 task bundle. YOnLab implements input transforms, decoding, geometric measurements and app integration. Existing YuNet, SFace, ML Kit, OpenCV and LiteRT retain their separately included licenses and terms. BlazeFace is the detector; identity comparison uses the separate SFace embedding model.

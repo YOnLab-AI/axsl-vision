@@ -1,0 +1,55 @@
+plugins { id 'com.android.application' }
+
+def signingValues = [
+    storeFile: providers.environmentVariable('AXSL_SIGNING_STORE_FILE').orNull,
+    storePassword: providers.environmentVariable('AXSL_SIGNING_STORE_PASSWORD').orNull,
+    keyAlias: providers.environmentVariable('AXSL_SIGNING_KEY_ALIAS').orNull,
+    keyPassword: providers.environmentVariable('AXSL_SIGNING_KEY_PASSWORD').orNull
+]
+def hasSigning = signingValues.values().every { it != null && !it.isBlank() }
+if (!hasSigning && signingValues.values().any { it != null }) {
+    throw new GradleException('Set all four AXSL_SIGNING_* variables, or leave all unset.')
+}
+
+android {
+    namespace 'com.yonlab.one'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.yonlab.one'
+        minSdk 24
+        targetSdk 36
+        versionCode 20
+        versionName '0.1'
+        ndk { abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64' }
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    androidResources { noCompress += ['tflite','onnx'] }
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+            excludes += ['**/x86/**', '**/mips/**', '**/mips64/**']
+            keepDebugSymbols += ['**/*.so']
+        }
+        resources { excludes += ['META-INF/DEPENDENCIES','META-INF/INDEX.LIST'] }
+    }
+    signingConfigs {
+        if (hasSigning) {
+            referenceRelease {
+                storeFile file(signingValues.storeFile)
+                storePassword signingValues.storePassword
+                keyAlias signingValues.keyAlias
+                keyPassword signingValues.keyPassword
+            }
+        }
+    }
+    buildTypes {
+        debug { debuggable true }
+        release {
+            minifyEnabled false
+            debuggable false
+            if (hasSigning) signingConfig signingConfigs.referenceRelease
+        }
+    }
+}
+
+dependencies { implementation project(':vision'); implementation project(':offlinevoice') }

@@ -1,0 +1,1405 @@
+KleidiCV0.7.0 original source copyright and license attribution
+Official source: https://gitlab.arm.com/kleidi/kleidicv.git
+Tag/commit: 1e8fe7008c2292657b9689d70ea5d30db0e57767
+Original LICENSES/Apache-2.0.txt SHA256: 074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff
+Source archive SHA256: e16c2f089390db761961b4d9bfa516637048d80aa421a868944634dae59927f5
+
+Below are verbatim copyright lines from the original pinned source, grouped by file.
+The project source identifies Apache-2.0. Its full original text accompanies this file.
+No library build or native execution was performed.
+
+.clang-format
+# SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.clang-tidy
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/Dockerfile
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/README.md
+SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/clang_toolchain.cmake
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/coverage.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/devcontainer.json.license
+SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/disassemble.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/oncreate.sh
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.devcontainer/start_qemu.sh
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.gitignore
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.gitlab-ci.yml
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.vscode/launch.json.license
+SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.vscode/settings.json.license
+SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+.vscode/tasks.json.license
+SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+CHANGELOG.md
+SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+CMakeLists.txt
+# SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+Doxyfile
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+README.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+SECURITY.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+adapters/opencv/CMakeLists.txt
+# SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+adapters/opencv/extra_benchmarks/opencv-4.12.patch
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+// SPDX-FileCopyrightText: Copyright (C) 2000-2022, Intel Corporation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2009-2016, NVIDIA Corporation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2015-2023, OpenCV Foundation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2008-2016, Itseez Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2019-2023, Xperience AI, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2019-2022, Shenzhen Institute of Artificial Intelligence and Robotics for Society, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2022-2023, Southern University of Science And Technology, all rights reserved.
+// SPDX-FileCopyrightText: Third party copyrights are property of their respective owners.
+
+adapters/opencv/kleidicv_hal.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+adapters/opencv/kleidicv_hal.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+adapters/opencv/opencv-4.12.patch
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+// SPDX-FileCopyrightText: Copyright (C) 2000-2022, Intel Corporation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2009-2016, NVIDIA Corporation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2015-2023, OpenCV Foundation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2008-2016, Itseez Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2019-2023, Xperience AI, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2019-2022, Shenzhen Institute of Artificial Intelligence and Robotics for Society, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2022-2023, Southern University of Science And Technology, all rights reserved.
+// SPDX-FileCopyrightText: Third party copyrights are property of their respective owners.
+
+adapters/opencv/opencv-5.x.patch
+// SPDX-FileCopyrightText: 2024-2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+// SPDX-FileCopyrightText: Copyright (C) 2000-2022, Intel Corporation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2009-2016, NVIDIA Corporation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2015-2023, OpenCV Foundation, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2008-2016, Itseez Inc., all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2019-2023, Xperience AI, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2019-2022, Shenzhen Institute of Artificial Intelligence and Robotics for Society, all rights reserved.
+// SPDX-FileCopyrightText: Copyright (C) 2022-2023, Southern University of Science And Technology, all rights reserved.
+// SPDX-FileCopyrightText: Third party copyrights are property of their respective owners.
+
+benchmark/CMakeLists.txt
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+benchmark/benchmark.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+benchmark/main.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+benchmark/patches/benchmark.patch
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/CMakeLists.txt
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/README.md
+SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/common.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/manager.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/subordinate.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_binary_op.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_blur_and_downsample.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_exp.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_float_conv.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_gaussian_blur.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_in_range.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_median_blur.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_min_max.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_morphology.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_remap.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_resize.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_rgb2yuv.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_rgb_to_yuv420p.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_rgb_to_yuv422.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_scale.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_scharr.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_separable_filter_2d.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_sobel.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_sum.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_warp_perspective.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_yuv2rgb.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/test_yuv42x_to_rgb.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/tests.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/tests.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+conformity/opencv/utils.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/benchmark.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/build.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/contributing.md
+SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/functionality.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/integration.md
+SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/opencv.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/platform-support.md
+SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+doc/test.md
+SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+docker/Dockerfile
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/C/CMakeLists.txt
+# SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/C/main.c
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/extract_one_operation/CMakeLists.txt
+# SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/extract_one_operation/example_usage.c
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/extract_one_operation/kleidicv/config.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/extract_one_operation/sme_gaussian_blur.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+examples/extract_one_operation/sme_gaussian_blur_api.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/CMakeLists.txt
+# SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/arithmetics/exp_constants.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/arithmetics/rotate.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/arithmetics/scale.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/arithmetics/transpose.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/config.h.in
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/containers/stack.h
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/float_conversion.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/gray_to_rgb.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/merge.h
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/rgb_to_rgb.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/rgb_to_yuv.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/split.h
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/conversions/yuv_to_rgb.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/ctypes.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/debug.h
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/dispatch.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/blur_and_downsample.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/filter_2d_neon.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/filter_2d_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/filter_2d_window_loader_3x3.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/filter_2d_window_loader_5x5.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/filter_2d_window_loader_7x7.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/gaussian_blur.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/median_blur.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/process_filter_2d.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/scharr.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_15x15_neon.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_15x15_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_21x21_neon.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_21x21_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_2d.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_3x3_neon.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_3x3_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_5x5_neon.h
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_5x5_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_7x7_neon.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/separable_filter_7x7_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/sigma.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/filters/sobel.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/kleidicv.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/morphology/workspace.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/neon.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/neon_intrinsics.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/operations.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/resize/resize.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/resize/resize_linear.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/sve2.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/traits.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/transform/remap.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/transform/warp_perspective.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/types.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/unsafe.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/utils.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/blur_and_downsample_ws.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/border_15x15.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/border_21x21.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/border_3x3.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/border_5x5.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/border_7x7.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/border_types.h
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/include/kleidicv/workspace/separable.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/canny_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/count_nonzeros_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_loc_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/analysis/min_max_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/absdiff_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/absdiff_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/absdiff_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/absdiff_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/absdiff_sme2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/absdiff_sve2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_abs_with_threshold_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_abs_with_threshold_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_abs_with_threshold_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_abs_with_threshold_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_abs_with_threshold_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_abs_with_threshold_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_sme2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/add_sve2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/compare_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/compare_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/compare_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/compare_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/compare_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/compare_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/exp_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/exp_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/exp_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/exp_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/exp_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/exp_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/in_range_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/in_range_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/in_range_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/in_range_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/in_range_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/in_range_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/multiply_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/multiply_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/multiply_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/multiply_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/multiply_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/multiply_sve2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/rotate_api.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/rotate_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/scale_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/scale_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/scale_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/scale_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/scale_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/scale_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sub_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sub_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sub_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sub_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sub_sme2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sub_sve2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sum_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sum_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sum_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sum_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sum_sme2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/sum_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/threshold_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/threshold_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/threshold_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/threshold_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/threshold_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/threshold_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/transpose_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/arithmetics/transpose_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/float_conv_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/float_conv_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/float_conv_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/float_conv_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/float_conv_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/float_conv_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/gray_to_rgb_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/gray_to_rgb_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/gray_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/gray_to_rgb_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/gray_to_rgb_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/gray_to_rgb_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/merge_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/merge_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_rgb_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_rgb_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_rgb_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_rgb_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420_neon.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420p_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420p_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420p_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420p_sve2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420sp_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420sp_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv420sp_sve2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv422_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv422_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv422_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv422_sve2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv444_coefficients.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv444_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv444_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv444_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv444_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv444_sve2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/rgb_to_yuv_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/split_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/split_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420_to_rgb_neon.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420p_to_rgb_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420p_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420p_to_rgb_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420p_to_rgb_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420p_to_rgb_sve2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420sp_to_rgb_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420sp_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420sp_to_rgb_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv420sp_to_rgb_sve2.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv422_to_rgb_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv422_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv422_to_rgb_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv422_to_rgb_sve2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv42x_coefficients.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv444_coefficients.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv444_to_rgb_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv444_to_rgb_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv444_to_rgb_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv444_to_rgb_sve2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/conversions/yuv_to_rgb_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/blur_and_downsample_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/blur_and_downsample_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/blur_and_downsample_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/blur_and_downsample_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/blur_and_downsample_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/border_generic_neon.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/gaussian_blur_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/gaussian_blur_arbitrary_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/gaussian_blur_fixed_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/gaussian_blur_fixed_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/gaussian_blur_fixed_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/gaussian_blur_fixed_sve2.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_border_handling.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_large_hist_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_small_hist_neon.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_3x3.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_5x5.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_7x7.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_sme.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/median_blur_sorting_network_sve2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/scharr_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/scharr_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/scharr_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/scharr_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/scharr_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/separable_filter_2d_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/separable_filter_2d_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/separable_filter_2d_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/separable_filter_2d_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/separable_filter_2d_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/sobel_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/sobel_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/sobel_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/sobel_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/filters/sobel_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/logical/bitwise_and_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/logical/bitwise_and_neon.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/logical/bitwise_and_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/logical/bitwise_and_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/logical/bitwise_and_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/logical/bitwise_and_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/morphology/morphology_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/morphology/morphology_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/morphology/morphology_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/morphology/morphology_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/morphology/morphology_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/morphology/morphology_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_api.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_linear_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_linear_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_linear_sc.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_linear_sme.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_linear_sve2.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_neon.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_sc.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_sme.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_sme2.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/resize/resize_sve2.cpp
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_api.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_f32_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_f32_sve2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_s16_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_s16_sve2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_s16point5_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/remap_s16point5_sve2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/transform_common.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/transform_neon.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/transform_sve2.h
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/warp_perspective_api.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/warp_perspective_neon.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv/src/transform/warp_perspective_sve2.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv_thread/CMakeLists.txt
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv_thread/include/kleidicv_thread/kleidicv_thread.h
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+kleidicv_thread/src/kleidicv_thread.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/annotate-license.sh
+# SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/armie_features.txt.license
+# SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/README.md
+SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/benchmarks.txt
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/benchmarks_4K.txt
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/benchmarks_FHD.txt
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/build.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/perf_test_op.sh
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/push.sh
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/run_benchmarks.sh
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/benchmark/run_gtest_adb.py
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/build-opencv.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/build.sh
+# SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/ci-opencv.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/ci.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/cpplint.sh
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/format.sh
+# SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/generate_coverage_report.py
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/prefix_testsuite_names.py
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/run_opencv_conformity_checks.sh
+# SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+scripts/test_android.sh
+# SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/.clang-tidy
+# SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/CMakeLists.txt
+# SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/CMakeLists.txt
+# SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/multithreading_fake.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/multithreading_fake.h
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_add_abs_with_threshold.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_bitwise_and.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_blur_and_downsample.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_canny.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_compare.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_count_nonzeros.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_exp.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_float_conv.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_gaussian_blur.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_in_range.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_median_blur.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_merge.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_min_max.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_morphology.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_remap.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_resize_linear.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_resize_to_quarter.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_rgb_and_gray.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_rgb_to_yuv420p.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_rgb_to_yuv420sp.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_rgb_to_yuv422.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates
+
+test/api/test_rgb_to_yuv444.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_rotate.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_rotate_thread.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_saturating_absdiff.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_saturating_add.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_saturating_multiply.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_saturating_sub.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_scale.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_scharr.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_separable_filter_2d.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_sobel.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_split.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_sum.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_min_max.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_min_max_loc.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_resize.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_rgb_to_yuv420p.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_rgb_to_yuv420sp.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_rgb_to_yuv422.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_rgb_to_yuv444_.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_yuv420p_to_rgb.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_yuv420sp_to_rgb.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_yuv422_to_rgb.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_thread_yuv444_to_rgb.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_threshold_binary.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_transpose.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_warp_perspective.cpp
+// SPDX-FileCopyrightText: 2024 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_yuv420p_to_rgb.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_yuv420sp_to_rgb.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/api/test_yuv422_to_rgb.cpp
+// SPDX-FileCopyrightText: 2025 Arm Limited and/or its affiliates
+
+test/api/test_yuv444_to_rgb.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/CMakeLists.txt
+# SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/abstract.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/array.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/border.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/border.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/generator.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/kernel.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/operation.h
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/test_array2d.cpp
+// SPDX-FileCopyrightText: 2023 - 2025 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/test_border.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/test_generator.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/test_kernel.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/test_main.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/types.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/utils.cpp
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/utils.h
+// SPDX-FileCopyrightText: 2023 - 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/framework/wrap_malloc.cpp
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/patches/googletest.patch
+// SPDX-FileCopyrightText: 2023 Arm Limited and/or its affiliates <open-source-office@arm.com>
+
+test/test_config.h.in
+// SPDX-FileCopyrightText: 2024 Arm Limited and/or its affiliates <open-source-office@arm.com>
+

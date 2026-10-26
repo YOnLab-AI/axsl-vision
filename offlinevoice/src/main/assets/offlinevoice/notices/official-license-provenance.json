@@ -1,0 +1,20 @@
+[
+  {
+    "file": "sherpa-onnx-Apache-2.0.txt",
+    "source": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/LICENSE",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "vosk-API-Apache-2.0.txt",
+    "source": "https://raw.githubusercontent.com/alphacep/vosk-api/master/COPYING",
+    "bytes": 10173,
+    "sha256": "bb618af833c817ab01c1564bd3ec75ba4b4f9cf30910a4a2168e30a674ee8cc6"
+  },
+  {
+    "file": "onnxruntime-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/LICENSE",
+    "bytes": 1073,
+    "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+  }
+]

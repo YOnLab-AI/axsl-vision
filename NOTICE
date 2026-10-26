@@ -1,0 +1,15 @@
+AXSL Vision
+Copyright 2026 AXSL Vision contributors
+
+Project-authored application code is provided under the Apache License, Version 2.0.
+This grant does not replace the licenses or terms for third-party libraries,
+model weights, datasets, fonts, media, or other externally sourced materials.
+
+See docs/DATA_AND_LICENSES.md and the component notices retained alongside
+their metadata. Model and demo release packs retain per-file attribution.
+Some project-authored historical fixtures are permitted specifically for
+distribution with this free application; they are not silently relicensed
+under the application code license.
+
+Android package names and persisted-format identifiers retain legacy names
+to preserve updates and existing user data. The product name is AXSL Vision.

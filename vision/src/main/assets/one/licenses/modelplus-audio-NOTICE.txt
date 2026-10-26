@@ -1,0 +1,39 @@
+PANNs CNN6 / CNN10 — model and conversion attribution
+
+Original authors: Qiuqiang Kong, Yin Cao, Turab Iqbal, Yuxuan Wang,
+Wenwu Wang, Mark D. Plumbley.
+Paper: PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition.
+Publisher checkpoint collection: https://zenodo.org/records/3987831
+CNN6: Cnn6_mAP=0.343.pth
+CNN10: Cnn10_mAP=0.380.pth
+Checkpoint weights license: Creative Commons Attribution 4.0 International (CC BY 4.0).
+License text: modelplus-panns-weights-CC-BY-4.0.txt
+License URL: https://creativecommons.org/licenses/by/4.0/
+
+Original implementation: https://github.com/qiuqiangkong/audioset_tagging_cnn
+Code revision: d2f4b8c18eab44737fcc0de1248ae21eb43f6aa4
+Implementation license: MIT; see modelplus-panns-code-MIT.txt.
+
+Changes by YOnLab: converted inference CNN6 and CNN10 tails to ONNX opset 17;
+retained all trained network parameters; removed training-only dropout branches.
+The model frontend is evaluated in Android Java at 32 kHz using the exact published
+checkpoint's periodic Hann coefficients and mel filter weights. It performs centered
+reflect-padded STFT (1024 FFT / 320 hop), power spectrum, 64-band mel projection,
+and 10*log10(max(mel,1e-10)), matching the upstream parameters (50–14000 Hz).
+The comparison workspace uses 0.975-second windows with 0.480-second steps.
+The 527 output labels are copied from the upstream AudioSet class-label map.
+Pinned checkpoint/code revisions, bytes, and model hashes are recorded in
+one/modelplus/audio/audio-models.json.
+
+Whisper Base / Small multilingual INT8
+
+Original model: OpenAI Whisper (MIT).
+Source: https://github.com/openai/whisper
+License: modelplus-whisper-MIT.txt
+Android-compatible INT8 export: csukuangfj / sherpa-onnx
+Base: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base/tree/bb53ee204431c90d314c1cc08d28d23e5b7927cc
+Small: https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small/tree/8f3c18b358db4d1f2fc1eae49d75cd20989e4309
+Original exporter runtime: https://github.com/k2-fsa/sherpa-onnx (Apache-2.0).
+YOnLab changes: bundled original encoder, decoder and token files without modifying
+their bytes; registered Base and Small as separately selectable multilingual models.
+Exact source-file hashes and revisions are in offlinevoice/whisper-modelplus.json.

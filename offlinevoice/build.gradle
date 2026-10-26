@@ -1,0 +1,16 @@
+plugins { id 'com.android.library' }
+android {
+    namespace 'com.yonlab.offlinevoice'
+    compileSdk 36
+    defaultConfig { minSdk 24; targetSdk 36 }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    androidResources { noCompress += ['zip'] }
+    packaging { jniLibs { useLegacyPackaging = false }; resources { excludes += ['META-INF/DEPENDENCIES','META-INF/INDEX.LIST'] } }
+}
+dependencies {
+    implementation files('libs/sherpa-onnx-static-link-onnxruntime-2.0.0.aar')
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.2.20'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.alphacephei:vosk-android:0.3.75@aar'
+    implementation 'net.java.dev.jna:jna:5.18.1@aar'
+}

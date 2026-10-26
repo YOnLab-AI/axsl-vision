@@ -1,0 +1,12 @@
+{
+  "modelId": "mobilenet-v2-2022",
+  "version": "OpenCVZoo2022apr (comparison baseline, not latest)",
+  "sourceCommit": "48b10fa505aeb51fbd127fc60a5c660040e823b7",
+  "url": "https://media.githubusercontent.com/media/opencv/opencv_zoo/48b10fa505aeb51fbd127fc60a5c660040e823b7/models/image_classification_mobilenet/image_classification_mobilenetv2_2022apr.onnx",
+  "sha256": "c0c3f76d93fa3fd6580652a45618618a220fced18babf65774ed169de0432ad5",
+  "bytes": 13964571,
+  "expectedSha256GitLfs": "c0c3f76d93fa3fd6580652a45618618a220fced18babf65774ed169de0432ad5",
+  "license": "Apache-2.0 (all files in model directory per README)",
+  "preprocessSource": "mobilenet.py",
+  "deviceExecuted": false
+}

@@ -1,0 +1,53 @@
+{
+  "license": "Apache-2.0",
+  "copyright": "Copyright 2026 AXSL Vision Contributors",
+  "method": "Original code-native geometric artwork using Pillow; matching editable SVG masters; no site-derived image, external image, font, icon, generative model or model output",
+  "purpose": "UI category illustrations only; not benchmark photos or inference examples",
+  "files": [
+    {
+      "name": "hero",
+      "file": "hero.jpg",
+      "sha256": "2668cf9abf263d7815eb447a26c3841c2f8af3e8fa00b4c87f5dcb77636597d6",
+      "svg_sha256": "79c0b66793f662aa0a535c419e289ec95e66b96aa82510dc1fcd03bab8631c57",
+      "width": 960,
+      "height": 640,
+      "app_byte_match": true
+    },
+    {
+      "name": "pet",
+      "file": "pet.jpg",
+      "sha256": "5ea1b266936a7a333dffe5e76b9241925feae29677835dcee8726a8816e35126",
+      "svg_sha256": "e5d584083f128792c7d28753d741046fe8bfc188e130c06427b037695a06e787",
+      "width": 960,
+      "height": 640,
+      "app_byte_match": true
+    },
+    {
+      "name": "smarthouse",
+      "file": "smarthouse.jpg",
+      "sha256": "53797ccba244635346e0b06f99f12ae332e7b6f106a3a83a3dd63557a2eef6bb",
+      "svg_sha256": "96c71507eb6f2004581943ec09a7d7f887563bba929c0fb0feb127670843057a",
+      "width": 960,
+      "height": 640,
+      "app_byte_match": true
+    },
+    {
+      "name": "sports",
+      "file": "sports.jpg",
+      "sha256": "450d5c24e191c4ff94f60a9e960838f2ab13adb285043545e37896b7a22c8f50",
+      "svg_sha256": "6fab95cb918d772906e3b2843eb31c74dbb4a017ea96375d79c6a437d3c95f3e",
+      "width": 960,
+      "height": 640,
+      "app_byte_match": true
+    },
+    {
+      "name": "workplace",
+      "file": "workplace.jpg",
+      "sha256": "6fcc61f9a19adf03e0ea90852f6a96452750a04381040be29256656670368d0c",
+      "svg_sha256": "c89b7abb6b0f891e6d7642a4895e2723fe71f21274c2c144cbaab518bc2253f9",
+      "width": 960,
+      "height": 640,
+      "app_byte_match": true
+    }
+  ]
+}

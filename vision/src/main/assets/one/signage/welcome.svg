@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">AXSL Vision — 방문 안내 예시</title>
+<desc id="desc">직접 작성한 한글 문구와 코드 도형으로 구성한 가상의 안내판 예시입니다. 외부 사진 및 생성형 이미지가 없습니다.</desc>
+<!-- Editable text remains live. Malgun Gothic is referenced, not embedded. -->
+<rect width="1600" height="900" fill="#001850"/>
+<text x="96" y="93.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">AXSL Vision</text>
+<rect x="1380" y="56" width="124" height="56" rx="12" fill="#FFFFFF"/>
+<text x="1406" y="95.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="30" font-weight="700" fill="#001850">예시</text>
+<text x="96" y="207.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" font-weight="400" fill="#FFFFFF">방문 안내 · 예시</text>
+<text x="88" y="413.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="126" font-weight="700" fill="#FFFFFF">환영합니다</text>
+<text x="96" y="507.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="38" font-weight="400" fill="#FFFFFF">안내가 필요하면</text>
+<text x="96" y="563.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="38" font-weight="400" fill="#FFFFFF">데스크에 문의하세요</text>
+<rect x="96" y="670" width="842" height="104" rx="20" fill="#FFFFFF"/>
+<text x="128" y="733.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="36" font-weight="700" fill="#001850">입장 안내</text>
+<polyline points="380,724 474,724" fill="none" stroke="#0068F8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="457,707 474,724 457,741" fill="none" stroke="#0068F8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="522" y="733.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="36" font-weight="700" fill="#001850">현장 확인</text>
+<rect x="1064" y="226" width="440" height="548" rx="20" fill="#FFFFFF"/>
+<circle cx="1284" cy="402" r="128" fill="#F7FAFF"/>
+<circle cx="1284" cy="402" r="94" fill="#0068F8"/>
+<polyline points="1228,402 1340,402" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1306,368 1340,402 1306,436" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1172" y="588" width="224" height="8" rx="4" fill="#D8E4F5"/>
+<rect x="1204" y="624" width="160" height="8" rx="4" fill="#D8E4F5"/>
+<text x="96" y="852.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="26" font-weight="400" fill="#D8E4F5">현장의 안내에 따라 주세요</text>
+</svg>

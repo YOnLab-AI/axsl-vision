@@ -1,0 +1,13 @@
+package com.yonlab.vision;
+import android.content.Context;import android.graphics.*;import org.tensorflow.lite.*;import java.nio.*;import java.io.*;import java.util.*;
+final class OneMoveNetEngine implements AutoCloseable {
+ private final Interpreter engine;private final int side;final String sha256;private boolean closed;
+ OneMoveNetEngine(Context c,String id)throws Exception{
+  boolean thunder=id.endsWith("thunder");if(!id.endsWith("lightning")&&!thunder)throw new IllegalArgumentException("MoveNet model");OneLiteAsset asset=new OneLiteAsset(c,"movenet-"+(thunder?"thunder":"lightning")+".tflite");sha256=asset.sha256;side=thunder?256:192;int threads=OneExecutionSettings.threads(c);
+  Interpreter model=new Interpreter(asset.bytes,new Interpreter.Options().setNumThreads(threads));try{model.allocateTensors();if(model.getInputTensorCount()!=1||model.getOutputTensorCount()!=1||model.getInputTensor(0).dataType()!=DataType.UINT8||!Arrays.equals(model.getInputTensor(0).shape(),new int[]{1,side,side,3})||!Arrays.equals(model.getOutputTensor(0).shape(),new int[]{1,1,17,3}))throw new IOException("MoveNet 입력·출력을 확인하세요");engine=model;}catch(Exception|Error e){model.close();throw e;}
+ }
+ synchronized List<PoseGeometry.Point> pose(Bitmap image)throws Exception{
+  if(closed||Thread.currentThread().isInterrupted())throw new InterruptedIOException("canceled");int w=image.getWidth(),h=image.getHeight();double scale=Math.min(side/(double)w,side/(double)h);int rw=Math.max(1,(int)Math.round(w*scale)),rh=Math.max(1,(int)Math.round(h*scale)),left=(side-rw)/2,top=(side-rh)/2;Bitmap letter=Bitmap.createBitmap(side,side,Bitmap.Config.ARGB_8888);Canvas canvas=new Canvas(letter);canvas.drawColor(Color.BLACK);canvas.drawBitmap(image,null,new Rect(left,top,left+rw,top+rh),new Paint(Paint.FILTER_BITMAP_FLAG));int[] pixels=new int[side*side];letter.getPixels(pixels,0,side,0,0,side,side);letter.recycle();ByteBuffer input=ByteBuffer.allocateDirect(side*side*3).order(ByteOrder.nativeOrder());for(int p:pixels){input.put((byte)(p>>>16));input.put((byte)(p>>>8));input.put((byte)p);}input.rewind();float[][][][] output=new float[1][1][17][3];engine.run(input,output);if(Thread.currentThread().isInterrupted())throw new InterruptedIOException("canceled");List<PoseGeometry.Point> result=new ArrayList<>();int[] ids=OneTensorMath.cocoToMlKit();for(int i=0;i<17;i++){float[] p=output[0][0][i];float x=OneTensorMath.coordinate(p[1],left,rw,side),y=OneTensorMath.coordinate(p[0],top,rh,side);if(Float.isFinite(x)&&Float.isFinite(y)&&Float.isFinite(p[2]))result.add(new PoseGeometry.Point(ids[i],x,y,p[2]));}return result;
+ }
+ public synchronized void close(){if(!closed){closed=true;engine.close();}}
+}

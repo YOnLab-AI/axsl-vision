@@ -1,0 +1,262 @@
+{
+  "schema": "axsl-vision-validation-v1",
+  "version": "0.1",
+  "versionCode": 20,
+  "date": "2026-10-26",
+  "scope": "Sanitized local build, actual release controller executions and UI observations for this exact APK",
+  "apk": {
+    "sha256": "cde2536127ea067c0c4b2ff143e3113f7f051565b2338043747f144d7a7721f7",
+    "bytes": 1583002073,
+    "buildType": "release",
+    "debuggable": false,
+    "signatureMatchedToInstalledTarget": true
+  },
+  "host": {
+    "totalTestsPassed": 260,
+    "androidUnitTests": {
+      "tests": 244,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suiteCount": 39,
+      "modules": {
+        "vision": 225,
+        "offlinevoice": 19
+      }
+    },
+    "assetBootstrapTests": {
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "build": "PASS",
+    "lint": {
+      "errors": 0,
+      "warnings": 2,
+      "warningIds": [
+        "MonochromeLauncherIcon",
+        "MonochromeLauncherIcon"
+      ]
+    },
+    "scope": "Local host checks; not a remote GitHub Actions result"
+  },
+  "assets": {
+    "lockSha256": "dd0a23a6a8f331703669a0eca27fc37dc685b9a55703083df6be91cbf0b56faa",
+    "localLockedPackInstallFiles": 661,
+    "verifyOnlyHashedFiles": 661,
+    "groups": [
+      {
+        "id": "runtime",
+        "bytes": 38296452,
+        "sha256": "202d69cd06ddc54ce485e331610040ccc90435150b43e13d66c70b159b641dc5",
+        "entries": 1
+      },
+      {
+        "id": "models",
+        "bytes": 833502416,
+        "sha256": "311bb03b723de18f473b2236b0fa01b285a64593c5dc1b9ce30d790700fbc21d",
+        "entries": 49
+      },
+      {
+        "id": "demos",
+        "bytes": 46825603,
+        "sha256": "5a5f95e864964264d4224e3e0beac8e4c68cbeaf3401740e064036e93f2711d2",
+        "entries": 611
+      }
+    ],
+    "scope": "Local locked ZIP install and verify-only smoke; no live HTTPS transport or concurrency-race acceptance claimed"
+  },
+  "device": {
+    "model": "SM-F956N",
+    "api": 37,
+    "fontScale": 1.5
+  },
+  "engineExecutions": {
+    "passed": 5,
+    "total": 5,
+    "scope": "Five selected engine/model IDs, each on one public input; not all-model validation",
+    "cases": [
+      {
+        "feature": "classify",
+        "demoId": "ko-scene-08",
+        "sourceInputSha256": "5da031bfe6102faae4604c07993e190ec491d12af6a6d84b41dab5cb60af9a67",
+        "sourceInputBytes": 282980,
+        "passed": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "evidenceScope": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+        "modelId": "mobilenet-v4-fp32",
+        "modelSha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02",
+        "state": "COMPLETED",
+        "loadMs": 169,
+        "inferenceMs": 41,
+        "elapsedMs": 216,
+        "timingScope": "model construction and preprocessing+inference+postprocessing; source decode excluded; SDK lazy initialization may occur in inference",
+        "observation": {
+          "top1": {
+            "classId": 582,
+            "label": "grocery store, grocery, food market, market",
+            "score": 0.3343818783760071
+          },
+          "qualityEvaluation": null
+        }
+      },
+      {
+        "feature": "detect",
+        "demoId": "ko-scene-04",
+        "sourceInputSha256": "debe6dae8ed14cad1a534104b9071a5d42e76c45449f29192f2deea2ba26c447",
+        "sourceInputBytes": 334220,
+        "passed": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "evidenceScope": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+        "modelId": "efficientdet-lite0",
+        "modelSha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b",
+        "state": "COMPLETED",
+        "loadMs": 46,
+        "inferenceMs": 34,
+        "elapsedMs": 91,
+        "timingScope": "model construction and preprocessing+inference+postprocessing; source decode excluded; SDK lazy initialization may occur in inference",
+        "observation": {
+          "detectionCount": 7,
+          "qualityEvaluation": null
+        }
+      },
+      {
+        "feature": "ocr",
+        "demoId": "ko-ocr-1-normal",
+        "sourceInputSha256": "87630da840b2c5cade4690cf14bd27346ec93588897e68a757692d3c27234589",
+        "sourceInputBytes": 36523,
+        "passed": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "evidenceScope": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+        "modelId": "mlkit-ocr-ko",
+        "modelSha256": "",
+        "state": "COMPLETED",
+        "loadMs": 20,
+        "inferenceMs": 156,
+        "elapsedMs": 176,
+        "timingScope": "model construction and preprocessing+inference+postprocessing; source decode excluded; SDK lazy initialization may occur in inference",
+        "observation": {
+          "characters": 82,
+          "blocks": 7,
+          "qualityEvaluation": null
+        }
+      },
+      {
+        "feature": "qr",
+        "demoId": "qr-demo-1",
+        "sourceInputSha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
+        "sourceInputBytes": 19323,
+        "passed": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "evidenceScope": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+        "modelId": "zxing-qr",
+        "modelSha256": "",
+        "state": "COMPLETED",
+        "loadMs": 0,
+        "inferenceMs": 85,
+        "elapsedMs": 86,
+        "timingScope": "model construction and preprocessing+inference+postprocessing; source decode excluded; SDK lazy initialization may occur in inference",
+        "observation": {
+          "format": "QR_CODE",
+          "characters": 21,
+          "exactPayloadAndFormatMatched": true,
+          "referenceVerified": true,
+          "referenceInputSha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
+          "sourceCreatorScriptSha256": "f0c86e840804b4d0443ad7bbbc3959b3f037da418188c62918b4a9f30a5e417d",
+          "qualityScope": "Literal payload and symbology match for this exact encoded raster; fixture payload remains reference data"
+        }
+      },
+      {
+        "feature": "speech",
+        "demoId": "ko-speech-fleurs-045",
+        "sourceInputSha256": "f4442b98ae2d82253d2b083ed31fe2aa8f653b9a7a7e7aaa3f01d5076b29a43f",
+        "sourceInputBytes": 316878,
+        "passed": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "evidenceScope": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+        "modelId": "vosk-ko-small-0.22",
+        "state": "COMPLETED",
+        "engine": "vosk",
+        "loadMs": 1765,
+        "inferenceMs": 2118,
+        "elapsedMs": 4045,
+        "inputPrepareMs": 41,
+        "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+        "durationMs": 9900,
+        "sampleCount": 158400,
+        "modelManifestSha256": "c4e5597129c61ba39760a1621ace86e9b21926660d79687f9ff9b00ff0cc7f78",
+        "modelArchiveSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+        "pcmSha256": "13f73e05577a8f4ca743bbd92446c26eb877bd5f0e4e4389cdc5a61406815094",
+        "modelWeightsFingerprint": "",
+        "observation": {
+          "referenceVerified": true,
+          "cer": 0.15789473684210525,
+          "normalizedReferenceCodepoints": 38,
+          "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+          "normalization": "NFC; remove Character.isWhitespace or Character.isSpaceChar codepoints; preserve case and punctuation; Levenshtein distance over Unicode codepoints / normalized reference length",
+          "qualityScope": "One 9.9-second clip only; not corpus accuracy",
+          "transcriptIncluded": false,
+          "referenceTextIncluded": false
+        },
+        "cleanup": {
+          "selectedSourceClosed": true,
+          "modelClosed": true,
+          "recognizerClosed": true,
+          "workerDone": true
+        }
+      }
+    ],
+    "evidenceScope": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+    "methodBoundary": "Actual non-debuggable release controllers invoked through private instrumentation. Helper code is not published; the public summary does not provide an independently rerunnable harness."
+  },
+  "uiChecks": {
+    "passed": 5,
+    "total": 5,
+    "cases": [
+      {
+        "test": "AXSL Vision sole-brand home",
+        "result": "PASS"
+      },
+      {
+        "test": "Settings show version0.1 and no corporate logo",
+        "result": "PASS"
+      },
+      {
+        "test": "Guide player uses AXSL Vision branding",
+        "result": "PASS"
+      },
+      {
+        "test": "Full-screen entry and return",
+        "result": "PASS"
+      },
+      {
+        "test": "Voice module uses AXSL Vision branding",
+        "result": "PASS"
+      }
+    ],
+    "method": "OBSERVED_NORMAL_UI_INTERACTION",
+    "scope": "Five normal UI observations, separate from privately instrumented controller executions."
+  },
+  "privacy": {
+    "privatePathsIncluded": false,
+    "deviceSerialIncluded": false,
+    "transcriptsIncluded": false,
+    "referenceTextIncluded": false,
+    "runIdsIncluded": false
+  },
+  "limits": [
+    "Five engine executions and five UI observations are distinct from the 260 host tests",
+    "Classification, detection and OCR cases are output observations without accuracy metrics",
+    "QR quality is exact payload/format matching for one raster",
+    "Vosk CER is one 9.9-second clip under the stated normalization policy",
+    "Audio prepare/decode time is separate from PREDECODED_SAME_PCM_ENGINE timing",
+    "No repeated benchmark, full model accuracy sweep, other-device/board or long-term signage acceptance",
+    "Historical 4.4.0/code19 evidence remains separately identified"
+  ]
+}

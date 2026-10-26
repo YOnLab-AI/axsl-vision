@@ -1,0 +1,47 @@
+# Developer state and generated outputs
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+__pycache__/
+*.pyc
+
+# Signing material and credentials never belong in the reference repository
+**/signing/
+*.jks
+*.keystore
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+hosts.yml
+*.apk
+*.aab
+
+# Hydrated release assets; tools/fetch_assets.py verifies their locked hashes
+**/libs/*.aar
+**/src/main/assets/**/*.onnx
+**/src/main/assets/**/*.tflite
+**/src/main/assets/**/*.zip
+**/src/main/assets/**/*.bin
+**/src/main/assets/**/*.npy
+**/src/main/assets/**/*.npz
+**/src/main/assets/**/*.pb
+**/src/main/assets/**/*.pt
+**/src/main/assets/**/*.jpg
+**/src/main/assets/**/*.jpeg
+**/src/main/assets/**/*.png
+**/src/main/assets/**/*.webp
+**/src/main/assets/**/*.wav
+**/src/main/assets/**/*.mp3
+**/src/main/assets/**/*.mp4
+!vision/src/main/assets/one/signage/*.png
+!vision/src/main/assets/axsl/images/*.jpg
+.asset-downloads/
+
+# Local validation has separate, deliberately unpublished evidence
+private/
+records-private/

@@ -1,0 +1,2793 @@
+{
+  "schema": "axsl-vision-model-catalog-v1",
+  "productVersion": "0.1",
+  "versionCode": 20,
+  "featureCount": 19,
+  "featureModelSlotCount": 87,
+  "distinctExecutableIdCount": 68,
+  "countingNotes": [
+    "슬롯은 기능별 선택 관계이며 독립 가중치 수가 아님",
+    "SDK 내장 모델과 복합 모델 집합은 개별 asset SHA와 다름",
+    "code_engine 4개 ID는 Android Media, ZXing, OpenCV QR 기본/ArUco"
+  ],
+  "featureSlots": {
+    "detect": [
+      "efficientdet-lite0",
+      "ssd-mobilenet-v1",
+      "yolox-nano",
+      "nanodet-plus",
+      "efficientdet-lite1"
+    ],
+    "classify": [
+      "mobilenet-v4-fp32",
+      "mobilenet-v2-2022",
+      "efficientnet-lite0-f32",
+      "efficientnet-lite0-i8",
+      "resnet18-v1",
+      "squeezenet1-1"
+    ],
+    "segment": [
+      "pphumanseg-2023",
+      "selfie-segmentation",
+      "deeplab-v3",
+      "segment-modnet",
+      "segment-selfie-landscape"
+    ],
+    "faces": [
+      "mlkit-sface-2023",
+      "yunet-2026-sface",
+      "blazeface-short-sface",
+      "blazeface-full-sface"
+    ],
+    "compare": [
+      "mlkit-sface-2023",
+      "yunet-2026-sface",
+      "blazeface-short-sface",
+      "blazeface-full-sface"
+    ],
+    "access": [
+      "mlkit-sface-2023",
+      "yunet-2026-sface",
+      "blazeface-short-sface",
+      "blazeface-full-sface"
+    ],
+    "drive": [
+      "mlkit-face-contours",
+      "face-mesh-468",
+      "face-landmarker-478"
+    ],
+    "flow": [
+      "ssd-mobilenet-v1",
+      "efficientdet-lite0",
+      "yolox-nano",
+      "nanodet-plus",
+      "efficientdet-lite1"
+    ],
+    "vis": [
+      "mlkit-sface-2023",
+      "yunet-2026-sface",
+      "blazeface-short-sface",
+      "blazeface-full-sface"
+    ],
+    "pose": [
+      "mlkit-pose",
+      "mlkit-pose-accurate",
+      "movenet-lightning",
+      "movenet-thunder",
+      "posenet-mobilenet",
+      "blazepose-full"
+    ],
+    "ocr": [
+      "mlkit-ocr-ko",
+      "mlkit-ocr-latin",
+      "paddle-ocr-v5-ko",
+      "paddle-ocr-v6-ko",
+      "paddle-ocr-v6-tiny"
+    ],
+    "qr": [
+      "zxing-qr",
+      "mlkit-barcode",
+      "opencv-qr",
+      "opencv-qr-aruco"
+    ],
+    "speech": [
+      "vosk-ko-small-0.22",
+      "vosk-en-us-small-0.15",
+      "whisper-tiny-multilingual-int8",
+      "whisper-base-multilingual-int8",
+      "whisper-small-multilingual-int8"
+    ],
+    "signage": [
+      "android-media",
+      "blazeface-short-sface",
+      "blazeface-full-sface"
+    ],
+    "document": [
+      "doc-ocr-ko",
+      "doc-ocr-latin",
+      "doc-paddle-v5-ko",
+      "doc-paddle-v6-ko",
+      "doc-paddle-v6-tiny"
+    ],
+    "studio": [
+      "studio-pphuman",
+      "studio-selfie",
+      "studio-modnet",
+      "studio-selfie-landscape"
+    ],
+    "search": [
+      "search-tinyclip-q8",
+      "search-mobilenet-v3-small",
+      "search-mobilenet-v3-large",
+      "search-resnet18",
+      "search-squeezenet"
+    ],
+    "sound": [
+      "yamnet-classifier",
+      "yamnet-original",
+      "panns-cnn6",
+      "panns-cnn10"
+    ],
+    "coach": [
+      "coach-mlkit",
+      "coach-mlkit-accurate",
+      "coach-movenet-lightning",
+      "coach-movenet-thunder",
+      "coach-posenet",
+      "coach-blazepose"
+    ]
+  },
+  "models": [
+    {
+      "id": "android-media",
+      "title": "Android Media",
+      "kind": "code_engine",
+      "runtime": "Android ImageView / VideoView",
+      "features": [
+        "signage"
+      ],
+      "assetBindings": [],
+      "preprocessing": "명시적으로 추가한 사진·영상의 content URI 및 앱 소유 사본",
+      "postprocessing": "순서·사진 간격·일시정지/재개·전체 화면·수명주기 제어",
+      "license": "앱 코드 Apache-2.0; Android SDK/platform terms 및 입력 자료 조건 별도",
+      "officialSources": [
+        "https://developer.android.com/reference/android/widget/VideoView"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/SignageActivity.java",
+        "vision/src/main/java/com/yonlab/vision/SignagePlaybackPolicy.java"
+      ],
+      "sharedWeights": "",
+      "notes": "AI 추론 모델 또는 맞춤 광고 모델이 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "blazeface-full-sface",
+      "title": "BlazeFace Full · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0 + LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis",
+        "signage"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "models/face_detection_yunet_2023mar.onnx",
+          "modulePath": "vision/src/main/assets/models/face_detection_yunet_2023mar.onnx",
+          "bytes": 232589,
+          "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/face_recognition_sface_2021dec.onnx",
+          "modulePath": "vision/src/main/assets/models/face_recognition_sface_2021dec.onnx",
+          "bytes": 38696353,
+          "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/facepose/blazeface-full-sparse.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazeface-full-sparse.tflite",
+          "bytes": 676746,
+          "sha256": "2c3728e6da56f21e21a320433396fb06d40d9088f2247c05e5635a688d45dfe1",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "modulePath": "vision/src/main/assets/models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "bytes": 4791892,
+          "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9",
+          "role": "optional: faces/vis expression"
+        },
+        {
+          "assetPath": "models/age_gender_recognition_retail_0013_fp32.onnx",
+          "modulePath": "vision/src/main/assets/models/age_gender_recognition_retail_0013_fp32.onnx",
+          "bytes": 8558439,
+          "sha256": "f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678",
+          "role": "optional: faces/vis age-head observation"
+        }
+      ],
+      "preprocessing": "선택 검출기와 ML Kit 관측 → YuNet 5점 정렬 → SFace 입력; 속성 heads는 기능별 선택 실행",
+      "postprocessing": "SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능",
+      "license": "YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface",
+        "https://developers.google.com/ml-kit/terms",
+        "https://storage.googleapis.com/mediapipe-assets/face_detection_full_range_sparse.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/FaceEngine.java",
+        "vision/src/main/java/com/yonlab/vision/Registry.java",
+        "vision/src/main/java/com/yonlab/vision/OneYuNet.java",
+        "vision/src/main/java/com/yonlab/vision/PlusBlazeDetector.java"
+      ],
+      "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
+      "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json",
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "blazeface-short-sface",
+      "title": "BlazeFace Short · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0 + LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis",
+        "signage"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "models/face_detection_yunet_2023mar.onnx",
+          "modulePath": "vision/src/main/assets/models/face_detection_yunet_2023mar.onnx",
+          "bytes": 232589,
+          "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/face_recognition_sface_2021dec.onnx",
+          "modulePath": "vision/src/main/assets/models/face_recognition_sface_2021dec.onnx",
+          "bytes": 38696353,
+          "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/facepose/blazeface-short.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazeface-short.tflite",
+          "bytes": 229032,
+          "sha256": "3bc182eb9f33925d9e58b5c8d59308a760f4adea8f282370e428c51212c26633",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "modulePath": "vision/src/main/assets/models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "bytes": 4791892,
+          "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9",
+          "role": "optional: faces/vis expression"
+        },
+        {
+          "assetPath": "models/age_gender_recognition_retail_0013_fp32.onnx",
+          "modulePath": "vision/src/main/assets/models/age_gender_recognition_retail_0013_fp32.onnx",
+          "bytes": 8558439,
+          "sha256": "f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678",
+          "role": "optional: faces/vis age-head observation"
+        }
+      ],
+      "preprocessing": "선택 검출기와 ML Kit 관측 → YuNet 5점 정렬 → SFace 입력; 속성 heads는 기능별 선택 실행",
+      "postprocessing": "SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능",
+      "license": "YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface",
+        "https://developers.google.com/ml-kit/terms",
+        "https://storage.googleapis.com/mediapipe-assets/face_detection_short_range.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/FaceEngine.java",
+        "vision/src/main/java/com/yonlab/vision/Registry.java",
+        "vision/src/main/java/com/yonlab/vision/OneYuNet.java",
+        "vision/src/main/java/com/yonlab/vision/PlusBlazeDetector.java"
+      ],
+      "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
+      "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json",
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "blazepose-full",
+      "title": "BlazePose Full",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/facepose/blazepose-detector.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazepose-detector.tflite",
+          "bytes": 2959046,
+          "sha256": "9ba9dd3d42efaaba86b4ff0122b06f29c4122e756b329d89dca1e297fd8f866c",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/facepose/blazepose-full.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazepose-full.tflite",
+          "bytes": 6440512,
+          "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "pose detector → hip-centered upright 256 ROI → RGB/255",
+      "postprocessing": "33점 출력 → COCO17 공통 관절 연결 → overlay/coach 기하",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/google-ai-edge/mediapipe",
+        "https://storage.googleapis.com/mediapipe-assets/pose_landmark_full.tflite",
+        "https://storage.googleapis.com/mediapipe-assets/pose_detection.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PlusPoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PlusBlazeDetector.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 detector+landmark 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json"
+      ]
+    },
+    {
+      "id": "coach-blazepose",
+      "title": "BlazePose Full",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/facepose/blazepose-detector.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazepose-detector.tflite",
+          "bytes": 2959046,
+          "sha256": "9ba9dd3d42efaaba86b4ff0122b06f29c4122e756b329d89dca1e297fd8f866c",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/facepose/blazepose-full.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazepose-full.tflite",
+          "bytes": 6440512,
+          "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "pose detector → hip-centered upright 256 ROI → RGB/255",
+      "postprocessing": "33점 출력 → COCO17 공통 관절 연결 → overlay/coach 기하",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/google-ai-edge/mediapipe",
+        "https://storage.googleapis.com/mediapipe-assets/pose_landmark_full.tflite",
+        "https://storage.googleapis.com/mediapipe-assets/pose_detection.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PlusPoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PlusBlazeDetector.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 detector+landmark 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json"
+      ]
+    },
+    {
+      "id": "coach-mlkit",
+      "title": "ML Kit Pose",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection:18.0.0-beta5",
+      "features": [
+        "coach"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → SDK single-image pose",
+      "postprocessing": "33점/likelihood → overlay; coach 별칭은 각도·좌우 기하",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/pose-detection",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OnePoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "coach-mlkit-accurate",
+      "title": "ML Kit Pose Accurate",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection-accurate:18.0.0-beta5",
+      "features": [
+        "coach"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → SDK single-image pose",
+      "postprocessing": "33점/likelihood → overlay; coach 별칭은 각도·좌우 기하",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/pose-detection",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OnePoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "coach-movenet-lightning",
+      "title": "MoveNet Lightning",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/movenet-lightning.tflite",
+          "modulePath": "vision/src/main/assets/one/models/movenet-lightning.tflite",
+          "bytes": 4758512,
+          "sha256": "0fac2226112d0371903ca86e3853cec24ef603a0b2f96f589b180f0ebdd135ab",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "192 square black letterbox, RGB UINT8 NHWC",
+      "postprocessing": "1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/google/movenet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneMoveNetEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "coach-movenet-thunder",
+      "title": "MoveNet Thunder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/movenet-thunder.tflite",
+          "modulePath": "vision/src/main/assets/one/models/movenet-thunder.tflite",
+          "bytes": 12584128,
+          "sha256": "41641538679ec79b07d4101e591dda47d098c09af29607674b2a40b8a3798dd3",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "256 square black letterbox, RGB UINT8 NHWC",
+      "postprocessing": "1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/google/movenet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneMoveNetEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "coach-posenet",
+      "title": "PoseNet MobileNet",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "coach"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/facepose/posenet-mobile.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/posenet-mobile.tflite",
+          "bytes": 13269068,
+          "sha256": "7bcc1efa3010de45640406a4ce0acc2ef89a742021f11adacdca2fd6e494fa07",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB square input, (value−128)/128; PlusTensorModel 실제 shape 검증",
+      "postprocessing": "heatmap/offset → COCO17 → 공통 관절; coach 각도",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/tensorflow/examples/tree/master/lite/examples/posenet",
+        "https://storage.googleapis.com/download.tensorflow.org/models/tflite/posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PlusPoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PlusTensorModel.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json"
+      ]
+    },
+    {
+      "id": "deeplab-v3",
+      "title": "DeepLabV3 MobileNet",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "segment"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/deeplab-v3.tflite",
+          "modulePath": "vision/src/main/assets/one/models/deeplab-v3.tflite",
+          "bytes": 2780176,
+          "sha256": "ff36e24d40547fe9e645e2f4e8745d1876d6e38b332d39a82f0bf0f5d1d561b3",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "OneDeepLabEngine이 입력 dtype/shape를 검증하고 RGB tensor 구성",
+      "postprocessing": "PASCAL21 per-pixel argmax/영역 overlay",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/tensorflow/deeplabv3/tfLite/default/1"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneDeepLabEngine.java",
+        "vision/src/main/java/com/yonlab/vision/SupplementalImageRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "doc-ocr-ko",
+      "title": "ML Kit Korean OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition-korean:16.0.1",
+      "features": [
+        "document"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → 선택 script recognizer; document는 보정된 이미지",
+      "postprocessing": "text/block/bounds → 원문; doc 별칭은 날짜·금액 추출",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/text-recognition/v2",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PhotoVisionEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 SDK 모델",
+      "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "doc-ocr-latin",
+      "title": "ML Kit Latin OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition:16.0.1",
+      "features": [
+        "document"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → 선택 script recognizer; document는 보정된 이미지",
+      "postprocessing": "text/block/bounds → 원문; doc 별칭은 날짜·금액 추출",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/text-recognition/v2",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PhotoVisionEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 SDK 모델",
+      "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "doc-paddle-v5-ko",
+      "title": "PaddleOCR v5-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "document"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-det.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-det.onnx",
+          "bytes": 4826518,
+          "sha256": "a431985659dc921974177a95adcfbb90fd9e51989a5e04d70d0b75f597b6e61d",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "bytes": 13418787,
+          "sha256": "92f0b7785e64fc9090106a241cf4c1eb97472824558272751b88a2a4476d3a08",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "bytes": 83288,
+          "sha256": "e600744eabcf1db6513518f7e09105cdb746ee0504ef110b25478147d9f0aa81",
+          "role": "recognition alphabet"
+        }
+      ],
+      "preprocessing": "DB 검출 정규화 → 다각형 line crop/perspective → 인식기 입력",
+      "postprocessing": "greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/PaddlePaddle/PaddleOCR",
+        "https://huggingface.co/PaddlePaddle",
+        "https://huggingface.co/PaddlePaddle/korean_PP-OCRv5_mobile_rec_onnx/tree/5c6f574b8e2230adf4287b33e736d71b9fabd28e",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_det_onnx/tree/e6f4fa85f00e168c862bc462aebca69eef9b3d3d"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PaddleOcrEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
+      "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/ocr/source-models.json"
+      ]
+    },
+    {
+      "id": "doc-paddle-v6-ko",
+      "title": "PaddleOCR v6-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "document"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-det.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-det.onnx",
+          "bytes": 1780590,
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "bytes": 13418787,
+          "sha256": "92f0b7785e64fc9090106a241cf4c1eb97472824558272751b88a2a4476d3a08",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "bytes": 83288,
+          "sha256": "e600744eabcf1db6513518f7e09105cdb746ee0504ef110b25478147d9f0aa81",
+          "role": "recognition alphabet"
+        }
+      ],
+      "preprocessing": "DB 검출 정규화 → 다각형 line crop/perspective → 인식기 입력",
+      "postprocessing": "greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/PaddlePaddle/PaddleOCR",
+        "https://huggingface.co/PaddlePaddle",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/tree/2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+        "https://huggingface.co/PaddlePaddle/korean_PP-OCRv5_mobile_rec_onnx/tree/5c6f574b8e2230adf4287b33e736d71b9fabd28e"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PaddleOcrEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
+      "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/ocr/source-models.json"
+      ]
+    },
+    {
+      "id": "doc-paddle-v6-tiny",
+      "title": "PaddleOCR v6-tiny",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "document"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-det.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-det.onnx",
+          "bytes": 1780590,
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-tiny-rec.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-tiny-rec.onnx",
+          "bytes": 4462639,
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-tiny-rec-dict.json",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-tiny-rec-dict.json",
+          "bytes": 47870,
+          "sha256": "b9bf03b8b02c9c22f6af847769269d5c1f877cfc8914bbaecac6a44d7a6061de",
+          "role": "recognition alphabet"
+        }
+      ],
+      "preprocessing": "DB 검출 정규화 → 다각형 line crop/perspective → 인식기 입력",
+      "postprocessing": "greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/PaddlePaddle/PaddleOCR",
+        "https://huggingface.co/PaddlePaddle",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/tree/2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/tree/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PaddleOcrEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
+      "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/ocr/source-models.json"
+      ]
+    },
+    {
+      "id": "efficientdet-lite0",
+      "title": "EfficientDet Lite0 COCO",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "models/ball-efficientdet.tflite",
+          "modulePath": "app/src/main/assets/models/ball-efficientdet.tflite",
+          "bytes": 4563519,
+          "sha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "원본 RGB를 모델이 요구하는 정사각 UINT8 텐서로 resize; 실제 tensor shape/type 검증",
+      "postprocessing": "boxes/classes/scores/count → sparse COCO label 매핑 → 임계값/정규화 좌표",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/tensorflow/efficientdet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/ObjectEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneObjectEngine.java"
+      ],
+      "sharedWeights": "detect/flow가 같은 파일을 사용",
+      "notes": "",
+      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "historicalCase": {
+        "version": "4.4.0",
+        "versionCode": 19,
+        "case": "detect/ko-scene-04",
+        "device": "SM-F956N / API37",
+        "scope": "한 입력의 실제 release controller 실행; QR만 해당 payload/format 정답 일치"
+      },
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ],
+      "publicValidationCase": {
+        "version": "0.1",
+        "versionCode": 20,
+        "demoId": "ko-scene-04",
+        "feature": "detect",
+        "sourceInputSha256": "debe6dae8ed14cad1a534104b9071a5d42e76c45449f29192f2deea2ba26c447",
+        "evidence": "docs/validation-0.1.json"
+      }
+    },
+    {
+      "id": "efficientdet-lite1",
+      "title": "EfficientDet-Lite1 384",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/efficientdet-lite1.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/efficientdet-lite1.tflite",
+          "bytes": 6077535,
+          "sha256": "183afa66aad648b0dc16519ae1f55646d9cd38d2b544b917a9ab1da320ebed75",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB direct resize384; uint8 values0..255; normalized [ymin,xmin,ymax,xmax] boxes; sparse COCO90 IDs",
+      "postprocessing": "모델별 tensor decode/NMS → COCO 검출 box와 score",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/tensorflow/efficientdet/tfLite/lite1-detection-default/1",
+        "https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/object_detection/android/lite-model_efficientdet_lite1_detection_metadata_1.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedObjectEngine.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "efficientnet-lite0-f32",
+      "title": "EfficientNet Lite0 FP32",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "classify"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/efficientnet-lite0-f32.tflite",
+          "modulePath": "vision/src/main/assets/one/models/efficientnet-lite0-f32.tflite",
+          "bytes": 18582189,
+          "sha256": "6c7ab0a6e5dcbf38a8c33b960996a55a3b4300b36a018c4545801de3a3c8bde0",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "정사각 center crop224; (RGB−127)/128; INT8 선택은 모델의 scale/zero-point로 UINT8 변환",
+      "postprocessing": "1000개 score; 양자화 출력은 dequantize 후 Top5",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://developers.google.com/edge/mediapipe/solutions/vision/image_classifier"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneEfficientNet.java",
+        "vision/src/main/java/com/yonlab/vision/SupplementalImageRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "FP32/INT8는 서로 다른 파일이며 CPU thread preset을 모델로 센 것이 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "efficientnet-lite0-i8",
+      "title": "EfficientNet Lite0 INT8",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "classify"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/efficientnet-lite0-i8.tflite",
+          "modulePath": "vision/src/main/assets/one/models/efficientnet-lite0-i8.tflite",
+          "bytes": 5434517,
+          "sha256": "bc2ffe19c1118de0c0c2a9088992da5589722656e0fba81421385300a4a34b16",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "정사각 center crop224; (RGB−127)/128; INT8 선택은 모델의 scale/zero-point로 UINT8 변환",
+      "postprocessing": "1000개 score; 양자화 출력은 dequantize 후 Top5",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://developers.google.com/edge/mediapipe/solutions/vision/image_classifier"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneEfficientNet.java",
+        "vision/src/main/java/com/yonlab/vision/SupplementalImageRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "FP32/INT8는 서로 다른 파일이며 CPU thread preset을 모델로 센 것이 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "face-landmarker-478",
+      "title": "Face landmarks 478",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU + OpenCV 4.13.0",
+      "features": [
+        "drive"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/facepose/blazeface-short.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazeface-short.tflite",
+          "bytes": 229032,
+          "sha256": "3bc182eb9f33925d9e58b5c8d59308a760f4adea8f282370e428c51212c26633",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/facepose/face-landmarker-478.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/face-landmarker-478.tflite",
+          "bytes": 2553590,
+          "sha256": "c7d54204ce0448474c7f3fa9af494787c0965cbdd6f20fc72867e43046bd43d5",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "BlazeFace short → 가장 큰 얼굴의 눈 정렬 ROI, 1.5× margin → RGB/255",
+      "postprocessing": "실제 478점 → EAR·입 열림 비율·solvePnP 자세 → Drive 시간 상태",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/google-ai-edge/mediapipe",
+        "https://storage.googleapis.com/mediapipe-assets/face_detection_short_range.tflite",
+        "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PlusFaceLandmarks.java",
+        "vision/src/main/java/com/yonlab/vision/PlusTensorModel.java",
+        "vision/src/main/java/com/yonlab/vision/Analytics.java"
+      ],
+      "sharedWeights": "두 모델 모두 같은 BlazeFace short detector 사용",
+      "notes": "478점은 blendshape 출력이나 감정 분류 478종을 뜻하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json"
+      ]
+    },
+    {
+      "id": "face-mesh-468",
+      "title": "Face landmarks 468",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU + OpenCV 4.13.0",
+      "features": [
+        "drive"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/facepose/blazeface-short.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/blazeface-short.tflite",
+          "bytes": 229032,
+          "sha256": "3bc182eb9f33925d9e58b5c8d59308a760f4adea8f282370e428c51212c26633",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/facepose/face-mesh-468.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/face-mesh-468.tflite",
+          "bytes": 1242398,
+          "sha256": "1055cb9d4a9ca8b8c688902a3a5194311138ba256bcc94e336d8373a5f30c814",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "BlazeFace short → 가장 큰 얼굴의 눈 정렬 ROI, 1.5× margin → RGB/255",
+      "postprocessing": "실제 468점 → EAR·입 열림 비율·solvePnP 자세 → Drive 시간 상태",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/google-ai-edge/mediapipe",
+        "https://storage.googleapis.com/mediapipe-assets/face_detection_short_range.tflite",
+        "https://storage.googleapis.com/mediapipe-assets/face_landmark.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PlusFaceLandmarks.java",
+        "vision/src/main/java/com/yonlab/vision/PlusTensorModel.java",
+        "vision/src/main/java/com/yonlab/vision/Analytics.java"
+      ],
+      "sharedWeights": "두 모델 모두 같은 BlazeFace short detector 사용",
+      "notes": "478점은 blendshape 출력이나 감정 분류 478종을 뜻하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json"
+      ]
+    },
+    {
+      "id": "mlkit-barcode",
+      "title": "ML Kit Barcode",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed barcode-scanning:17.3.0",
+      "features": [
+        "qr"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage → SDK barcode scanner",
+      "postprocessing": "여러 코드의 payload/format/bounds; QR 정답은 실제 문자열/format과 비교",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/barcode-scanning",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneBarcodeEngine.java",
+        "vision/src/main/java/com/yonlab/vision/SupplementalImageRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "mlkit-face-contours",
+      "title": "ML Kit Face Contours",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed face-detection:16.1.7",
+      "features": [
+        "drive"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage → ML Kit 얼굴/contour",
+      "postprocessing": "눈 열림 확률·머리 각도·입 기하 → Analytics.Drive 시간 상태",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/face-detection",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/FaceEngine.java",
+        "vision/src/main/java/com/yonlab/vision/Analytics.java"
+      ],
+      "sharedWeights": "",
+      "notes": "눈 열림 확률과 EAR 기하 비율은 다른 값",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "mlkit-ocr-ko",
+      "title": "ML Kit Korean OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition-korean:16.0.1",
+      "features": [
+        "ocr"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → 선택 script recognizer; document는 보정된 이미지",
+      "postprocessing": "text/block/bounds → 원문; doc 별칭은 날짜·금액 추출",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/text-recognition/v2",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PhotoVisionEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 SDK 모델",
+      "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
+      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "historicalCase": {
+        "version": "4.4.0",
+        "versionCode": 19,
+        "case": "ocr/ko-ocr-1-normal",
+        "device": "SM-F956N / API37",
+        "scope": "한 입력의 실제 release controller 실행; QR만 해당 payload/format 정답 일치"
+      },
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ],
+      "publicValidationCase": {
+        "version": "0.1",
+        "versionCode": 20,
+        "demoId": "ko-ocr-1-normal",
+        "feature": "ocr",
+        "sourceInputSha256": "87630da840b2c5cade4690cf14bd27346ec93588897e68a757692d3c27234589",
+        "evidence": "docs/validation-0.1.json"
+      }
+    },
+    {
+      "id": "mlkit-ocr-latin",
+      "title": "ML Kit Latin OCR",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed text-recognition:16.0.1",
+      "features": [
+        "ocr"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → 선택 script recognizer; document는 보정된 이미지",
+      "postprocessing": "text/block/bounds → 원문; doc 별칭은 날짜·금액 추출",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/text-recognition/v2",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PhotoVisionEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 SDK 모델",
+      "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "mlkit-pose",
+      "title": "ML Kit Pose",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection:18.0.0-beta5",
+      "features": [
+        "pose"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → SDK single-image pose",
+      "postprocessing": "33점/likelihood → overlay; coach 별칭은 각도·좌우 기하",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/pose-detection",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OnePoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "mlkit-pose-accurate",
+      "title": "ML Kit Pose Accurate",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed pose-detection-accurate:18.0.0-beta5",
+      "features": [
+        "pose"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → SDK single-image pose",
+      "postprocessing": "33점/likelihood → overlay; coach 별칭은 각도·좌우 기하",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/pose-detection",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OnePoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "mlkit-sface-2023",
+      "title": "ML Kit · YuNet · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "models/face_detection_yunet_2023mar.onnx",
+          "modulePath": "vision/src/main/assets/models/face_detection_yunet_2023mar.onnx",
+          "bytes": 232589,
+          "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/face_recognition_sface_2021dec.onnx",
+          "modulePath": "vision/src/main/assets/models/face_recognition_sface_2021dec.onnx",
+          "bytes": 38696353,
+          "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "modulePath": "vision/src/main/assets/models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "bytes": 4791892,
+          "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9",
+          "role": "optional: faces/vis expression"
+        },
+        {
+          "assetPath": "models/age_gender_recognition_retail_0013_fp32.onnx",
+          "modulePath": "vision/src/main/assets/models/age_gender_recognition_retail_0013_fp32.onnx",
+          "bytes": 8558439,
+          "sha256": "f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678",
+          "role": "optional: faces/vis age-head observation"
+        }
+      ],
+      "preprocessing": "선택 검출기와 ML Kit 관측 → YuNet 5점 정렬 → SFace 입력; 속성 heads는 기능별 선택 실행",
+      "postprocessing": "SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능",
+      "license": "YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/FaceEngine.java",
+        "vision/src/main/java/com/yonlab/vision/Registry.java",
+        "vision/src/main/java/com/yonlab/vision/OneYuNet.java",
+        "vision/src/main/java/com/yonlab/vision/PlusBlazeDetector.java"
+      ],
+      "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
+      "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "mobilenet-v2-2022",
+      "title": "MobileNetV2 FP32",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "classify"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/mobilenet-v2-2022.onnx",
+          "modulePath": "vision/src/main/assets/one/models/mobilenet-v2-2022.onnx",
+          "bytes": 13964571,
+          "sha256": "c0c3f76d93fa3fd6580652a45618618a220fced18babf65774ed169de0432ad5",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB 256×256 linear resize → center224 → ImageNet mean/std NCHW",
+      "postprocessing": "1×1000 logits softmax → Top5",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/image_classification_mobilenet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/OneModelRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "mobilenet-v4-fp32",
+      "title": "MobileNetV4 Small FP32",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "classify"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/mobilenet-v4-fp32.onnx",
+          "modulePath": "vision/src/main/assets/one/models/mobilenet-v4-fp32.onnx",
+          "bytes": 15069033,
+          "sha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB shortest-side256 bicubic → center224 → ImageNet mean/std NCHW",
+      "postprocessing": "1×1000 logits softmax → Top5",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://huggingface.co/timm/mobilenetv4_conv_small.e2400_r224_in1k"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/OneModelRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "",
+      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "historicalCase": {
+        "version": "4.4.0",
+        "versionCode": 19,
+        "case": "classify/ko-scene-08",
+        "device": "SM-F956N / API37",
+        "scope": "한 입력의 실제 release controller 실행; QR만 해당 payload/format 정답 일치"
+      },
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ],
+      "publicValidationCase": {
+        "version": "0.1",
+        "versionCode": 20,
+        "demoId": "ko-scene-08",
+        "feature": "classify",
+        "sourceInputSha256": "5da031bfe6102faae4604c07993e190ec491d12af6a6d84b41dab5cb60af9a67",
+        "evidence": "docs/validation-0.1.json"
+      }
+    },
+    {
+      "id": "movenet-lightning",
+      "title": "MoveNet Lightning",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/movenet-lightning.tflite",
+          "modulePath": "vision/src/main/assets/one/models/movenet-lightning.tflite",
+          "bytes": 4758512,
+          "sha256": "0fac2226112d0371903ca86e3853cec24ef603a0b2f96f589b180f0ebdd135ab",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "192 square black letterbox, RGB UINT8 NHWC",
+      "postprocessing": "1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/google/movenet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneMoveNetEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "movenet-thunder",
+      "title": "MoveNet Thunder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/movenet-thunder.tflite",
+          "modulePath": "vision/src/main/assets/one/models/movenet-thunder.tflite",
+          "bytes": 12584128,
+          "sha256": "41641538679ec79b07d4101e591dda47d098c09af29607674b2a40b8a3798dd3",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "256 square black letterbox, RGB UINT8 NHWC",
+      "postprocessing": "1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/google/movenet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneMoveNetEngine.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "nanodet-plus",
+      "title": "NanoDet-Plus m1.5x 416",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/nanodet.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/nanodet.onnx",
+          "bytes": 3800954,
+          "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB letterbox416 black; mean103.53/116.28/123.675, std57.375/57.12/58.395; DFL8 bins, strides8/16/32, per-class NMS IoU0.6, maximum100 detections",
+      "postprocessing": "모델별 tensor decode/NMS → COCO 검출 box와 score",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/object_detection_nanodet",
+        "https://huggingface.co/opencv/object_detection_nanodet/resolve/5bfd47077350a726ad440dd7bd1e1e35e8ebcfb2/object_detection_nanodet_2022nov.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedObjectEngine.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "opencv-qr",
+      "title": "OpenCV QR",
+      "kind": "code_engine",
+      "runtime": "OpenCV 4.13.0",
+      "features": [
+        "qr"
+      ],
+      "assetBindings": [],
+      "preprocessing": "QR 전용 image → QRCodeDetector",
+      "postprocessing": "검출된 QR의 공통 OpenCV 해독; payload/format",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://docs.opencv.org/4.x/de/dc3/classcv_1_1QRCodeDetector.html",
+        "https://docs.opencv.org/4.x/d2/d8c/classcv_1_1QRCodeDetectorAruco.html"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedQrRunner.java"
+      ],
+      "sharedWeights": "서로 다른 검출 경로와 공통 QR 해독; 두 가중치 모델이 아님",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "opencv-qr-aruco",
+      "title": "OpenCV QR ArUco",
+      "kind": "code_engine",
+      "runtime": "OpenCV 4.13.0",
+      "features": [
+        "qr"
+      ],
+      "assetBindings": [],
+      "preprocessing": "QR 전용 image → QRCodeDetectorAruco",
+      "postprocessing": "검출된 QR의 공통 OpenCV 해독; payload/format",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://docs.opencv.org/4.x/de/dc3/classcv_1_1QRCodeDetector.html",
+        "https://docs.opencv.org/4.x/d2/d8c/classcv_1_1QRCodeDetectorAruco.html"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedQrRunner.java"
+      ],
+      "sharedWeights": "서로 다른 검출 경로와 공통 QR 해독; 두 가중치 모델이 아님",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "paddle-ocr-v5-ko",
+      "title": "PaddleOCR v5-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "ocr"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-det.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-det.onnx",
+          "bytes": 4826518,
+          "sha256": "a431985659dc921974177a95adcfbb90fd9e51989a5e04d70d0b75f597b6e61d",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "bytes": 13418787,
+          "sha256": "92f0b7785e64fc9090106a241cf4c1eb97472824558272751b88a2a4476d3a08",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "bytes": 83288,
+          "sha256": "e600744eabcf1db6513518f7e09105cdb746ee0504ef110b25478147d9f0aa81",
+          "role": "recognition alphabet"
+        }
+      ],
+      "preprocessing": "DB 검출 정규화 → 다각형 line crop/perspective → 인식기 입력",
+      "postprocessing": "greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/PaddlePaddle/PaddleOCR",
+        "https://huggingface.co/PaddlePaddle",
+        "https://huggingface.co/PaddlePaddle/korean_PP-OCRv5_mobile_rec_onnx/tree/5c6f574b8e2230adf4287b33e736d71b9fabd28e",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_det_onnx/tree/e6f4fa85f00e168c862bc462aebca69eef9b3d3d"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PaddleOcrEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
+      "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/ocr/source-models.json"
+      ]
+    },
+    {
+      "id": "paddle-ocr-v6-ko",
+      "title": "PaddleOCR v6-ko",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "ocr"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-det.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-det.onnx",
+          "bytes": 1780590,
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+          "bytes": 13418787,
+          "sha256": "92f0b7785e64fc9090106a241cf4c1eb97472824558272751b88a2a4476d3a08",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec-dict.json",
+          "bytes": 83288,
+          "sha256": "e600744eabcf1db6513518f7e09105cdb746ee0504ef110b25478147d9f0aa81",
+          "role": "recognition alphabet"
+        }
+      ],
+      "preprocessing": "DB 검출 정규화 → 다각형 line crop/perspective → 인식기 입력",
+      "postprocessing": "greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/PaddlePaddle/PaddleOCR",
+        "https://huggingface.co/PaddlePaddle",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/tree/2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+        "https://huggingface.co/PaddlePaddle/korean_PP-OCRv5_mobile_rec_onnx/tree/5c6f574b8e2230adf4287b33e736d71b9fabd28e"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PaddleOcrEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
+      "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/ocr/source-models.json"
+      ]
+    },
+    {
+      "id": "paddle-ocr-v6-tiny",
+      "title": "PaddleOCR v6-tiny",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "ocr"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-det.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-det.onnx",
+          "bytes": 1780590,
+          "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-tiny-rec.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-tiny-rec.onnx",
+          "bytes": 4462639,
+          "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/ocr/paddle-v6-tiny-rec-dict.json",
+          "modulePath": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-tiny-rec-dict.json",
+          "bytes": 47870,
+          "sha256": "b9bf03b8b02c9c22f6af847769269d5c1f877cfc8914bbaecac6a44d7a6061de",
+          "role": "recognition alphabet"
+        }
+      ],
+      "preprocessing": "DB 검출 정규화 → 다각형 line crop/perspective → 인식기 입력",
+      "postprocessing": "greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/PaddlePaddle/PaddleOCR",
+        "https://huggingface.co/PaddlePaddle",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_det_onnx/tree/2ba1506c0380b8f0b03dd142459aac66d4421f6c",
+        "https://huggingface.co/PaddlePaddle/PP-OCRv6_tiny_rec_onnx/tree/2612ab37152ae0a677521bae4e1e3d4fb4cf7c30"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PaddleOcrEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneTextEngine.java",
+        "vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java"
+      ],
+      "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
+      "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/ocr/source-models.json"
+      ]
+    },
+    {
+      "id": "panns-cnn10",
+      "title": "PANNs CNN10",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "sound"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/audio/panns-cnn10.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/audio/panns-cnn10.onnx",
+          "bytes": 20875311,
+          "sha256": "b6caad166df74fa25e1f1983b3e85a21ce6324a03458c123374a5f2703b21318",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/audio/panns-cnn10-frontend.bin",
+          "modulePath": "vision/src/main/assets/one/modelplus/audio/panns-cnn10-frontend.bin",
+          "bytes": 135424,
+          "sha256": "59ee4583ee2fdd42a0738fa35c408aad80f65e85a43dcf1dfb61778260ce5a0d",
+          "role": "checkpoint-derived frontend tensors"
+        }
+      ],
+      "preprocessing": "32kHz native PCM → checkpoint Hann/mel tensors → log-mel 98×64; 0.975s window/0.480s hop",
+      "postprocessing": "527종 AudioSet → window/mean/peak ranking; source/native PCM SHA 구분",
+      "license": "가중치 CC-BY-4.0; 원본 코드 MIT; 앱 통합 코드 Apache-2.0",
+      "officialSources": [
+        "https://zenodo.org/records/3987831",
+        "https://github.com/qiuqiangkong/audioset_tagging_cnn"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PannSoundEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PannFrontend.java",
+        "vision/src/main/java/com/yonlab/vision/PannModels.java"
+      ],
+      "sharedWeights": "",
+      "notes": "source catalog의 runtimeInferenceTestPerformed=false/benchmarkPerformed=false를 전체 검증 PASS로 바꾸지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/audio/audio-models.json"
+      ]
+    },
+    {
+      "id": "panns-cnn6",
+      "title": "PANNs CNN6",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "sound"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/audio/panns-cnn6.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/audio/panns-cnn6.onnx",
+          "bytes": 19350324,
+          "sha256": "00fd20f5fae17b5d5a1dadcc86f8fc394be5c55366e85455a835031c5f1731b3",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/modelplus/audio/panns-cnn6-frontend.bin",
+          "modulePath": "vision/src/main/assets/one/modelplus/audio/panns-cnn6-frontend.bin",
+          "bytes": 135424,
+          "sha256": "59ee4583ee2fdd42a0738fa35c408aad80f65e85a43dcf1dfb61778260ce5a0d",
+          "role": "checkpoint-derived frontend tensors"
+        }
+      ],
+      "preprocessing": "32kHz native PCM → checkpoint Hann/mel tensors → log-mel 98×64; 0.975s window/0.480s hop",
+      "postprocessing": "527종 AudioSet → window/mean/peak ranking; source/native PCM SHA 구분",
+      "license": "가중치 CC-BY-4.0; 원본 코드 MIT; 앱 통합 코드 Apache-2.0",
+      "officialSources": [
+        "https://zenodo.org/records/3987831",
+        "https://github.com/qiuqiangkong/audioset_tagging_cnn"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PannSoundEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PannFrontend.java",
+        "vision/src/main/java/com/yonlab/vision/PannModels.java"
+      ],
+      "sharedWeights": "",
+      "notes": "source catalog의 runtimeInferenceTestPerformed=false/benchmarkPerformed=false를 전체 검증 PASS로 바꾸지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/audio/audio-models.json"
+      ]
+    },
+    {
+      "id": "posenet-mobilenet",
+      "title": "PoseNet MobileNet",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "pose"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/facepose/posenet-mobile.tflite",
+          "modulePath": "vision/src/main/assets/one/modelplus/facepose/posenet-mobile.tflite",
+          "bytes": 13269068,
+          "sha256": "7bcc1efa3010de45640406a4ce0acc2ef89a742021f11adacdca2fd6e494fa07",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB square input, (value−128)/128; PlusTensorModel 실제 shape 검증",
+      "postprocessing": "heatmap/offset → COCO17 → 공통 관절; coach 각도",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/tensorflow/examples/tree/master/lite/examples/posenet",
+        "https://storage.googleapis.com/download.tensorflow.org/models/tflite/posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/PlusPoseEngine.java",
+        "vision/src/main/java/com/yonlab/vision/PlusTensorModel.java",
+        "vision/src/main/java/com/yonlab/vision/FitnessCoach.java"
+      ],
+      "sharedWeights": "pose/coach 동일 파일",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/facepose/catalog.json"
+      ]
+    },
+    {
+      "id": "pphumanseg-2023",
+      "title": "PPHumanSeg",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "segment"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/pphumanseg-2023.onnx",
+          "modulePath": "vision/src/main/assets/one/models/pphumanseg-2023.onnx",
+          "bytes": 6163938,
+          "sha256": "552d8a984054e59b5d773d24b9b12022b22046ceb2bbc4c9aaeaceb36a9ddf24",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB192 → (value/255−0.5)/0.5 → NCHW",
+      "postprocessing": "192×192 foreground/background → 원본 크기 마스크; studio는 합성 효과 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/human_segmentation_pphumanseg"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "segment와 studio가 같은 가중치 사용",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "resnet18-v1",
+      "title": "ResNet-18 v1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "classify"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/resnet18-v1.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/resnet18-v1.onnx",
+          "bytes": 46820951,
+          "sha256": "a587e02c452cfa2caa579b00d4354ef21190b2be691039b179b3f1412ae9b210",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "ImageNet RGB shortest-side256, center224, /255, mean.485/.456/.406, std.229/.224/.225; retrieval L2-normalizes512 features",
+      "postprocessing": "원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/onnx/models/tree/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/resnet",
+        "https://media.githubusercontent.com/media/onnx/models/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/resnet/model/resnet18-v1-7.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionImageRunner.java",
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "search-mobilenet-v3-large",
+      "title": "MobileNetV3 Large Embedder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "search"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/search-mobilenet-v3-large.tflite",
+          "modulePath": "vision/src/main/assets/one/models/search-mobilenet-v3-large.tflite",
+          "bytes": 10889458,
+          "sha256": "11af3c560dfeed7737cb4c03c23bf52a8403020784192d4dea0b74862a12828d",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB resize224 /255; 모델 metadata mean0/std255",
+      "postprocessing": "실제 embedding → L2 → 동일 갤러리 cosine, 동일 픽셀 자기사본 제외",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://developers.google.com/edge/mediapipe/solutions/vision/image_embedder"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "",
+      "notes": "검색 순위는 정답률과 다름; 모델별 embedding cache 분리",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "search-mobilenet-v3-small",
+      "title": "MobileNetV3 Small Embedder",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "search"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/search-mobilenet-v3-small.tflite",
+          "modulePath": "vision/src/main/assets/one/models/search-mobilenet-v3-small.tflite",
+          "bytes": 4117670,
+          "sha256": "bbbb4c51a55a53905af1daec995ca1aae355046f8839bb8c9f5ce9271394bc40",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB resize224 /255; 모델 metadata mean0/std255",
+      "postprocessing": "실제 embedding → L2 → 동일 갤러리 cosine, 동일 픽셀 자기사본 제외",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://developers.google.com/edge/mediapipe/solutions/vision/image_embedder"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "",
+      "notes": "검색 순위는 정답률과 다름; 모델별 embedding cache 분리",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "search-resnet18",
+      "title": "ResNet-18 v1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "search"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/resnet18-v1.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/resnet18-v1.onnx",
+          "bytes": 46820951,
+          "sha256": "a587e02c452cfa2caa579b00d4354ef21190b2be691039b179b3f1412ae9b210",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "ImageNet RGB shortest-side256, center224, /255, mean.485/.456/.406, std.229/.224/.225; retrieval L2-normalizes512 features",
+      "postprocessing": "원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/onnx/models/tree/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/resnet",
+        "https://media.githubusercontent.com/media/onnx/models/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/resnet/model/resnet18-v1-7.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionImageRunner.java",
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "search-squeezenet",
+      "title": "SqueezeNet1.1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "search"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/squeezenet1-1.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/squeezenet1-1.onnx",
+          "bytes": 4956520,
+          "sha256": "69fed662717dec53395aff9a072b59be71acd7a666ea45fa5ec2e8a200d27e11",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "ImageNet RGB shortest-side256, center224, /255, mean.485/.456/.406, std.229/.224/.225; retrieval L2-normalizes512 features",
+      "postprocessing": "원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/onnx/models/tree/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/squeezenet",
+        "https://media.githubusercontent.com/media/onnx/models/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/squeezenet/model/squeezenet1.1-7.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionImageRunner.java",
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "search-tinyclip-q8",
+      "title": "TinyCLIP ViT 8M INT8",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "search"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/search-tinyclip-vision-q8.onnx",
+          "modulePath": "vision/src/main/assets/one/models/search-tinyclip-vision-q8.onnx",
+          "bytes": 8957217,
+          "sha256": "bbf8426b0e548881dcfd9257030dd6139fceeeb4808994968b882ecc3ada291f",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "CLIP shortest-side224 bicubic/center224 RGB; published CLIP mean/std",
+      "postprocessing": "image_embeds512 → L2 → 동일 갤러리 cosine",
+      "license": "MIT",
+      "officialSources": [
+        "https://github.com/microsoft/Cream/tree/main/TinyCLIP"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "",
+      "notes": "텍스트 생성/대화 모델이 아니며 이미지 인코더만 사용",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "segment-modnet",
+      "title": "MODNet portrait matting",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "segment"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/modnet.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/modnet.onnx",
+          "bytes": 25888640,
+          "sha256": "07c308cf0fc7e6e8b2065a12ed7fc07e1de8febb7dc7839d7b7f15dd66584df9",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB /255, mean0.5 std0.5; aspect resize short-side512, bounded longest-side768, multiples32. Soft alpha bilinear-resized to source image.",
+      "postprocessing": "실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/ZHKKKe/MODNet",
+        "https://huggingface.co/Xenova/modnet/resolve/fa2fa546052fba4c08921230a26cc69a333fca12/onnx/model.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedPortraitEngine.java",
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "Xenova/modnet Transformers.js ONNX conversion",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "segment-selfie-landscape",
+      "title": "MediaPipe Selfie Segmentation Landscape",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "segment"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/selfie-landscape.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/selfie-landscape.onnx",
+          "bytes": 462338,
+          "sha256": "7a0adcfdb1715d3b0ff0f61486d8a181c33f4a208343a5abfccbc6540e872d24",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB direct resize256x144; /255; soft alpha bilinear-resized to source image.",
+      "postprocessing": "실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/selfie_segmentation.md",
+        "https://huggingface.co/onnx-community/mediapipe_selfie_segmentation_landscape/resolve/2497d5bec26c626c7b3c4edc6e1fefc21b64f6c3/onnx/model.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedPortraitEngine.java",
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "ONNX Community / Xenova conversion of Google MediaPipe landscape model",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "selfie-segmentation",
+      "title": "ML Kit Selfie Segmentation",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed segmentation-selfie:16.0.0-beta6",
+      "features": [
+        "segment"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → SDK SINGLE_IMAGE_MODE soft mask",
+      "postprocessing": "bilinear 원본 크기 alpha → segment overlay 또는 studio 교체/흐림/제거",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/selfie-segmentation",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "segment와 studio의 동일 SDK 모델",
+      "notes": "SDK 내부 가중치를 추출하지 않으며 개별 SHA를 임의로 만들지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "squeezenet1-1",
+      "title": "SqueezeNet1.1",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "classify"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/squeezenet1-1.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/squeezenet1-1.onnx",
+          "bytes": 4956520,
+          "sha256": "69fed662717dec53395aff9a072b59be71acd7a666ea45fa5ec2e8a200d27e11",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "ImageNet RGB shortest-side256, center224, /255, mean.485/.456/.406, std.229/.224/.225; retrieval L2-normalizes512 features",
+      "postprocessing": "원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/onnx/models/tree/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/squeezenet",
+        "https://media.githubusercontent.com/media/onnx/models/c5cae0f1942c8d7727372c7b1f6b485aa39e4421/validated/vision/classification/squeezenet/model/squeezenet1.1-7.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/AddedVisionImageRunner.java",
+        "vision/src/main/java/com/yonlab/vision/ImageRetrieval.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "ssd-mobilenet-v1",
+      "title": "SSD MobileNet COCO",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "detect",
+        "flow"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "models/detect.tflite",
+          "modulePath": "vision/src/main/assets/models/detect.tflite",
+          "bytes": 4183312,
+          "sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB resize → UINT8 NHWC; 출력 4개와 shape 검증",
+      "postprocessing": "검출 box와 sparse COCO label; score는 정확도 지표가 아님",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v1"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/ObjectEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneObjectEngine.java"
+      ],
+      "sharedWeights": "detect/flow 공통",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "studio-modnet",
+      "title": "MODNet portrait matting",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "studio"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/modnet.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/modnet.onnx",
+          "bytes": 25888640,
+          "sha256": "07c308cf0fc7e6e8b2065a12ed7fc07e1de8febb7dc7839d7b7f15dd66584df9",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB /255, mean0.5 std0.5; aspect resize short-side512, bounded longest-side768, multiples32. Soft alpha bilinear-resized to source image.",
+      "postprocessing": "실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/ZHKKKe/MODNet",
+        "https://huggingface.co/Xenova/modnet/resolve/fa2fa546052fba4c08921230a26cc69a333fca12/onnx/model.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedPortraitEngine.java",
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "Xenova/modnet Transformers.js ONNX conversion",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "studio-pphuman",
+      "title": "PPHumanSeg",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "studio"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/pphumanseg-2023.onnx",
+          "modulePath": "vision/src/main/assets/one/models/pphumanseg-2023.onnx",
+          "bytes": 6163938,
+          "sha256": "552d8a984054e59b5d773d24b9b12022b22046ceb2bbc4c9aaeaceb36a9ddf24",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB192 → (value/255−0.5)/0.5 → NCHW",
+      "postprocessing": "192×192 foreground/background → 원본 크기 마스크; studio는 합성 효과 후처리",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/human_segmentation_pphumanseg"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneOnnx.java",
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "segment와 studio가 같은 가중치 사용",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "studio-selfie",
+      "title": "ML Kit Selfie Segmentation",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed segmentation-selfie:16.0.0-beta6",
+      "features": [
+        "studio"
+      ],
+      "assetBindings": [],
+      "preprocessing": "InputImage bitmap → SDK SINGLE_IMAGE_MODE soft mask",
+      "postprocessing": "bilinear 원본 크기 alpha → segment overlay 또는 studio 교체/흐림/제거",
+      "license": "Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음",
+      "officialSources": [
+        "https://developers.google.com/ml-kit/vision/selfie-segmentation",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "segment와 studio의 동일 SDK 모델",
+      "notes": "SDK 내부 가중치를 추출하지 않으며 개별 SHA를 임의로 만들지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
+      ]
+    },
+    {
+      "id": "studio-selfie-landscape",
+      "title": "MediaPipe Selfie Segmentation Landscape",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "studio"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/modelplus/vision/selfie-landscape.onnx",
+          "modulePath": "vision/src/main/assets/one/modelplus/vision/selfie-landscape.onnx",
+          "bytes": 462338,
+          "sha256": "7a0adcfdb1715d3b0ff0f61486d8a181c33f4a208343a5abfccbc6540e872d24",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "RGB direct resize256x144; /255; soft alpha bilinear-resized to source image.",
+      "postprocessing": "실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/selfie_segmentation.md",
+        "https://huggingface.co/onnx-community/mediapipe_selfie_segmentation_landscape/resolve/2497d5bec26c626c7b3c4edc6e1fefc21b64f6c3/onnx/model.onnx"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/AddedVisionModels.java",
+        "vision/src/main/java/com/yonlab/vision/AddedPortraitEngine.java",
+        "vision/src/main/java/com/yonlab/vision/BackgroundStudio.java"
+      ],
+      "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
+      "notes": "ONNX Community / Xenova conversion of Google MediaPipe landscape model",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/modelplus/vision/catalog.json"
+      ]
+    },
+    {
+      "id": "vosk-en-us-small-0.15",
+      "title": "Vosk English",
+      "kind": "trained_pipeline",
+      "runtime": "Vosk Android 0.3.75 + JNA 5.18.1",
+      "features": [
+        "speech"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "offlinevoice/vosk-model-small-en-us-0.15.zip",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/vosk-model-small-en-us-0.15.zip",
+          "bytes": 41205931,
+          "sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498",
+          "role": "archive of model weight/config files"
+        }
+      ],
+      "preprocessing": "허용된 모델 manifest에 따라 검증·해제; mono16k PCM",
+      "postprocessing": "streaming partial/final text; 정답이 검증된 입력에서만 CER/WER 사용",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://alphacephei.com/vosk/models",
+        "https://github.com/alphacep/vosk-api"
+      ],
+      "sourceFiles": [
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModelPolicy.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/OfflineVoiceActivity.java"
+      ],
+      "sharedWeights": "",
+      "notes": "언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
+        "offlinevoice/src/main/assets/offlinevoice/english-model-files.json"
+      ]
+    },
+    {
+      "id": "vosk-ko-small-0.22",
+      "title": "Vosk 한국어",
+      "kind": "trained_pipeline",
+      "runtime": "Vosk Android 0.3.75 + JNA 5.18.1",
+      "features": [
+        "speech"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "offlinevoice/vosk-model-small-ko-0.22.zip",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/vosk-model-small-ko-0.22.zip",
+          "bytes": 86914329,
+          "sha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+          "role": "archive of model weight/config files"
+        }
+      ],
+      "preprocessing": "허용된 모델 manifest에 따라 검증·해제; mono16k PCM",
+      "postprocessing": "streaming partial/final text; 정답이 검증된 입력에서만 CER/WER 사용",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://alphacephei.com/vosk/models",
+        "https://github.com/alphacep/vosk-api"
+      ],
+      "sourceFiles": [
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModelPolicy.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/OfflineVoiceActivity.java"
+      ],
+      "sharedWeights": "",
+      "notes": "언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음",
+      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "provenanceFiles": [
+        "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
+        "offlinevoice/src/main/assets/offlinevoice/model-files.json"
+      ],
+      "publicValidationCase": {
+        "version": "0.1",
+        "versionCode": 20,
+        "demoId": "ko-speech-fleurs-045",
+        "feature": "speech",
+        "sourceInputSha256": "f4442b98ae2d82253d2b083ed31fe2aa8f653b9a7a7e7aaa3f01d5076b29a43f",
+        "evidence": "docs/validation-0.1.json"
+      }
+    },
+    {
+      "id": "whisper-base-multilingual-int8",
+      "title": "Whisper Base Multilingual INT8",
+      "kind": "trained_pipeline",
+      "runtime": "sherpa-onnx 2.0.0 local AAR / CPU",
+      "features": [
+        "speech"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "offlinevoice/whisper-base-int8/base-encoder.int8.onnx",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-base-int8/base-encoder.int8.onnx",
+          "bytes": 29120534,
+          "sha256": "0b8fb1304b6109976038efff5ace81720e00386f3ff6b54ee8c75291ca0a1e11",
+          "role": "encoder"
+        },
+        {
+          "assetPath": "offlinevoice/whisper-base-int8/base-decoder.int8.onnx",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-base-int8/base-decoder.int8.onnx",
+          "bytes": 130672026,
+          "sha256": "9759d217388a01b3a4c7c15533201067b48ae819c4daafc8624e64b9409dc02d",
+          "role": "decoder"
+        },
+        {
+          "assetPath": "offlinevoice/whisper-base-int8/base-tokens.txt",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-base-int8/base-tokens.txt",
+          "bytes": 816730,
+          "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126",
+          "role": "tokens"
+        }
+      ],
+      "preprocessing": "mono16k PCM → sherpa feature80; encoder/decoder/token manifest 검증",
+      "postprocessing": "greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개",
+      "license": "Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도",
+      "officialSources": [
+        "https://github.com/openai/whisper",
+        "https://github.com/k2-fsa/sherpa-onnx",
+        "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-base"
+      ],
+      "sourceFiles": [
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/WhisperConfig.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/PlusWhisperModels.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java"
+      ],
+      "sharedWeights": "",
+      "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
+        "offlinevoice/src/main/assets/offlinevoice/whisper-modelplus.json"
+      ]
+    },
+    {
+      "id": "whisper-small-multilingual-int8",
+      "title": "Whisper Small Multilingual INT8",
+      "kind": "trained_pipeline",
+      "runtime": "sherpa-onnx 2.0.0 local AAR / CPU",
+      "features": [
+        "speech"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "offlinevoice/whisper-small-int8/small-encoder.int8.onnx",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-small-int8/small-encoder.int8.onnx",
+          "bytes": 112442483,
+          "sha256": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9",
+          "role": "encoder"
+        },
+        {
+          "assetPath": "offlinevoice/whisper-small-int8/small-decoder.int8.onnx",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-small-int8/small-decoder.int8.onnx",
+          "bytes": 262226114,
+          "sha256": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee",
+          "role": "decoder"
+        },
+        {
+          "assetPath": "offlinevoice/whisper-small-int8/small-tokens.txt",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-small-int8/small-tokens.txt",
+          "bytes": 816730,
+          "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126",
+          "role": "tokens"
+        }
+      ],
+      "preprocessing": "mono16k PCM → sherpa feature80; encoder/decoder/token manifest 검증",
+      "postprocessing": "greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개",
+      "license": "Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도",
+      "officialSources": [
+        "https://github.com/openai/whisper",
+        "https://github.com/k2-fsa/sherpa-onnx",
+        "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-small"
+      ],
+      "sourceFiles": [
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/WhisperConfig.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/PlusWhisperModels.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java"
+      ],
+      "sharedWeights": "",
+      "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
+        "offlinevoice/src/main/assets/offlinevoice/whisper-modelplus.json"
+      ]
+    },
+    {
+      "id": "whisper-tiny-multilingual-int8",
+      "title": "Whisper Tiny Multilingual INT8",
+      "kind": "trained_pipeline",
+      "runtime": "sherpa-onnx 2.0.0 local AAR / CPU",
+      "features": [
+        "speech"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "offlinevoice/whisper-tiny-multilingual-int8.zip",
+          "modulePath": "offlinevoice/src/main/assets/offlinevoice/whisper-tiny-multilingual-int8.zip",
+          "bytes": 59484816,
+          "sha256": "5001b4a0e90a068c78f079d613e91e3e58fc36be0350b19ce3dc651bdd599849",
+          "role": "archive containing encoder+decoder+tokens+license"
+        }
+      ],
+      "preprocessing": "mono16k PCM → sherpa feature80; encoder/decoder/token manifest 검증",
+      "postprocessing": "greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개",
+      "license": "Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도",
+      "officialSources": [
+        "https://github.com/openai/whisper",
+        "https://github.com/k2-fsa/sherpa-onnx",
+        "https://huggingface.co/csukuangfj/sherpa-onnx-whisper-tiny"
+      ],
+      "sourceFiles": [
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/WhisperConfig.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/WhisperModelStore.java",
+        "offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java"
+      ],
+      "sharedWeights": "",
+      "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
+        "offlinevoice/src/main/assets/offlinevoice/whisper-model-files.json"
+      ]
+    },
+    {
+      "id": "yamnet-classifier",
+      "title": "YAMNet Mobile INT8",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "sound"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/yamnet-classifier.tflite",
+          "modulePath": "vision/src/main/assets/one/models/yamnet-classifier.tflite",
+          "bytes": 4126810,
+          "sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "16kHz mono float PCM; 15,600 samples window/7,680 hop; 마지막 창 zero pad",
+      "postprocessing": "521종 window score → 전체 평균/peak/Top5; 시간축 표시",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/google/yamnet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/SoundEngine.java",
+        "vision/src/main/java/com/yonlab/vision/SoundMath.java",
+        "vision/src/main/java/com/yonlab/vision/SoundBenchActivity.java"
+      ],
+      "sharedWeights": "",
+      "notes": "파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "yamnet-original",
+      "title": "YAMNet Original FP32",
+      "kind": "trained_pipeline",
+      "runtime": "LiteRT 1.4.2 Interpreter / CPU",
+      "features": [
+        "sound"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/yamnet-original.tflite",
+          "modulePath": "vision/src/main/assets/one/models/yamnet-original.tflite",
+          "bytes": 16096668,
+          "sha256": "141fba1cdaae842c816f28edc4937e8b4f0af4c8df21862ccc6b52dc567993c3",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "16kHz mono float PCM; 15,600 samples window/7,680 hop; 마지막 창 zero pad",
+      "postprocessing": "521종 window score → 전체 평균/peak/Top5; 시간축 표시",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://www.kaggle.com/models/google/yamnet"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/SoundEngine.java",
+        "vision/src/main/java/com/yonlab/vision/SoundMath.java",
+        "vision/src/main/java/com/yonlab/vision/SoundBenchActivity.java"
+      ],
+      "sharedWeights": "",
+      "notes": "파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "yolox-nano",
+      "title": "YOLOX Nano",
+      "kind": "trained_pipeline",
+      "runtime": "ONNX Runtime Android 1.24.3 / CPU + OpenCV 4.13.0",
+      "features": [
+        "detect",
+        "flow"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "one/models/yolox-nano.onnx",
+          "modulePath": "vision/src/main/assets/one/models/yolox-nano.onnx",
+          "bytes": 3659407,
+          "sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d",
+          "role": "model"
+        }
+      ],
+      "preprocessing": "416×416 좌상단 letterbox, padding114, raw BGR CHW",
+      "postprocessing": "raw head decode/NMS → 원본 좌표 복원 → COCO80과 sparse label 연결",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/Megvii-BaseDetection/YOLOX/releases/tag/0.1.1rc0"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/OneYoloXEngine.java",
+        "vision/src/main/java/com/yonlab/vision/OneYoloXMath.java"
+      ],
+      "sharedWeights": "detect/flow 공통",
+      "notes": "",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "yunet-2026-sface",
+      "title": "YuNet 2026 · SFace",
+      "kind": "trained_pipeline",
+      "runtime": "Google ML Kit / SDK-managed + OpenCV 4.13.0 + ONNX Runtime Android 1.24.3 / CPU",
+      "features": [
+        "faces",
+        "compare",
+        "access",
+        "vis"
+      ],
+      "assetBindings": [
+        {
+          "assetPath": "models/face_detection_yunet_2023mar.onnx",
+          "modulePath": "vision/src/main/assets/models/face_detection_yunet_2023mar.onnx",
+          "bytes": 232589,
+          "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/face_recognition_sface_2021dec.onnx",
+          "modulePath": "vision/src/main/assets/models/face_recognition_sface_2021dec.onnx",
+          "bytes": 38696353,
+          "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+          "role": "model"
+        },
+        {
+          "assetPath": "one/models/yunet-2026-sface.onnx",
+          "modulePath": "vision/src/main/assets/one/models/yunet-2026-sface.onnx",
+          "bytes": 229738,
+          "sha256": "ebafce4e3c118d6554634be5c27ab333b4c047a9a8c3faf1d7cf93101c22f0f0",
+          "role": "model"
+        },
+        {
+          "assetPath": "models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "modulePath": "vision/src/main/assets/models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+          "bytes": 4791892,
+          "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9",
+          "role": "optional: faces/vis expression"
+        },
+        {
+          "assetPath": "models/age_gender_recognition_retail_0013_fp32.onnx",
+          "modulePath": "vision/src/main/assets/models/age_gender_recognition_retail_0013_fp32.onnx",
+          "bytes": 8558439,
+          "sha256": "f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678",
+          "role": "optional: faces/vis age-head observation"
+        }
+      ],
+      "preprocessing": "선택 검출기와 ML Kit 관측 → YuNet 5점 정렬 → SFace 입력; 속성 heads는 기능별 선택 실행",
+      "postprocessing": "SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능",
+      "license": "YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관",
+      "officialSources": [
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+        "https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface",
+        "https://developers.google.com/ml-kit/terms"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/FaceEngine.java",
+        "vision/src/main/java/com/yonlab/vision/Registry.java",
+        "vision/src/main/java/com/yonlab/vision/OneYuNet.java",
+        "vision/src/main/java/com/yonlab/vision/PlusBlazeDetector.java"
+      ],
+      "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
+      "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
+      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ]
+    },
+    {
+      "id": "zxing-qr",
+      "title": "ZXing QR / Barcode",
+      "kind": "code_engine",
+      "runtime": "ZXing 3.5.3",
+      "features": [
+        "qr"
+      ],
+      "assetBindings": [],
+      "preprocessing": "RGB pixels → luminance/binarizer",
+      "postprocessing": "symbol format/payload; QR 생성은 별도 encoder 코드",
+      "license": "Apache-2.0",
+      "officialSources": [
+        "https://github.com/zxing/zxing"
+      ],
+      "sourceFiles": [
+        "vision/src/main/java/com/yonlab/vision/BarcodeHelper.java",
+        "vision/src/main/java/com/yonlab/vision/OneModelRunner.java"
+      ],
+      "sharedWeights": "",
+      "notes": "학습 가중치가 없는 해독 엔진",
+      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "historicalCase": {
+        "version": "4.4.0",
+        "versionCode": 19,
+        "case": "qr/qr-demo-1",
+        "device": "SM-F956N / API37",
+        "scope": "한 입력의 실제 release controller 실행; QR만 해당 payload/format 정답 일치"
+      },
+      "provenanceFiles": [
+        "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
+      ],
+      "publicValidationCase": {
+        "version": "0.1",
+        "versionCode": 20,
+        "demoId": "qr-demo-1",
+        "feature": "qr",
+        "sourceInputSha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
+        "evidence": "docs/validation-0.1.json"
+      }
+    }
+  ]
+}

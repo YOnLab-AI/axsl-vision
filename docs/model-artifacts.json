@@ -1,0 +1,248 @@
+{
+  "schema": 1,
+  "scope": "역사적 4.4.0 기준에 포함된 파일/모델 archive inventory; 0.1 fetch asset lock과 비교할 식별 자료이며 모델 정확도 또는 독립 모델 수가 아님",
+  "fileCount": 47,
+  "distinctSha256Count": 47,
+  "formatCounts": {
+    ".tflite": 19,
+    ".zip": 3,
+    ".onnx": 25
+  },
+  "files": [
+    {
+      "path": "app/src/main/assets/models/ball-efficientdet.tflite",
+      "bytes": 4563519,
+      "sha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/vosk-model-small-en-us-0.15.zip",
+      "bytes": 41205931,
+      "sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/vosk-model-small-ko-0.22.zip",
+      "bytes": 86914329,
+      "sha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/whisper-base-int8/base-decoder.int8.onnx",
+      "bytes": 130672026,
+      "sha256": "9759d217388a01b3a4c7c15533201067b48ae819c4daafc8624e64b9409dc02d"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/whisper-base-int8/base-encoder.int8.onnx",
+      "bytes": 29120534,
+      "sha256": "0b8fb1304b6109976038efff5ace81720e00386f3ff6b54ee8c75291ca0a1e11"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/whisper-small-int8/small-decoder.int8.onnx",
+      "bytes": 262226114,
+      "sha256": "acad50b5c782696e91b55914cc5ab4f756f1532f76e22aa6fc615f39fb69a8ee"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/whisper-small-int8/small-encoder.int8.onnx",
+      "bytes": 112442483,
+      "sha256": "4cbe7b22fa9026b843b60a68640c747de05bafb1a11b57edc0e66c232d9f33a9"
+    },
+    {
+      "path": "offlinevoice/src/main/assets/offlinevoice/whisper-tiny-multilingual-int8.zip",
+      "bytes": 59484816,
+      "sha256": "5001b4a0e90a068c78f079d613e91e3e58fc36be0350b19ce3dc651bdd599849"
+    },
+    {
+      "path": "vision/src/main/assets/models/age_gender_recognition_retail_0013_fp32.onnx",
+      "bytes": 8558439,
+      "sha256": "f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678"
+    },
+    {
+      "path": "vision/src/main/assets/models/detect.tflite",
+      "bytes": 4183312,
+      "sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13"
+    },
+    {
+      "path": "vision/src/main/assets/models/face_detection_yunet_2023mar.onnx",
+      "bytes": 232589,
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+    },
+    {
+      "path": "vision/src/main/assets/models/face_recognition_sface_2021dec.onnx",
+      "bytes": 38696353,
+      "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79"
+    },
+    {
+      "path": "vision/src/main/assets/models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+      "bytes": 4791892,
+      "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/audio/panns-cnn10.onnx",
+      "bytes": 20875311,
+      "sha256": "b6caad166df74fa25e1f1983b3e85a21ce6324a03458c123374a5f2703b21318"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/audio/panns-cnn6.onnx",
+      "bytes": 19350324,
+      "sha256": "00fd20f5fae17b5d5a1dadcc86f8fc394be5c55366e85455a835031c5f1731b3"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/blazeface-full-sparse.tflite",
+      "bytes": 676746,
+      "sha256": "2c3728e6da56f21e21a320433396fb06d40d9088f2247c05e5635a688d45dfe1"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/blazeface-short.tflite",
+      "bytes": 229032,
+      "sha256": "3bc182eb9f33925d9e58b5c8d59308a760f4adea8f282370e428c51212c26633"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/blazepose-detector.tflite",
+      "bytes": 2959046,
+      "sha256": "9ba9dd3d42efaaba86b4ff0122b06f29c4122e756b329d89dca1e297fd8f866c"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/blazepose-full.tflite",
+      "bytes": 6440512,
+      "sha256": "e9a5c5cb17f736fafd4c2ec1da3b3d331d6edbe8a0d32395855aeb2cdfd64b9f"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/face-landmarker-478.tflite",
+      "bytes": 2553590,
+      "sha256": "c7d54204ce0448474c7f3fa9af494787c0965cbdd6f20fc72867e43046bd43d5"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/face-mesh-468.tflite",
+      "bytes": 1242398,
+      "sha256": "1055cb9d4a9ca8b8c688902a3a5194311138ba256bcc94e336d8373a5f30c814"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/facepose/posenet-mobile.tflite",
+      "bytes": 13269068,
+      "sha256": "7bcc1efa3010de45640406a4ce0acc2ef89a742021f11adacdca2fd6e494fa07"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-det.onnx",
+      "bytes": 4826518,
+      "sha256": "a431985659dc921974177a95adcfbb90fd9e51989a5e04d70d0b75f597b6e61d"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/ocr/paddle-v5-ko-rec.onnx",
+      "bytes": 13418787,
+      "sha256": "92f0b7785e64fc9090106a241cf4c1eb97472824558272751b88a2a4476d3a08"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-det.onnx",
+      "bytes": 1780590,
+      "sha256": "193bab7a04fca699a6c82e6abb5b81bdb28177f0abd4062552b04908dafb19f8"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/ocr/paddle-v6-tiny-rec.onnx",
+      "bytes": 4462639,
+      "sha256": "9ef676d6ed3c88256a2d92c640c44f25b0c40947e111b14b8be8f594091563e6"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/vision/efficientdet-lite1.tflite",
+      "bytes": 6077535,
+      "sha256": "183afa66aad648b0dc16519ae1f55646d9cd38d2b544b917a9ab1da320ebed75"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/vision/modnet.onnx",
+      "bytes": 25888640,
+      "sha256": "07c308cf0fc7e6e8b2065a12ed7fc07e1de8febb7dc7839d7b7f15dd66584df9"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/vision/nanodet.onnx",
+      "bytes": 3800954,
+      "sha256": "4b82da9944b88577175ee23a459dce2e26e6e4be573def65b1055dc2d9720186"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/vision/resnet18-v1.onnx",
+      "bytes": 46820951,
+      "sha256": "a587e02c452cfa2caa579b00d4354ef21190b2be691039b179b3f1412ae9b210"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/vision/selfie-landscape.onnx",
+      "bytes": 462338,
+      "sha256": "7a0adcfdb1715d3b0ff0f61486d8a181c33f4a208343a5abfccbc6540e872d24"
+    },
+    {
+      "path": "vision/src/main/assets/one/modelplus/vision/squeezenet1-1.onnx",
+      "bytes": 4956520,
+      "sha256": "69fed662717dec53395aff9a072b59be71acd7a666ea45fa5ec2e8a200d27e11"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/deeplab-v3.tflite",
+      "bytes": 2780176,
+      "sha256": "ff36e24d40547fe9e645e2f4e8745d1876d6e38b332d39a82f0bf0f5d1d561b3"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/efficientnet-lite0-f32.tflite",
+      "bytes": 18582189,
+      "sha256": "6c7ab0a6e5dcbf38a8c33b960996a55a3b4300b36a018c4545801de3a3c8bde0"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/efficientnet-lite0-i8.tflite",
+      "bytes": 5434517,
+      "sha256": "bc2ffe19c1118de0c0c2a9088992da5589722656e0fba81421385300a4a34b16"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/mobilenet-v2-2022.onnx",
+      "bytes": 13964571,
+      "sha256": "c0c3f76d93fa3fd6580652a45618618a220fced18babf65774ed169de0432ad5"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/mobilenet-v4-fp32.onnx",
+      "bytes": 15069033,
+      "sha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/movenet-lightning.tflite",
+      "bytes": 4758512,
+      "sha256": "0fac2226112d0371903ca86e3853cec24ef603a0b2f96f589b180f0ebdd135ab"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/movenet-thunder.tflite",
+      "bytes": 12584128,
+      "sha256": "41641538679ec79b07d4101e591dda47d098c09af29607674b2a40b8a3798dd3"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/pphumanseg-2023.onnx",
+      "bytes": 6163938,
+      "sha256": "552d8a984054e59b5d773d24b9b12022b22046ceb2bbc4c9aaeaceb36a9ddf24"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/search-mobilenet-v3-large.tflite",
+      "bytes": 10889458,
+      "sha256": "11af3c560dfeed7737cb4c03c23bf52a8403020784192d4dea0b74862a12828d"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/search-mobilenet-v3-small.tflite",
+      "bytes": 4117670,
+      "sha256": "bbbb4c51a55a53905af1daec995ca1aae355046f8839bb8c9f5ce9271394bc40"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/search-tinyclip-vision-q8.onnx",
+      "bytes": 8957217,
+      "sha256": "bbf8426b0e548881dcfd9257030dd6139fceeeb4808994968b882ecc3ada291f"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/yamnet-classifier.tflite",
+      "bytes": 4126810,
+      "sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/yamnet-original.tflite",
+      "bytes": 16096668,
+      "sha256": "141fba1cdaae842c816f28edc4937e8b4f0af4c8df21862ccc6b52dc567993c3"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/yolox-nano.onnx",
+      "bytes": 3659407,
+      "sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d"
+    },
+    {
+      "path": "vision/src/main/assets/one/models/yunet-2026-sface.onnx",
+      "bytes": 229738,
+      "sha256": "ebafce4e3c118d6554634be5c27ab333b4c047a9a8c3faf1d7cf93101c22f0f0"
+    }
+  ]
+}

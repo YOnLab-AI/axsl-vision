@@ -1,0 +1,85 @@
+{
+  "model": "vosk-model-small-ko-0.22",
+  "zipBytes": 86914329,
+  "zipSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+  "officialMd5": "fa8029a173787a159e0e72fe6135f890",
+  "license": "Apache2.0 from official model list",
+  "unpackedBytes": 264364726,
+  "files": [
+    {
+      "path": "am/final.mdl",
+      "bytes": 14356670,
+      "sha256": "de1a0b3beaad1f266b18d9af624a8d2451ac32e500a575cec9826d415ecfd0b4"
+    },
+    {
+      "path": "graph/phones.txt",
+      "bytes": 1917,
+      "sha256": "ca2c642d315ed11525c2004e95b688f3dd29a8bdd7735649babfef438702e42a"
+    },
+    {
+      "path": "graph/disambig_tid.int",
+      "bytes": 132,
+      "sha256": "f393757ce5a99ce66ab60bb8aa89f6ac3ceff737f27e9d5d11fc60893d7aba64"
+    },
+    {
+      "path": "graph/HCLr.fst",
+      "bytes": 181533466,
+      "sha256": "862822d277b283b16b293aca397e14d6e0bc460723004d966dace532db4110d0"
+    },
+    {
+      "path": "graph/Gr.fst",
+      "bytes": 48498089,
+      "sha256": "b13d06a65c73b4f32a7618844fbe62aaa2fd250bea63c124c40ec2a8b5c5735e"
+    },
+    {
+      "path": "graph/phones/word_boundary.int",
+      "bytes": 2076,
+      "sha256": "6de0418fb4dc7c42d0e9c75c906a239235830bc8415eb96a40099d204586d0ab"
+    },
+    {
+      "path": "conf/model.conf",
+      "bytes": 289,
+      "sha256": "dd7178da0e99fdbe489816c1e9702c3daa28e02accacc2993e0becb7af33b80c"
+    },
+    {
+      "path": "conf/mfcc.conf",
+      "bytes": 128,
+      "sha256": "cdb0d516e5b8886092f1d840c628107703a65b571dc3b16b888a9a3978958b96"
+    },
+    {
+      "path": "ivector/splice.conf",
+      "bytes": 35,
+      "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+    },
+    {
+      "path": "ivector/final.dubm",
+      "bytes": 168048,
+      "sha256": "8dcb7b76385f6fe1a5e876185452261e218a9a25eb17d87b5b86e4fbb14ddce3"
+    },
+    {
+      "path": "ivector/global_cmvn.stats",
+      "bytes": 1060,
+      "sha256": "397ea1dfa402d0ea434924b181fc70202777656bef5b4f37c9cf2ac96e6e74a9"
+    },
+    {
+      "path": "ivector/final.ie",
+      "bytes": 19757687,
+      "sha256": "888bdd4437dfbd476e6939099c7af81de85a3c2d50217db0c311f67db0a66fed"
+    },
+    {
+      "path": "ivector/online_cmvn.conf",
+      "bytes": 96,
+      "sha256": "4cfe3a77bd2420961704432ba67201f242ef36ff97803c88275dcead7f4acd36"
+    },
+    {
+      "path": "ivector/final.mat",
+      "bytes": 44975,
+      "sha256": "022aec6ec7f135cb494f89aabbccb9ab27653468d01a77ad480433de69f76990"
+    },
+    {
+      "path": "README",
+      "bytes": 58,
+      "sha256": "45afbed86ee5cabd8975ba512767f68d242c550f7ce026e4442dda46aa7dba0a"
+    }
+  ]
+}

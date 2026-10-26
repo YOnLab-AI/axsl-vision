@@ -1,0 +1,172 @@
+{
+  "project": "Lucide",
+  "repository": "https://github.com/lucide-icons/lucide",
+  "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+  "license_file_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/LICENSE",
+  "license_sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "license": "Upstream ISC with retained Feather MIT-derived notices; full pinned LICENSE included",
+  "icons": [
+    {
+      "resource": "ic_users",
+      "upstream_icon": "users",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/users.svg",
+      "source_svg_sha256": "eeed488a1ec95ba730dd69996536fb65061d6ea273afb2429ae47e65eebf401c",
+      "android_xml_sha256": "6d96a35db431f4ccc682202bb2fa5f1d8d3fec54214e4a0553ffd2e9375b4bf8",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_paw",
+      "upstream_icon": "paw-print",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/paw-print.svg",
+      "source_svg_sha256": "578001404e63e57af3da69c739f247f20d4ccc8a40882123c352d4160fe63996",
+      "android_xml_sha256": "691a9db96a2927af04afd165eae0981de649eb853529a44909171852a1fafa2d",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_pulse",
+      "upstream_icon": "activity",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/activity.svg",
+      "source_svg_sha256": "050fbcda05e13c2051cf857683645e19c6b180861ef4d0cc28a6f09ba1ea1666",
+      "android_xml_sha256": "ee792356379c45f74434f754079025e1e5f2ca1df45ffbdb358004c37ac8b76b",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_house",
+      "upstream_icon": "house",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/house.svg",
+      "source_svg_sha256": "28216c479005731ef5e382e7d8627eda2b129b019eb1f3d9de9f5915576d448e",
+      "android_xml_sha256": "76eeb9f41b59db1bb8174e6be8419eecf5ed6601301b2636722fba3906924994",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_chip",
+      "upstream_icon": "cpu",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/cpu.svg",
+      "source_svg_sha256": "ec83bb69ec029d367d749afc445b39c8e95891ebf99b0400652677c2b149b99c",
+      "android_xml_sha256": "5567df273420f128cff64551093b869aa811ed44105d66a78d94321452d1b2a0",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_arrow",
+      "upstream_icon": "arrow-right",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/arrow-right.svg",
+      "source_svg_sha256": "288397fdb73bb4f783cf9eabb726ff47357df1d4e3f1201dd748090579f108b9",
+      "android_xml_sha256": "ef2117a99a73c20b94a4a28d58343dda3113f2e0e061373656f847d8acbba06d",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_search",
+      "upstream_icon": "search",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/search.svg",
+      "source_svg_sha256": "283d371c2e433817bb9c0c8310caa6c77fa4177c0f4f1168d9c83b97af7389dc",
+      "android_xml_sha256": "83243402d1d42c5ed80b89333f08039ad71b9934ad9fc3b1f258eb8351b77186",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_camera",
+      "upstream_icon": "camera",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/camera.svg",
+      "source_svg_sha256": "ebbb3178dd80dfd942770a2237fe7bfc3515c55c7daa9d3666933a656d2790e3",
+      "android_xml_sha256": "ca31dc2641271d4d9b727caf36f31d155252068c8c1fffba764e56f388e2bf59",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_circle_check",
+      "upstream_icon": "circle-check",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/circle-check.svg",
+      "source_svg_sha256": "9711e045a5999f8a3b0782eb88e09b04e0559bc7b379dcc0a4ae645223e10345",
+      "android_xml_sha256": "48357de4f5e66b9e99a6798d2619d840824da87850a42f490e7cfdf4f65d3755",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_credit_card",
+      "upstream_icon": "credit-card",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/credit-card.svg",
+      "source_svg_sha256": "72d2b1acd904e01c6f676b4f6d07d56550a80b5d42687d43a313b85040943a2e",
+      "android_xml_sha256": "bdf2e9fa8b8e63d28f854f2a4b5dfe368ae0481acea7fd1c9725a24c2e7e7e31",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_external_link",
+      "upstream_icon": "external-link",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/external-link.svg",
+      "source_svg_sha256": "3891241b8c3bfc3a8a930078f26ffc5a7e9763da6d0162ace2050b28d4c1d1fe",
+      "android_xml_sha256": "0d5b1032450c8a1980b1aff68b06c48d806c4cdf990f4e8f95880a114fb1d9c6",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_image",
+      "upstream_icon": "image",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/image.svg",
+      "source_svg_sha256": "619c9db58c879dce6250376ba67d9c9102ca6dbb3b1efb9294c9f180e22273a5",
+      "android_xml_sha256": "87b991a40f990da22f3c113d0ba99de4cf762fa99dcfd632b22e58e4d2f5906f",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_refresh_cw",
+      "upstream_icon": "refresh-cw",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/refresh-cw.svg",
+      "source_svg_sha256": "2e10dd403c85a24f163d59fc6151aa21147fe9402e1305dfc8979208caee8944",
+      "android_xml_sha256": "2218cd2c0e9c88a60119bab50bfb7fa670e134215a4b2be981db7014c57a70a5",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_scan_face",
+      "upstream_icon": "scan-face",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/scan-face.svg",
+      "source_svg_sha256": "048cfc02382d4e19d20558f432da555bdcd0f738bcd8e56c261b4b4ec25cc491",
+      "android_xml_sha256": "067ab6e99c3bd776484ee431a214d517f1a774b029f4bea5851df93a17a09126",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_settings",
+      "upstream_icon": "settings",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/settings.svg",
+      "source_svg_sha256": "0ae27fd0f81999229e3127ac96c5b32edfea448e291d509e76212b917551d66b",
+      "android_xml_sha256": "4b768059e0769e8a126310183f63e34592ded6d606da76ebcc6513f75090a7fb",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_shield_check",
+      "upstream_icon": "shield-check",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/shield-check.svg",
+      "source_svg_sha256": "8d4fcdbde5bba4abb1a2f6fe53e37ceb6343a1d5449a9d88f6f97c1971d26c4e",
+      "android_xml_sha256": "3186359d953b311c8ad0b6b51da857d2c278d1e65ac9833599ad9cd77f4d0a9e",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_user_plus",
+      "upstream_icon": "user-plus",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/user-plus.svg",
+      "source_svg_sha256": "4838b7bc545a9fd67e7c587803b09186aa44fc4c76c444fd4a44008ff926291f",
+      "android_xml_sha256": "367f3e26210bdd616675e4d858d680f125c5cd74165f8207a5eea0d4f89bac22",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    },
+    {
+      "resource": "ic_volume_2",
+      "upstream_icon": "volume-2",
+      "commit": "05232756c05e9ca7d5ad267e8694e9afa5d572fa",
+      "source_url": "https://raw.githubusercontent.com/lucide-icons/lucide/05232756c05e9ca7d5ad267e8694e9afa5d572fa/icons/volume-2.svg",
+      "source_svg_sha256": "fb404f9c128a0579de67b399177631e5edb3502fdc247ceb30e8b15754b46071",
+      "android_xml_sha256": "9d4bf1a44f178579b32d8afd69413293bd095b358ccb1df474163998e22a8952",
+      "conversion": "SVG paths copied; circle/rect/line converted to equivalent path geometry; currentColor rendered #0068F8; 24x24 viewport,2px stroke,round caps/joins retained"
+    }
+  ]
+}

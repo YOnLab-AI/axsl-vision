@@ -1,0 +1,1 @@
+package com.yonlab.vision; public final class OneImageHandoffCopyTest { @org.junit.Test public void sourceSnapshotIsExactBoundedAndOwned() throws Exception {OneImageHandoffCopyHost.main(new String[0]);} }

@@ -1,0 +1,38 @@
+{
+  "efficientnet-lite0-f32.tflite": {
+    "bytes": 18582189,
+    "sha256": "6c7ab0a6e5dcbf38a8c33b960996a55a3b4300b36a018c4545801de3a3c8bde0"
+  },
+  "efficientnet-lite0-i8.tflite": {
+    "bytes": 5434517,
+    "sha256": "bc2ffe19c1118de0c0c2a9088992da5589722656e0fba81421385300a4a34b16"
+  },
+  "movenet-lightning.tflite": {
+    "bytes": 4758512,
+    "sha256": "0fac2226112d0371903ca86e3853cec24ef603a0b2f96f589b180f0ebdd135ab"
+  },
+  "movenet-thunder.tflite": {
+    "bytes": 12584128,
+    "sha256": "41641538679ec79b07d4101e591dda47d098c09af29607674b2a40b8a3798dd3"
+  },
+  "yamnet-original.tflite": {
+    "bytes": 16096668,
+    "sha256": "141fba1cdaae842c816f28edc4937e8b4f0af4c8df21862ccc6b52dc567993c3"
+  },
+  "yamnet-classifier.tflite": {
+    "bytes": 4126810,
+    "sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de"
+  },
+  "deeplab-v3.tflite": {
+    "bytes": 2780176,
+    "sha256": "ff36e24d40547fe9e645e2f4e8745d1876d6e38b332d39a82f0bf0f5d1d561b3"
+  },
+  "search-mobilenet-v3-small.tflite": {
+    "bytes": 4117670,
+    "sha256": "bbbb4c51a55a53905af1daec995ca1aae355046f8839bb8c9f5ce9271394bc40"
+  },
+  "search-mobilenet-v3-large.tflite": {
+    "bytes": 10889458,
+    "sha256": "11af3c560dfeed7737cb4c03c23bf52a8403020784192d4dea0b74862a12828d"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "models": [
+    {
+      "id": "panns-cnn6",
+      "title": "PANNs CNN6",
+      "source": "https://zenodo.org/records/3987831",
+      "sourceCheckpoint": "Cnn6_mAP=0.343.pth",
+      "sourceCheckpointSha256": "8a17541944f2623a2a0164e072ac2f915dcedca99968083cc44bfbc7eb682275",
+      "codeSource": "https://github.com/qiuqiangkong/audioset_tagging_cnn",
+      "codeRevision": "d2f4b8c18eab44737fcc0de1248ae21eb43f6aa4",
+      "weightsLicense": "CC-BY-4.0",
+      "codeLicense": "MIT",
+      "asset": "one/modelplus/audio/panns-cnn6.onnx",
+      "sha256": "00fd20f5fae17b5d5a1dadcc86f8fc394be5c55366e85455a835031c5f1731b3",
+      "bytes": 19350324,
+      "frontendAsset": "one/modelplus/audio/panns-cnn6-frontend.bin",
+      "frontendSha256": "59ee4583ee2fdd42a0738fa35c408aad80f65e85a43dcf1dfb61778260ce5a0d",
+      "frontendBytes": 135424,
+      "input": [
+        1,
+        1,
+        98,
+        64
+      ],
+      "output": [
+        1,
+        527
+      ],
+      "nativeSampleRate": 32000,
+      "analysisWindowSeconds": 0.975,
+      "hopSeconds": 0.48,
+      "melBins": 64,
+      "fft": 1024,
+      "fftHop": 320,
+      "center": true,
+      "padding": "reflect",
+      "power": 2,
+      "logScale": "10log10(max(mel,1e-10));ref1;no_top_db",
+      "frontendSource": "Exact Hann and melW tensors copied from the published learned-model checkpoint",
+      "runtimeInferenceTestPerformed": false,
+      "benchmarkPerformed": false
+    },
+    {
+      "id": "panns-cnn10",
+      "title": "PANNs CNN10",
+      "source": "https://zenodo.org/records/3987831",
+      "sourceCheckpoint": "Cnn10_mAP=0.380.pth",
+      "sourceCheckpointSha256": "5240bdc47444e331bbeb54fd741d2b3f933a4526e84b0c17bf3593df94b13962",
+      "codeSource": "https://github.com/qiuqiangkong/audioset_tagging_cnn",
+      "codeRevision": "d2f4b8c18eab44737fcc0de1248ae21eb43f6aa4",
+      "weightsLicense": "CC-BY-4.0",
+      "codeLicense": "MIT",
+      "asset": "one/modelplus/audio/panns-cnn10.onnx",
+      "sha256": "b6caad166df74fa25e1f1983b3e85a21ce6324a03458c123374a5f2703b21318",
+      "bytes": 20875311,
+      "frontendAsset": "one/modelplus/audio/panns-cnn10-frontend.bin",
+      "frontendSha256": "59ee4583ee2fdd42a0738fa35c408aad80f65e85a43dcf1dfb61778260ce5a0d",
+      "frontendBytes": 135424,
+      "input": [
+        1,
+        1,
+        98,
+        64
+      ],
+      "output": [
+        1,
+        527
+      ],
+      "nativeSampleRate": 32000,
+      "analysisWindowSeconds": 0.975,
+      "hopSeconds": 0.48,
+      "melBins": 64,
+      "fft": 1024,
+      "fftHop": 320,
+      "center": true,
+      "padding": "reflect",
+      "power": 2,
+      "logScale": "10log10(max(mel,1e-10));ref1;no_top_db",
+      "frontendSource": "Exact Hann and melW tensors copied from the published learned-model checkpoint",
+      "runtimeInferenceTestPerformed": false,
+      "benchmarkPerformed": false
+    }
+  ],
+  "labelsAsset": "one/modelplus/audio/panns-labels.json",
+  "labelsSha256": "09bd2687536d2ef358df4feb33dc37a7ae4da107aaf8d67a1bea523487dff1bc"
+}

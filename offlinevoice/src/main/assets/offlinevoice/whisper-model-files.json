@@ -1,0 +1,29 @@
+{
+  "model": "whisper-tiny-multilingual-int8",
+  "sourceRepository": "csukuangfj/sherpa-onnx-whisper-tiny",
+  "sourceRevision": "65176e2deb88badc814a94058666cadccc29b61c",
+  "license": "MIT",
+  "upstreamModelAndWeightsLicenseEvidence": "https://github.com/openai/whisper#license",
+  "files": [
+    {
+      "path": "tiny-encoder.int8.onnx",
+      "bytes": 12937772,
+      "sha256": "d24fb083ae3b1041fc24e97971d60e280c9342201fbb67b0ab428a8b4a51a434"
+    },
+    {
+      "path": "tiny-decoder.int8.onnx",
+      "bytes": 89855401,
+      "sha256": "d2fece8dd42771f1df975c6c0445770d0c292bf7547c2cae04a6c0cc57540925"
+    },
+    {
+      "path": "tiny-tokens.txt",
+      "bytes": 816730,
+      "sha256": "b34b360dbb493e781e479794586d661700670d65564001f23024971d1f2fa126"
+    },
+    {
+      "path": "LICENSE-Whisper.txt",
+      "bytes": 1063,
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d"
+    }
+  ]
+}

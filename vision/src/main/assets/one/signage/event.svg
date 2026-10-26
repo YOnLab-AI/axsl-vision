@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">AXSL Vision — 행사 일정 예시</title>
+<desc id="desc">직접 작성한 한글 문구와 코드 도형으로 구성한 가상의 안내판 예시입니다. 외부 사진 및 생성형 이미지가 없습니다.</desc>
+<!-- Editable text remains live. Malgun Gothic is referenced, not embedded. -->
+<rect width="1600" height="900" fill="#F7FAFF"/>
+<text x="96" y="93.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="30" font-weight="700" fill="#001850">AXSL Vision</text>
+<rect x="1380" y="56" width="124" height="56" rx="12" fill="#001850"/>
+<text x="1406" y="95.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="30" font-weight="700" fill="#FFFFFF">예시</text>
+<text x="96" y="207.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="34" font-weight="400" fill="#4B5E83">행사 일정 · 예시</text>
+<text x="88" y="397.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="100" font-weight="700" fill="#001850">오늘의</text>
+<text x="88" y="523.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="100" font-weight="700" fill="#001850">프로그램</text>
+<rect x="96" y="618" width="400" height="8" rx="4" fill="#0068F8"/>
+<text x="96" y="709.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="32" font-weight="400" fill="#4B5E83">시간과 내용을 바꿔</text>
+<text x="96" y="759.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="32" font-weight="400" fill="#4B5E83">현장에 맞게 활용하세요</text>
+<rect x="720" y="250" width="784" height="144" rx="20" fill="#FFFFFF" stroke="#D8E4F5" stroke-width="2"/>
+<rect x="720" y="250" width="12" height="144" rx="4" fill="#0068F8"/>
+<text x="760" y="341.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="48" font-weight="700" fill="#0068F8">10:00</text>
+<polyline points="954,290 954,354" fill="none" stroke="#D8E4F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1002" y="339.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="42" font-weight="700" fill="#071B45">제품 체험</text>
+<rect x="720" y="426" width="784" height="144" rx="20" fill="#FFFFFF" stroke="#D8E4F5" stroke-width="2"/>
+<rect x="720" y="426" width="12" height="144" rx="4" fill="#0068F8"/>
+<text x="760" y="517.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="48" font-weight="700" fill="#0068F8">13:00</text>
+<polyline points="954,466 954,530" fill="none" stroke="#D8E4F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1002" y="515.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="42" font-weight="700" fill="#071B45">기술 소개</text>
+<rect x="720" y="602" width="784" height="144" rx="20" fill="#FFFFFF" stroke="#D8E4F5" stroke-width="2"/>
+<rect x="720" y="602" width="12" height="144" rx="4" fill="#0068F8"/>
+<text x="760" y="693.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="48" font-weight="700" fill="#0068F8">15:00</text>
+<polyline points="954,642 954,706" fill="none" stroke="#D8E4F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1002" y="691.0" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="42" font-weight="700" fill="#071B45">질의응답</text>
+<text x="96" y="854.5" font-family="Malgun Gothic, Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-size="28" font-weight="400" fill="#4B5E83">실제 일정이 아닌 안내판 예시입니다</text>
+</svg>

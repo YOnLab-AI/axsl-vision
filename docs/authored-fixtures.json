@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "count": 33,
+  "notApacheLicensed": true,
+  "items": [
+    {
+      "id": "ko-ocr-1-normal",
+      "title": "붕어빵 숫자 퀴즈",
+      "assetPath": "one/media/KO/ko-ocr-1-normal.png",
+      "sha256": "87630da840b2c5cade4690cf14bd27346ec93588897e68a757692d3c27234589",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-2-normal",
+      "title": "영수증 숫자 배틀",
+      "assetPath": "one/media/KO/ko-ocr-2-normal.png",
+      "sha256": "6609aea941736b6c7555bb805987972a78dd66b65a568a77308794daaa6f6a77",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "qr-demo-1",
+      "title": "한글 QR 메시지",
+      "assetPath": "one/media/KO/qr-demo-1.png",
+      "sha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "qr-demo-2",
+      "title": "글로벌 링크 바로 읽기",
+      "assetPath": "one/media/SHARED/qr-demo-2.png",
+      "sha256": "925b80b7e8c1e3c5740990b4501150966564767ad57e7a6581c6af67ab6bddfe",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "qr-demo-3",
+      "title": "상품 바코드 찾기",
+      "assetPath": "one/media/SHARED/qr-demo-3.png",
+      "sha256": "464019e3b013b8c4a96cd8207faa680e1cc886c9e985d4245045263bf85e1963",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-3-normal",
+      "title": "12번 출구 찾기",
+      "assetPath": "one/media/KO/ko-ocr-3-normal.png",
+      "sha256": "cec9d3eb759e51856536f9ed4183f948e7b2613a5ac74b13ad8632ea1bb294de",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-4-normal",
+      "title": "받침 탐정",
+      "assetPath": "one/media/KO/ko-ocr-4-normal.png",
+      "sha256": "229a06fefbbfb5772dc178be6948f379f65ee0a5bde3ed1b32a37393b5c54c90",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-5-normal",
+      "title": "떡볶이 메뉴 읽기",
+      "assetPath": "one/media/KO/ko-ocr-5-normal.png",
+      "sha256": "d8169bf6f0342ee4c0512fa0043db247fb38056168000ee0bb1d9df115e5bf8d",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-6-normal",
+      "title": "로봇 카페 픽업",
+      "assetPath": "one/media/KO/ko-ocr-6-normal.png",
+      "sha256": "4ebd9060bd10c0e0cd91791c31443fce30f0a7c2d70934cb82aa52927e1977a9",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-01",
+      "title": "한·영 혼합판 01",
+      "assetPath": "one/media/KO/go-ocr-card-01.png",
+      "sha256": "5815d3af0c36fa0a1793064442198133fc030f41fe59137010a2a2c186f5ce6f",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-02",
+      "title": "한·영 혼합판 02",
+      "assetPath": "one/media/KO/go-ocr-card-02.png",
+      "sha256": "c846f1694b234f04ccff48b2cc3d192561e2e64a48101eb3a68bcb9fec15814f",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-03",
+      "title": "한·영 혼합판 03",
+      "assetPath": "one/media/KO/go-ocr-card-03.png",
+      "sha256": "68bb758a53acab09f61348ba9fd52af4d6bae7ffb3c0721d60c93e86c58488c2",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-04",
+      "title": "한·영 혼합판 04",
+      "assetPath": "one/media/KO/go-ocr-card-04.png",
+      "sha256": "abb502e88f40adb3cf1466aadf235b4d40963259179109af96b828e117e4944b",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-05",
+      "title": "한·영 혼합판 05",
+      "assetPath": "one/media/KO/go-ocr-card-05.png",
+      "sha256": "8aacdfb35d83bf8b9ceea95a0dd167200d61e662777eb10900d6ec275d576295",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-06",
+      "title": "한·영 혼합판 06",
+      "assetPath": "one/media/KO/go-ocr-card-06.png",
+      "sha256": "ba7642b95f3c18d46e7985a116c04c1c225cacdf033e3c45337eb340bc54afc1",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-07",
+      "title": "한·영 혼합판 07",
+      "assetPath": "one/media/KO/go-ocr-card-07.png",
+      "sha256": "6184634467f09c30898980e21daed90d01ed1e514d41af53b2fc7e6e1a3b284a",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-08",
+      "title": "한·영 혼합판 08",
+      "assetPath": "one/media/KO/go-ocr-card-08.png",
+      "sha256": "ba8ad44bebf73ead1ce46f5875903635372edea244d85e4f59e442ff5109cc43",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-09",
+      "title": "한·영 혼합판 09",
+      "assetPath": "one/media/KO/go-ocr-card-09.png",
+      "sha256": "2d02e39ab521cef3403e7f3988a481ac78381c5aabf931535046319c6d06283e",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-10",
+      "title": "한·영 혼합판 10",
+      "assetPath": "one/media/KO/go-ocr-card-10.png",
+      "sha256": "c90944ea758e2757fba0b222928eecb90983948a1953bb1265164eda2dce70e1",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-11",
+      "title": "한·영 혼합판 11",
+      "assetPath": "one/media/KO/go-ocr-card-11.png",
+      "sha256": "990c883e2b9196414e139fbd921067699880a1daa739bcd12efee9289f6eb686",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "go-ocr-card-12",
+      "title": "한·영 혼합판 12",
+      "assetPath": "one/media/KO/go-ocr-card-12.png",
+      "sha256": "a0a3a921e4e3a47b32a018b79af6edcaaf49f28f6b0b9370c4aab71b2eeba99c",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-1-low-contrast",
+      "title": "붕어빵 숫자 퀴즈 · 낮은 대비",
+      "assetPath": "one/media/KO/ko-ocr-1-low-contrast.png",
+      "sha256": "a934427bdcde625522eff7c5c062b91bfc8b4abd4f6d6a60a1865138a1407ab9",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-2-low-contrast",
+      "title": "영수증 숫자 배틀 · 낮은 대비",
+      "assetPath": "one/media/KO/ko-ocr-2-low-contrast.png",
+      "sha256": "34567e1de8de6965f4659fa865d55bc8be4058b4dd06ceb3c004d9a85d85df7c",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-3-low-contrast",
+      "title": "12번 출구 찾기 · 낮은 대비",
+      "assetPath": "one/media/KO/ko-ocr-3-low-contrast.png",
+      "sha256": "aaac9cc169bf7f5f862cf5990af599a58a01f4981e3ed257e44c24a9c7639e5f",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-4-low-contrast",
+      "title": "받침 탐정 · 낮은 대비",
+      "assetPath": "one/media/KO/ko-ocr-4-low-contrast.png",
+      "sha256": "7cff4b2c32861248edf03eb966e023adb49c1b74f4c69f2ab1f1e82c9a60e990",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-5-low-contrast",
+      "title": "떡볶이 메뉴 읽기 · 낮은 대비",
+      "assetPath": "one/media/KO/ko-ocr-5-low-contrast.png",
+      "sha256": "00a673728a8d066523a65deb93dd55359832453611b4228c2225f6815f70f8f4",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "ko-ocr-6-low-contrast",
+      "title": "로봇 카페 픽업 · 낮은 대비",
+      "assetPath": "one/media/KO/ko-ocr-6-low-contrast.png",
+      "sha256": "4a1b9410570866dc40e8aea77543a035953dfbabe6cc880e12cd7b513421a941",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "exp-qr-ko-dim",
+      "title": "조도 낮은 한글 QR",
+      "assetPath": "one/media/KO/exp-qr-ko-dim.png",
+      "sha256": "60d34d7c92200440aacf063b1600ef1cad5c6a5c5d49c44ad252d03cf78336ff",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "exp-qr-ko-perspective",
+      "title": "원근으로 기울어진 한글 QR",
+      "assetPath": "one/media/KO/exp-qr-ko-perspective.png",
+      "sha256": "fdb9c2348b3fc76b2c1c7aafb34b318d14c18c05e6cfcf19647149677b8fb030",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "exp-qr-link-small",
+      "title": "멀리 있는 작은 링크 QR",
+      "assetPath": "one/media/SHARED/exp-qr-link-small.png",
+      "sha256": "d79781a7feb5ffe8b24db0318c6f71e27711ad3606b41f1774d10bd41e91fe8f",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "exp-qr-link-occluded",
+      "title": "일부가 가려진 링크 QR",
+      "assetPath": "one/media/SHARED/exp-qr-link-occluded.png",
+      "sha256": "2d43293920a4a4870a7c8fa5cf2f48eccfaeb7071bdd27e626f568b7456b09d5",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "exp-barcode-dim",
+      "title": "어두운 상품 바코드",
+      "assetPath": "one/media/SHARED/exp-barcode-dim.png",
+      "sha256": "8a726f55a597106e0a3c70aa0b90a264f0e34f6b8fd380d3bc3114626aa3b20a",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    },
+    {
+      "id": "exp-barcode-heavy-blur",
+      "title": "강하게 흐린 상품 바코드",
+      "assetPath": "one/media/SHARED/exp-barcode-heavy-blur.png",
+      "sha256": "c3084c583fb528760df0d93d9cefe445f8fffb12c6bb36492df4176577b3fd54",
+      "licenseName": "Project-authored demo fixture — permitted with this free app distribution",
+      "termsScope": "이 무료 앱 배포에 함께 포함하는 범위; Apache-2.0으로 재허가하지 않음"
+    }
+  ]
+}

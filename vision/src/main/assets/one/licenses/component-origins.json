@@ -1,0 +1,1253 @@
+{
+  "schema": 2,
+  "createdAtUtc": "2026-10-25T07:42:10.308101+00:00",
+  "scope": "Actual current active-module model files and selected runtime artifacts, not installed APK acceptance or a new YOnLab source license declaration",
+  "models": [
+    {
+      "asset": "models/ball-efficientdet.tflite",
+      "sourceModule": "app/src/main/assets",
+      "component": "EfficientDet Lite0 COCO",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/tensorflow/efficientdet",
+      "binding": "CONFIRMED_ORIGINAL_GOOGLE_MODEL_LICENSE",
+      "bytes": 4563519,
+      "sha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b"
+    },
+    {
+      "asset": "models/age_gender_recognition_retail_0013_fp32.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "Intel age/gender0013 conversion",
+      "license": "Apache-2.0",
+      "source": "https://github.com/openvinotoolkit/open_model_zoo/tree/master/models/intel/age-gender-recognition-retail-0013",
+      "binding": "CONFIRMED_ORIGINAL_MODEL_AND_BUNDLED_NOTICE",
+      "bytes": 8558439,
+      "sha256": "f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678"
+    },
+    {
+      "asset": "models/detect.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "SSD MobileNet COCO",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/tensorflow/ssd-mobilenet-v1",
+      "binding": "CONFIRMED_ORIGINAL_GOOGLE_MODEL_LICENSE",
+      "bytes": 4183312,
+      "sha256": "e4b118e5e4531945de2e659742c7c590f7536f8d0ed26d135abcfe83b4779d13"
+    },
+    {
+      "asset": "models/face_detection_yunet_2023mar.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "YuNet",
+      "license": "MIT",
+      "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_FOLDER",
+      "bytes": 232589,
+      "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+    },
+    {
+      "asset": "models/face_recognition_sface_2021dec.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "SFace",
+      "license": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_recognition_sface",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_FOLDER",
+      "bytes": 38696353,
+      "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79"
+    },
+    {
+      "asset": "models/facial_expression_recognition_mobilefacenet_2022july.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "MobileFaceNet facial expression",
+      "license": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/main/models/facial_expression_recognition",
+      "binding": "CONFIRMED_FOLDER_README_AND_REPO_LICENSE",
+      "bytes": 4791892,
+      "sha256": "4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9"
+    },
+    {
+      "asset": "one/models/deeplab-v3.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "DeepLabV3 PASCAL",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/tensorflow/deeplabv3/tfLite/default/1",
+      "binding": "CONFIRMED_ORIGINAL_MODEL_TENSORS_AND_GRAPH_MATCH",
+      "bytes": 2780176,
+      "sha256": "ff36e24d40547fe9e645e2f4e8745d1876d6e38b332d39a82f0bf0f5d1d561b3"
+    },
+    {
+      "asset": "one/models/efficientnet-lite0-f32.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "EfficientNet Lite0",
+      "license": "Apache-2.0",
+      "source": "https://developers.google.com/edge/mediapipe/solutions/vision/image_classifier",
+      "binding": "CONFIRMED_MODEL_METADATA_AND_PUBLISHER",
+      "bytes": 18582189,
+      "sha256": "6c7ab0a6e5dcbf38a8c33b960996a55a3b4300b36a018c4545801de3a3c8bde0"
+    },
+    {
+      "asset": "one/models/efficientnet-lite0-i8.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "EfficientNet Lite0",
+      "license": "Apache-2.0",
+      "source": "https://developers.google.com/edge/mediapipe/solutions/vision/image_classifier",
+      "binding": "CONFIRMED_MODEL_METADATA_AND_PUBLISHER",
+      "bytes": 5434517,
+      "sha256": "bc2ffe19c1118de0c0c2a9088992da5589722656e0fba81421385300a4a34b16"
+    },
+    {
+      "asset": "one/models/mobilenet-v2-2022.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "OpenCV Zoo MobileNetV2",
+      "license": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/main/models/image_classification_mobilenet",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_FOLDER",
+      "bytes": 13964571,
+      "sha256": "c0c3f76d93fa3fd6580652a45618618a220fced18babf65774ed169de0432ad5"
+    },
+    {
+      "asset": "one/models/mobilenet-v4-fp32.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "timm MobileNetV4 direct primary export",
+      "license": "Apache-2.0",
+      "source": "https://huggingface.co/timm/mobilenetv4_conv_small.e2400_r224_in1k",
+      "binding": "CONFIRMED_PRIMARY_WEIGHT_EXPORT",
+      "bytes": 15069033,
+      "sha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02"
+    },
+    {
+      "asset": "one/models/movenet-lightning.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "MoveNet singlepose",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/google/movenet",
+      "binding": "CONFIRMED_PRIMARY_MODEL_VARIATION",
+      "bytes": 4758512,
+      "sha256": "0fac2226112d0371903ca86e3853cec24ef603a0b2f96f589b180f0ebdd135ab"
+    },
+    {
+      "asset": "one/models/movenet-thunder.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "MoveNet singlepose",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/google/movenet",
+      "binding": "CONFIRMED_PRIMARY_MODEL_VARIATION",
+      "bytes": 12584128,
+      "sha256": "41641538679ec79b07d4101e591dda47d098c09af29607674b2a40b8a3798dd3"
+    },
+    {
+      "asset": "one/models/pphumanseg-2023.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "PPHumanSeg",
+      "license": "Apache-2.0",
+      "source": "https://github.com/opencv/opencv_zoo/tree/main/models/human_segmentation_pphumanseg",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_FOLDER",
+      "bytes": 6163938,
+      "sha256": "552d8a984054e59b5d773d24b9b12022b22046ceb2bbc4c9aaeaceb36a9ddf24"
+    },
+    {
+      "asset": "one/models/search-mobilenet-v3-large.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "Google MobileNetV3 image embedder",
+      "license": "Apache-2.0",
+      "source": "https://developers.google.com/edge/mediapipe/solutions/vision/image_embedder",
+      "binding": "CONFIRMED_MODEL_METADATA_AND_PUBLISHER",
+      "bytes": 10889458,
+      "sha256": "11af3c560dfeed7737cb4c03c23bf52a8403020784192d4dea0b74862a12828d"
+    },
+    {
+      "asset": "one/models/search-mobilenet-v3-small.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "Google MobileNetV3 image embedder",
+      "license": "Apache-2.0",
+      "source": "https://developers.google.com/edge/mediapipe/solutions/vision/image_embedder",
+      "binding": "CONFIRMED_MODEL_METADATA_AND_PUBLISHER",
+      "bytes": 4117670,
+      "sha256": "bbbb4c51a55a53905af1daec995ca1aae355046f8839bb8c9f5ce9271394bc40"
+    },
+    {
+      "asset": "one/models/search-tinyclip-vision-q8.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "TinyCLIP vision Q8",
+      "license": "MIT",
+      "source": "https://github.com/microsoft/Cream/blob/main/TinyCLIP/LICENSE",
+      "binding": "CONFIRMED_SOURCE_AND_TRANSFORMATION",
+      "bytes": 8957217,
+      "sha256": "bbf8426b0e548881dcfd9257030dd6139fceeeb4808994968b882ecc3ada291f"
+    },
+    {
+      "asset": "one/models/yamnet-classifier.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "YAMNet",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/google/yamnet",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_AND_AUTHOR_LICENSE",
+      "bytes": 4126810,
+      "sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de"
+    },
+    {
+      "asset": "one/models/yamnet-original.tflite",
+      "sourceModule": "vision/src/main/assets",
+      "component": "YAMNet",
+      "license": "Apache-2.0",
+      "source": "https://www.kaggle.com/models/google/yamnet",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_AND_AUTHOR_LICENSE",
+      "bytes": 16096668,
+      "sha256": "141fba1cdaae842c816f28edc4937e8b4f0af4c8df21862ccc6b52dc567993c3"
+    },
+    {
+      "asset": "one/models/yolox-nano.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "YOLOX Nano",
+      "license": "Apache-2.0",
+      "source": "https://github.com/Megvii-BaseDetection/YOLOX/releases/tag/0.1.1rc0",
+      "binding": "CONFIRMED_PRIMARY_RELEASE",
+      "bytes": 3659407,
+      "sha256": "c789161ed43c8269fcd4e67c67eeeb4e80c622da2eb296a20bc6007bd18a0b7d"
+    },
+    {
+      "asset": "one/models/yunet-2026-sface.onnx",
+      "sourceModule": "vision/src/main/assets",
+      "component": "YuNet",
+      "license": "MIT",
+      "source": "https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet",
+      "binding": "CONFIRMED_PUBLISHER_MODEL_FOLDER",
+      "bytes": 229738,
+      "sha256": "ebafce4e3c118d6554634be5c27ab333b4c047a9a8c3faf1d7cf93101c22f0f0"
+    },
+    {
+      "asset": "offlinevoice/vosk-model-small-en-us-0.15.zip",
+      "sourceModule": "offlinevoice/src/main/assets",
+      "component": "Vosk EN0.15",
+      "license": "Apache-2.0",
+      "source": "https://alphacephei.com/vosk/models",
+      "binding": "CONFIRMED_OFFICIAL_MODEL_LIST",
+      "bytes": 41205931,
+      "sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498"
+    },
+    {
+      "asset": "offlinevoice/vosk-model-small-ko-0.22.zip",
+      "sourceModule": "offlinevoice/src/main/assets",
+      "component": "Vosk KO0.22",
+      "license": "Apache-2.0",
+      "source": "https://alphacephei.com/vosk/models",
+      "binding": "CONFIRMED_OFFICIAL_MODEL_LIST",
+      "bytes": 86914329,
+      "sha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989"
+    },
+    {
+      "asset": "offlinevoice/whisper-tiny-multilingual-int8.zip",
+      "sourceModule": "offlinevoice/src/main/assets",
+      "component": "Whisper Tiny multilingual",
+      "license": "MIT",
+      "source": "https://github.com/openai/whisper#license",
+      "binding": "CONFIRMED_PRIMARY_MODEL_AND_UPSTREAM_MIT",
+      "bytes": 59484816,
+      "sha256": "5001b4a0e90a068c78f079d613e91e3e58fc36be0350b19ce3dc651bdd599849"
+    }
+  ],
+  "runtimeComponents": [
+    {
+      "coordinate": "com.microsoft.onnxruntime:onnxruntime-android:1.24.3",
+      "license": "MIT",
+      "artifacts": [
+        {
+          "file": "onnxruntime-android-1.24.3.aar",
+          "sha256": "67397e4a970e75617f765d2015ceaf911917e1d822276cfb5792744e8085cbce",
+          "bytes": 40948335
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.ai.edge.litert:litert:1.4.2",
+      "license": "Apache-2.0",
+      "artifacts": [
+        {
+          "file": "litert-1.4.2.aar",
+          "sha256": "9b02cdf9db0a698b341b59e75c54ab8221d6304577cc43830d01024caf1fca74",
+          "bytes": 8305790
+        }
+      ]
+    },
+    {
+      "coordinate": "org.opencv:opencv:4.13.0",
+      "license": "Apache-2.0 plus individual native/codec/Intel IPP terms",
+      "artifacts": [
+        {
+          "file": "opencv-4.13.0.aar",
+          "sha256": "a8c9b0929d8d6367bb476320a1f36587db2b57ea18d8f7521ce509514903ca04",
+          "bytes": 121695690
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.zxing:core:3.5.3",
+      "license": "Apache-2.0",
+      "artifacts": [
+        {
+          "file": "core-3.5.3.jar",
+          "sha256": "8d8064c1636fdaef7189dd9055c7d59950a8940a12f2293956446ec3c109fd82",
+          "bytes": 607650
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:barcode-scanning:17.3.0",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "barcode-scanning-17.3.0.aar",
+          "sha256": "64c5cf48bb94b6c54f2c785c660640a7d167aff6ad72bc2c920706dc4187b79a",
+          "bytes": 9898786
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:segmentation-selfie:16.0.0-beta6",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "segmentation-selfie-16.0.0-beta6.aar",
+          "sha256": "45caa6394adbfc5d841b880b8a098166dc79aeabbb41becd5e510f655fd120e7",
+          "bytes": 756815
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:pose-detection:18.0.0-beta5",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "pose-detection-18.0.0-beta5.aar",
+          "sha256": "976ff6f893eedbfa4d33cd86e7c4612c173f2c2fb9c62b3c5c28cac424803029",
+          "bytes": 5205621
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:pose-detection-accurate:18.0.0-beta5",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "pose-detection-accurate-18.0.0-beta5.aar",
+          "sha256": "952d478605750ff06b9fd11b1f54f4de5f4db8290e475b83958f6425382cdca0",
+          "bytes": 8601582
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:text-recognition:16.0.1",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "text-recognition-16.0.1.aar",
+          "sha256": "da753265d02479a8cfe4dbf891ba7d189248e7c8430b6f72bd4d532c757a69b3",
+          "bytes": 1383148
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:text-recognition-korean:16.0.1",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "text-recognition-korean-16.0.1.aar",
+          "sha256": "81d19c3d1540ce98fb23ba010fb12c442d71e75bb357473bee2174c68b35c171",
+          "bytes": 1899634
+        }
+      ]
+    },
+    {
+      "coordinate": "com.google.mlkit:face-detection:16.1.7",
+      "license": "Google ML Kit/API terms",
+      "artifacts": [
+        {
+          "file": "face-detection-16.1.7.aar",
+          "sha256": "3d8556a418b5474598d7f747f8e235de8f5da23ae529e3b0a2d8d4dbe83f6ded",
+          "bytes": 17726863
+        }
+      ]
+    },
+    {
+      "coordinate": "com.alphacephei:vosk-android:0.3.75",
+      "license": "Apache-2.0",
+      "artifacts": [
+        {
+          "file": "vosk-android-0.3.75.aar",
+          "sha256": "ab2f8b91ac8051561aa325546b35fed9a68b36b8121bac5c6fb927525c4adfad",
+          "bytes": 13472638
+        }
+      ]
+    },
+    {
+      "coordinate": "net.java.dev.jna:jna:5.18.1",
+      "license": "Apache-2.0 alternative",
+      "artifacts": [
+        {
+          "file": "jna-5.18.1.aar",
+          "sha256": "7f053e3ec99e14dd71259c82c1c8a02738d64a13c31226b2acc170f3060951e0",
+          "bytes": 522677
+        }
+      ]
+    },
+    {
+      "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.2.20",
+      "license": "Apache-2.0",
+      "artifacts": [
+        {
+          "file": "kotlin-stdlib-2.2.20.jar",
+          "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
+          "bytes": 1761444
+        }
+      ]
+    },
+    {
+      "coordinate": "androidx.core:core:1.16.0",
+      "license": "Apache-2.0",
+      "artifacts": [
+        {
+          "file": "core-1.16.0.aar",
+          "sha256": "6bf03d39dbe3744acce227d3b697374c3625aae1025fbec8ad9fd7bd58bce431",
+          "bytes": 1377184
+        }
+      ]
+    },
+    {
+      "coordinate": "androidx.exifinterface:exifinterface:1.4.1",
+      "license": "Apache-2.0",
+      "artifacts": [
+        {
+          "file": "exifinterface-1.4.1.aar",
+          "sha256": "17e17a6b86bb54074d3a7ecfa695ab920eaff4cf667a8371ed82e377580cfcf6",
+          "bytes": 75523
+        }
+      ]
+    },
+    {
+      "coordinate": "sherpa-onnx-static-link-onnxruntime:2.0.0",
+      "license": "Apache-2.0 with separate ONNX Runtime MIT/third-party notices",
+      "source": "https://github.com/k2-fsa/sherpa-onnx/releases/tag/v2.0.0",
+      "artifacts": [
+        {
+          "file": "sherpa-onnx-static-link-onnxruntime-2.0.0.aar",
+          "sha256": "59366e37cf2760b419e895d2872aa1664027fd721f6e4c827cdb0e805088fcbe",
+          "bytes": 38468722
+        }
+      ],
+      "espeakRemovalEvidence": "https://github.com/k2-fsa/sherpa-onnx/pull/4055"
+    }
+  ],
+  "notices": [
+    {
+      "component": "TinyCLIP",
+      "license": "MIT",
+      "sourceUrl": "https://raw.githubusercontent.com/microsoft/Cream/main/TinyCLIP/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/microsoft/Cream/main/TinyCLIP/LICENSE",
+      "snapshotPath": "tinyclip-MIT.txt",
+      "sha256": "583acc0d9c74def18ec24e56964421bf1fac1fa2d60451e75e6681d5ae58a3f6",
+      "bytes": 1769,
+      "asset": "one/licenses/MIT-TinyCLIP.txt"
+    },
+    {
+      "component": "YOLOX",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/main/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX/main/LICENSE",
+      "snapshotPath": "yolox-official-Apache-2.0.txt",
+      "sha256": "0ec3668d3274bcf29e8a29e9576d5a2cd96fc78d3c5bec4387355a796e5d9088",
+      "bytes": 11371,
+      "asset": "one/licenses/Apache-YOLOX.txt"
+    },
+    {
+      "component": "TensorFlow Models and Google published models",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/tensorflow/models/master/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/tensorflow/models/master/LICENSE",
+      "snapshotPath": "tensorflow-models-Apache-2.0.txt",
+      "sha256": "5b17814bf0de8cf65069bc6d7cc38cff19fcaa864d243423ad3ef3db01b52385",
+      "bytes": 11512,
+      "asset": "one/licenses/Apache-TensorFlow-Models.txt"
+    },
+    {
+      "component": "PPHumanSeg",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv_zoo/main/models/human_segmentation_pphumanseg/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv_zoo/main/models/human_segmentation_pphumanseg/LICENSE",
+      "snapshotPath": "pphumanseg-license.txt",
+      "sha256": "d9cf3b547fa4232fb9285f2db52e909f10f00781aaf64a6d0bb90c55149f1363",
+      "bytes": 11437,
+      "asset": "one/licenses/Apache-PPHumanSeg.txt"
+    },
+    {
+      "component": "SFace",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv_zoo/main/models/face_recognition_sface/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv_zoo/main/models/face_recognition_sface/LICENSE",
+      "snapshotPath": "sface-license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "asset": "one/licenses/Apache-SFace.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ade-LICENSE",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        },
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/flatbuffers-LICENSE.txt",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "YuNet",
+      "license": "MIT",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv_zoo/main/models/face_detection_yunet/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv_zoo/main/models/face_detection_yunet/LICENSE",
+      "snapshotPath": "yunet-license.txt",
+      "sha256": "c83b8120c50ccbd4c4f96edf53141bdd566ebb8f8e9227e415326aa1b1aba958",
+      "bytes": 1085,
+      "asset": "one/licenses/MIT-YuNet.txt"
+    },
+    {
+      "component": "Whisper code and model weights",
+      "license": "MIT",
+      "sourceUrl": "https://raw.githubusercontent.com/openai/whisper/main/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/openai/whisper/main/LICENSE",
+      "snapshotPath": "whisper-MIT.txt",
+      "sha256": "b5d65a59060e68c4ff940e1eddfa6f94b2d68fdf58ed7f4dd57721c997e35e9d",
+      "bytes": 1063,
+      "asset": "one/licenses/MIT-Whisper.txt"
+    },
+    {
+      "component": "ONNX Runtime 1.24.3",
+      "license": "MIT",
+      "sourceUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/LICENSE",
+      "snapshotPath": "onnxruntime-v1.24.3-MIT.txt",
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "bytes": 1073,
+      "asset": "one/licenses/MIT-ONNXRuntime.txt"
+    },
+    {
+      "component": "ONNX Runtime third-party notices",
+      "license": "Multiple individual terms",
+      "sourceUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/ThirdPartyNotices.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.24.3/ThirdPartyNotices.txt",
+      "snapshotPath": "onnxruntime-v1.24.3-ThirdPartyNotices.txt",
+      "sha256": "0e07b95f3a8d6230037707c5c4a2b554d12c4cb67369669ac255635528ffcee2",
+      "bytes": 325054,
+      "asset": "one/licenses/NOTICE-ONNXRuntime.txt"
+    },
+    {
+      "component": "sherpa-onnx 2.0.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/k2-fsa/sherpa-onnx/v2.0.0/LICENSE",
+      "snapshotPath": "sherpa-onnx-v2.0.0-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "asset": "one/licenses/Apache-SherpaONNX.txt"
+    },
+    {
+      "component": "Vosk API",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/alphacep/vosk-api/master/COPYING",
+      "resolvedUrl": "https://raw.githubusercontent.com/alphacep/vosk-api/master/COPYING",
+      "snapshotPath": "vosk-COPYING.txt",
+      "sha256": "bb618af833c817ab01c1564bd3ec75ba4b4f9cf30910a4a2168e30a674ee8cc6",
+      "bytes": 10173,
+      "asset": "one/licenses/Apache-Vosk.txt"
+    },
+    {
+      "component": "LiteRT",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/google-ai-edge/LiteRT/main/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/google-ai-edge/LiteRT/main/LICENSE",
+      "snapshotPath": "litert-LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "asset": "one/licenses/Apache-LiteRT.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/tbb-LICENSE.txt",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV 4.13.0",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/LICENSE",
+      "snapshotPath": "opencv-4.13.0-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "asset": "one/licenses/Apache-OpenCV.txt"
+    },
+    {
+      "component": "ZXing 3.5.3",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/zxing/zxing/zxing-3.5.3/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/zxing/zxing/zxing-3.5.3/LICENSE",
+      "snapshotPath": "zxing-3.5.3-LICENSE.txt",
+      "sha256": "3f62881f0566227a24b12e5a754cc79f39aaa94883038e95c94812e1f50af42f",
+      "bytes": 13320,
+      "asset": "one/licenses/Apache-ZXing.txt"
+    },
+    {
+      "component": "ZXing 3.5.3 notices",
+      "license": "Apache-2.0 NOTICE",
+      "sourceUrl": "https://raw.githubusercontent.com/zxing/zxing/zxing-3.5.3/NOTICE",
+      "resolvedUrl": "https://raw.githubusercontent.com/zxing/zxing/zxing-3.5.3/NOTICE",
+      "snapshotPath": "zxing-3.5.3-NOTICE.txt",
+      "sha256": "4db4b60aace29ec6c5c4f13ca9cac1930d3c0c54bcc67dceead0c10771120e66",
+      "bytes": 664,
+      "asset": "one/licenses/NOTICE-ZXing.txt"
+    },
+    {
+      "component": "JNA 5.18.1",
+      "license": "Apache-2.0 or LGPL-2.1-or-later; Apache alternative used",
+      "sourceUrl": "https://raw.githubusercontent.com/java-native-access/jna/5.18.1/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/java-native-access/jna/5.18.1/LICENSE",
+      "snapshotPath": "jna-5.18.1-LICENSE.txt",
+      "sha256": "07c938b23950ab7d47a24ef35f9f5da3a05ae164278dc959ad6994135ed59ff1",
+      "bytes": 797,
+      "asset": "one/licenses/LICENSE-JNA-Dual.txt"
+    },
+    {
+      "component": "Kotlin 2.2.20",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.2.20/license/LICENSE.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/JetBrains/kotlin/v2.2.20/license/LICENSE.txt",
+      "snapshotPath": "kotlin-2.2.20-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "asset": "one/licenses/Apache-Kotlin.txt"
+    },
+    {
+      "component": "AndroidX core / exifinterface",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/androidx/androidx/androidx-main/LICENSE.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/androidx/androidx/androidx-main/LICENSE.txt",
+      "snapshotPath": "androidx-LICENSE.txt",
+      "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+      "bytes": 10175,
+      "asset": "one/licenses/Apache-AndroidX.txt"
+    },
+    {
+      "component": "timm MobileNetV4 original model",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/huggingface/pytorch-image-models/main/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/huggingface/pytorch-image-models/main/LICENSE",
+      "snapshotPath": "timm-Apache-2.0.txt",
+      "sha256": "71b111620fa32c17a80ccd6db2da759d31a591e497d8b5f382174f59d1b59d49",
+      "bytes": 11343,
+      "asset": "one/licenses/Apache-timm.txt"
+    },
+    {
+      "component": "JNA 5.18.1 Apache alternative full text",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/java-native-access/jna/5.18.1/AL2.0",
+      "resolvedUrl": "https://raw.githubusercontent.com/java-native-access/jna/5.18.1/AL2.0",
+      "snapshotPath": "jna-5.18.1-AL2.0.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174,
+      "asset": "one/licenses/Apache-JNA-Alternative.txt"
+    },
+    {
+      "component": "JNA embedded libffi",
+      "license": "MIT",
+      "sourceUrl": "https://raw.githubusercontent.com/java-native-access/jna/5.18.1/native/libffi/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/java-native-access/jna/5.18.1/native/libffi/LICENSE",
+      "snapshotPath": "jna-libffi-lic.txt",
+      "sha256": "2c9c2acb9743e6b007b91350475308aee44691d96aa20eacef8e199988c8c388",
+      "bytes": 1132,
+      "asset": "one/licenses/MIT-JNA-libffi.txt"
+    },
+    {
+      "component": "Sherpa statically linked ONNX Runtime 1.28.2",
+      "license": "MIT",
+      "sourceUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.28.2/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.28.2/LICENSE",
+      "snapshotPath": "ort1282license.txt",
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "bytes": 1073,
+      "asset": "one/licenses/MIT-ONNXRuntime-Sherpa-1.28.2.txt"
+    },
+    {
+      "component": "Sherpa ONNX Runtime 1.28.2 third-party notices",
+      "license": "Multiple individual terms",
+      "sourceUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.28.2/ThirdPartyNotices.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.28.2/ThirdPartyNotices.txt",
+      "snapshotPath": "ort1282notice.txt",
+      "sha256": "0e07b95f3a8d6230037707c5c4a2b554d12c4cb67369669ac255635528ffcee2",
+      "bytes": 325054,
+      "asset": "one/licenses/NOTICE-ONNXRuntime-Sherpa-1.28.2.txt"
+    },
+    {
+      "component": "OpenCV embedded libjpeg-turbo 3.1.2",
+      "license": "IJG / BSD-3-Clause / zlib",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libjpeg-turbo/LICENSE.md",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libjpeg-turbo/LICENSE.md",
+      "snapshotPath": "opencv-jpeg-license.txt",
+      "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430",
+      "bytes": 5620,
+      "asset": "one/licenses/OpenCV-JPEG-LICENSE.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libjpeg-turbo-LICENSE.md",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded Independent JPEG Group copyright and conditions",
+      "license": "IJG",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libjpeg-turbo/README.ijg",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libjpeg-turbo/README.ijg",
+      "snapshotPath": "opencv-jpeg-ijg.txt",
+      "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+      "bytes": 12799,
+      "asset": "one/licenses/OpenCV-JPEG-IJG.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libjpeg-turbo-README.ijg",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded libwebp",
+      "license": "BSD-3-Clause",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libwebp/COPYING",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libwebp/COPYING",
+      "snapshotPath": "opencv-webp-copying.txt",
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+      "bytes": 1496,
+      "asset": "one/licenses/OpenCV-WebP.txt"
+    },
+    {
+      "component": "OpenCV embedded libpng 1.6.53",
+      "license": "libpng-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libpng/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libpng/LICENSE",
+      "snapshotPath": "opencv-png-license.txt",
+      "sha256": "16d9daaafbf63a31a5bdc91d4600972548fef5aaa1244202393288dbd079c49a",
+      "bytes": 5345,
+      "asset": "one/licenses/OpenCV-PNG.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libpng-LICENSE",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded libtiff 4.7.1",
+      "license": "libtiff",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libtiff/LICENSE.md",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/libtiff/LICENSE.md",
+      "snapshotPath": "opencv-tiff-license.txt",
+      "sha256": "0e27c2382d7b8147972bbb746e04059a1152c8d0fda9d03ef1399d1a433c4ade",
+      "bytes": 2416,
+      "asset": "one/licenses/OpenCV-TIFF.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libtiff-LICENSE.md",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded OpenJPEG 2.5.3",
+      "license": "BSD-2-Clause",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/openjpeg/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/openjpeg/LICENSE",
+      "snapshotPath": "opencv-openjpeg-license.txt",
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+      "bytes": 2112,
+      "asset": "one/licenses/OpenCV-OpenJPEG.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libopenjp2-LICENSE",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded OpenEXR 2.3.0",
+      "license": "BSD-3-Clause",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/openexr/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/openexr/LICENSE",
+      "snapshotPath": "opencv-openexr-license.txt",
+      "sha256": "14eba5f05238f57c77e94f0ebd29a0b3736ba0456ff990cda16e21b6903ac453",
+      "bytes": 1697,
+      "asset": "one/licenses/OpenCV-OpenEXR.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/openexr-LICENSE",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded Protobuf 3.19.1",
+      "license": "BSD-3-Clause",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/protobuf/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/protobuf/LICENSE",
+      "snapshotPath": "opencv-protobuf-license.txt",
+      "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+      "bytes": 1732,
+      "asset": "one/licenses/OpenCV-Protobuf.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/protobuf-LICENSE",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded Flatbuffers 25.9.23",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/flatbuffers/LICENSE.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/flatbuffers/LICENSE.txt",
+      "snapshotPath": "opencv-flatbuffers-license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "asset": "one/licenses/OpenCV-Flatbuffers.txt"
+    },
+    {
+      "component": "OpenCV embedded Android CPU features",
+      "license": "BSD-2-Clause",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/cpufeatures/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/cpufeatures/LICENSE",
+      "snapshotPath": "opencv-cpufeatures-license.txt",
+      "sha256": "c870d52f42a8f93023b99a85fe68d02637d6b04e5f35bbcd7f98759adb4e4d49",
+      "bytes": 577,
+      "asset": "one/licenses/OpenCV-CPUFeatures.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/cpufeatures-LICENSE",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded ITT notification; BSD alternative selected",
+      "license": "BSD-3-Clause OR GPL-2.0-only; BSD alternative used",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ittnotify/src/ittnotify/BSD-3-Clause.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/ittnotify/src/ittnotify/BSD-3-Clause.txt",
+      "snapshotPath": "opencv-itt-bsd.txt",
+      "sha256": "cf48cdd9ed87c2031b68fb1b9f4cfb55d00dcf815b21a30bf8304aa1e5e6f76a",
+      "bytes": 1485,
+      "asset": "one/licenses/OpenCV-ITT-BSD-Alternative.txt",
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ittnotify-BSD-3-Clause.txt",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV embedded oneTBB 2022.1",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/uxlfoundation/oneTBB/v2022.1.0/LICENSE.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/uxlfoundation/oneTBB/v2022.1.0/LICENSE.txt",
+      "snapshotPath": "opencv-tbb-license.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "asset": "one/licenses/OpenCV-oneTBB.txt"
+    },
+    {
+      "component": "OpenCV embedded oneTBB third-party programs",
+      "license": "Multiple individual terms",
+      "sourceUrl": "https://raw.githubusercontent.com/uxlfoundation/oneTBB/v2022.1.0/third-party-programs.txt",
+      "resolvedUrl": "https://raw.githubusercontent.com/uxlfoundation/oneTBB/v2022.1.0/third-party-programs.txt",
+      "snapshotPath": "tbb-notice.txt",
+      "sha256": "1634857eb058dce5278c57a832b8974190785145f4be9acdbdb511f3a0c4091c",
+      "bytes": 11631,
+      "asset": "one/licenses/OpenCV-oneTBB-ThirdParty.txt"
+    },
+    {
+      "component": "OpenCV embedded ADE 0.1.2e",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/ade/v0.1.2e/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/ade/v0.1.2e/LICENSE",
+      "snapshotPath": "ade-lic.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "asset": "one/licenses/OpenCV-ADE.txt"
+    },
+    {
+      "component": "OpenCV embedded QR decoder quirc",
+      "license": "ISC",
+      "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/quirc/LICENSE",
+      "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/3rdparty/quirc/LICENSE",
+      "snapshotPath": "opencv-quirc-license.txt",
+      "sha256": "f64a0d2030dd3bb501f303eb66097ed92cd0c63f824e515b1116dafbce5346fe",
+      "bytes": 790,
+      "asset": "one/licenses/OpenCV-Quirc.txt"
+    },
+    {
+      "component": "LiteRT 1.4.2 exact AAR license and attributions",
+      "license": "Apache-2.0 plus bundled individual terms",
+      "sourceUrl": "https://repo1.maven.org/maven2/com/google/ai/edge/litert/litert/1.4.2/litert-1.4.2.aar",
+      "sourceArtifact": "litert-1.4.2.aar",
+      "sourceArtifactSha256": "9b02cdf9db0a698b341b59e75c54ab8221d6304577cc43830d01024caf1fca74",
+      "archiveMember": "LICENSE",
+      "asset": "one/licenses/NOTICE-LiteRT-1.4.2-Actual-AAR.txt",
+      "sha256": "71c6915d04265772a0339bed47276942c678b45cc01534210ebe6984fd1aec65",
+      "bytes": 13575
+    },
+    {
+      "component": "OpenCV embedded NVIDIA Carotene",
+      "license": "BSD-3-Clause",
+      "upstreamSource": {
+        "sourceUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/hal/carotene/src/common.cpp",
+        "resolvedUrl": "https://raw.githubusercontent.com/opencv/opencv/4.13.0/hal/carotene/src/common.cpp",
+        "snapshotPath": "carotene-header.txt",
+        "sha256": "5bda8db16752e89fa61231eae349495effa0ac05ac24c1aae7c06e72476b95c2",
+        "bytes": 3830
+      },
+      "extraction": "Initial source comment, through first */; no license wording changed",
+      "asset": "one/licenses/OpenCV-Carotene-BSD.txt",
+      "sha256": "3a28a022c09e072ab30a1f28bcf075478129d09e7a4bee36f699635c6ec81701",
+      "bytes": 2043
+    },
+    {
+      "component": "KleidiCV0.7.0 original versioned Apache text",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://gitlab.arm.com/kleidi/kleidicv.git",
+      "tag": "0.7.0",
+      "commit": "1e8fe7008c2292657b9689d70ea5d30db0e57767",
+      "originalLicenseGitBlob": "137069b823873b8bcf42979bcf8e9371052d26a2",
+      "originalLicenseSha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "sourceMember": "LICENSES/Apache-2.0.txt",
+      "retrieval": "git clone --filter=blob:none --depth1 --branch0.7.0 --no-checkout; git show; HTTPS TLS verification via Windows Schannel. No global git configuration changed.",
+      "asset": "one/licenses/OpenCV-KleidiCV-0.7.0-Apache.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "bytes": 10280
+    },
+    {
+      "component": "KleidiCV0.7.0 verbatim source copyright lines",
+      "license": "Apache-2.0",
+      "sourceUrl": "https://gitlab.arm.com/kleidi/kleidicv.git",
+      "tag": "0.7.0",
+      "commit": "1e8fe7008c2292657b9689d70ea5d30db0e57767",
+      "originalLicenseGitBlob": "137069b823873b8bcf42979bcf8e9371052d26a2",
+      "originalLicenseSha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+      "sourceMember": "LICENSES/Apache-2.0.txt",
+      "retrieval": "git clone --filter=blob:none --depth1 --branch0.7.0 --no-checkout; git show; HTTPS TLS verification via Windows Schannel. No global git configuration changed.",
+      "asset": "one/licenses/NOTICE-KleidiCV-0.7.0-Copyright.txt",
+      "sha256": "db2ac67a1b08beb295189a81feab2c6948744094af81733642b4e61d01fdff13",
+      "bytes": 68049
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: libopenjp2-README.md",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libopenjp2-README.md",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-libopenjp2-README.md.txt",
+      "sha256": "cc0090eb6abfbea7d44351851d04bcfcfeb9181eac9fcb8b2d108091b5eefc24",
+      "bytes": 5402
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: ippiw-EULA.txt",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ippiw-EULA.txt",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-ippiw-EULA.txt",
+      "sha256": "c1bf7165226036081d5cbe4baca565eb5e817fe56b9cf1ac7247688feb32b3e4",
+      "bytes": 4190,
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ippicv-EULA.txt",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: openexr-AUTHORS.ilmbase",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/openexr-AUTHORS.ilmbase",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-openexr-AUTHORS.ilmbase.txt",
+      "sha256": "3d01213ed07453794228b95e41fd5897bad65e1342ebfdefbe52311d6e1adcb4",
+      "bytes": 336
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: ippicv-readme.htm",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ippicv-readme.htm",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-ippicv-readme.htm.txt",
+      "sha256": "60872339f83f97b5d102f68b43df8fa968e8b618a3ef69a0e6307d1e755251c1",
+      "bytes": 6506
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: tbb-README.md",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/tbb-README.md",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-tbb-README.md.txt",
+      "sha256": "9504c62f0e01a7ea5d15f7fcf2d52ec24acef60078ad10f0c55d63d68218fbe2",
+      "bytes": 4828
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: libjpeg-turbo-README.md",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libjpeg-turbo-README.md",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-libjpeg-turbo-README.md.txt",
+      "sha256": "c553459fc4ea1f69526f0edf0c8ff6c4002fda5b76094abefabdc3de1ee62c10",
+      "bytes": 17784
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: ippiw-support.txt",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ippiw-support.txt",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-ippiw-support.txt",
+      "sha256": "ae29fd797424fcd465b3b8f09fc30b5145c512b3763f6172edf71780203c6912",
+      "bytes": 326
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: dlpack-LICENSE",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/dlpack-LICENSE",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-dlpack-LICENSE.txt",
+      "sha256": "3e8f6bc39276a586d60c8c5aaece2ff989262181cf2b3d2a128db58f97a9300c",
+      "bytes": 11345
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: SoftFloat-COPYING.txt",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/SoftFloat-COPYING.txt",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-SoftFloat-COPYING.txt",
+      "sha256": "0c5b08365136da52639d777f1ebfc03988b0169d80655c90c59f1b3fa3e526a2",
+      "bytes": 1732
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: ippicv-third-party-programs.txt",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ippicv-third-party-programs.txt",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-ippicv-third-party-programs.txt",
+      "sha256": "152d84b967b38395b7b1d52fd515a397f6cab429832001b210812a9c5c8ea2c5",
+      "bytes": 260,
+      "additionalPublisherBindings": [
+        {
+          "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+          "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/ippiw-third-party-programs.txt",
+          "memberCrc32Verified": true,
+          "archiveFullSha256LocallyVerified": false,
+          "sameArm64NativeAsActualMavenAar": true
+        }
+      ]
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: mscr-chi_table_LICENSE.txt",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/mscr-chi_table_LICENSE.txt",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-mscr-chi_table_LICENSE.txt",
+      "sha256": "676858659f4115246b41f2f44dcfbf17db52c6b1755f1102b78a87062dff0c07",
+      "bytes": 1559
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: vasot-LICENSE.txt",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/vasot-LICENSE.txt",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-vasot-LICENSE.txt",
+      "sha256": "a9c8a68807d39b6810d593008f02e7835a8f8280781e5ce9b544a7fb973bb79e",
+      "bytes": 1083
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: cpufeatures-README.md",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/cpufeatures-README.md",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-cpufeatures-README.md.txt",
+      "sha256": "66da62d48c88cdb5f124626bb9be1598203a7ecdfe2c4a306a94d1f962b39fc5",
+      "bytes": 304
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: openexr-AUTHORS.openexr",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/openexr-AUTHORS.openexr",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-openexr-AUTHORS.openexr.txt",
+      "sha256": "35560b29d013ceea33c66e8a0dfa4fc41768302e441c49bf98a3cffffbc17bde",
+      "bytes": 1253
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: protobuf-README.md",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/protobuf-README.md",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-protobuf-README.md.txt",
+      "sha256": "aa924b1ceb243a25b4ff4a0360dc124a58d22633e9f6de02167d162b86968324",
+      "bytes": 134
+    },
+    {
+      "component": "OpenCV4.13.0 original SDK attribution: libpng-README",
+      "license": "Original individual terms; SDK attribution scope",
+      "scope": "Publisher SDK bundle; particular native components may be ABI-specific. IPP applies to x86/x86_64, not ARM64.",
+      "sourceUrl": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+      "archiveMember": "OpenCV-android-sdk/sdk/etc/licenses/libpng-README",
+      "memberCrc32Verified": true,
+      "archiveFullSha256LocallyVerified": false,
+      "sameArm64NativeAsActualMavenAar": true,
+      "asset": "one/licenses/OpenCV-SDK-libpng-README.txt",
+      "sha256": "50da3b47458393a14a1cab5a6230b25e96a6cf951875586b275f40b166b11e27",
+      "bytes": 9476
+    }
+  ],
+  "nativeComponentBinding": {
+    "aar": "opencv-4.13.0.aar",
+    "aarSha256": "a8c9b0929d8d6367bb476320a1f36587db2b57ea18d8f7521ce509514903ca04",
+    "nativeMember": "jni/arm64-v8a/libopencv_java4.so",
+    "nativeSha256": "d331aac20d0a76981ea652f7df7978e3b82ccc46d5926dc7c394d33c813694ab",
+    "buildInfoStringOffset": 3201657,
+    "scope": "Read-only published open-source artifact build-info text, not device execution"
+  },
+  "officialOpenCvSdkNativeBinding": {
+    "scope": "Read-only official publisher ZIP range extraction and SHA comparison. No binary execution or installation.",
+    "source": "https://github.com/opencv/opencv/releases/download/4.13.0/opencv-4.13.0-android-sdk.zip",
+    "archiveMember": "OpenCV-android-sdk/sdk/native/libs/arm64-v8a/libopencv_java4.so",
+    "rangeBytes": 9498440,
+    "rangeSha256": "24117adca3b03eae2f4e880ef90da55b2f56223e9e28aa3fa2c126d35819245a",
+    "uncompressedBytes": 23972544,
+    "memberSha256": "d331aac20d0a76981ea652f7df7978e3b82ccc46d5926dc7c394d33c813694ab",
+    "crc32Verified": true,
+    "actualMavenAarSha256": "a8c9b0929d8d6367bb476320a1f36587db2b57ea18d8f7521ce509514903ca04",
+    "actualMavenAarNativeSha256": "d331aac20d0a76981ea652f7df7978e3b82ccc46d5926dc7c394d33c813694ab",
+    "sameNativeBytesAsActualAar": true,
+    "fullSdkArchiveShaLocallyVerified": false
+  },
+  "nativeComponentScopeNotice": "one/licenses/NOTICE-Native-Component-Scope.txt",
+  "kleidicvPrimarySource": {
+    "tag": "0.7.0",
+    "commit": "1e8fe7008c2292657b9689d70ea5d30db0e57767",
+    "originalLicenseSha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+    "sourceFiles": 461,
+    "spdxExpressionCounts": {
+      "Apache-2.0": 455
+    },
+    "licenseAndCopyrightOriginalsRecovered": true
+  },
+  "noticeCoverageLimits": [
+    {
+      "component": "Native transitive dependencies",
+      "confirmed": "Listed actual OpenCV arm64 build dependencies and upstream published ORT third-party notices retained.",
+      "unverified": "Not an exhaustive native source-to-binary build reconstruction for every ABI."
+    }
+  ],
+  "sourceFetchErrors": [],
+  "pendingRestrictedModelExclusions": [],
+  "unresolvedModels": [],
+  "allMappedModelLicensesConfirmed": true,
+  "distributionCandidateClean": true,
+  "distributionCandidateCleanScope": "Mapped model file terms / restricted legacy weight removal / notice-source retrieval; not an umbrella legal conclusion",
+  "finalApkAudit": "REQUIRED_AFTER_FREEZE"
+}

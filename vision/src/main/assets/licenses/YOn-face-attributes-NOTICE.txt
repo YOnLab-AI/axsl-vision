@@ -1,0 +1,24 @@
+YOnLab face attribute model notices
+
+1. facial_expression_recognition_mobilefacenet_2022july.onnx
+   Source: OpenCV Zoo models/facial_expression_recognition
+   Commit: 48b10fa505aeb51fbd127fc60a5c660040e823b7
+   SHA256: 4f61307602fc089ce20488a31d4e4614e3c9753a7d6c41578c854858b183e1a9
+   Model directory README declares all directory files Apache License2.0.
+   Progressive Teacher contributor: Jing Jiang; ONNX implementation credited to Chengrui Wang.
+   Upstream model helper copyright (C)2022 Shenzhen Institute of Artificial Intelligence and Robotics for Society.
+   Model bytes unchanged. See FER-UPSTREAM.md and FER-Apache-2.0.txt.
+
+2. age_gender_recognition_retail_0013_fp32.onnx
+   Derived from Intel Open Model Zoo age-gender-recognition-retail-0013 FP32.
+   Official metadata commit: 2c9b5c563ab3a202d085a42e2bbfc48f77961f4b
+   Official model metadata explicitly links the weights to Apache License2.0.
+   Source FP32 XML/bin: Open Model Zoo2023.0 models_bin/1 distribution.
+   Change: OpenVINO IR11 converted to ONNX opset13 using onnxifier2.2.2; no retraining.
+   Converted SHA256: f4649ed528edcb0dbf3bb9474ffbd4fe32384f3c4b8e49493214464d0917e678
+   Conversion/runtime comparison records and original SHA384 checksums are delivered with the source package.
+   See Intel-AgeGender-UPSTREAM.md and Intel-AgeGender-Apache-2.0.txt.
+
+Model softmax values and estimated ages are model outputs, not measured identification accuracy.
+The Intel source model was trained for ages18-75 and not for children.
+Native inference models are cached once per app process; instance close does not immediately free shared native model memory.

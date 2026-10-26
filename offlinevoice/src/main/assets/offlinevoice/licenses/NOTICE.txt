@@ -1,0 +1,17 @@
+YOnLab offline Korean recognition dependencies
+
+Vosk Android 0.3.75: Alpha Cephei, Apache License 2.0.
+https://repo.maven.apache.org/maven2/com/alphacephei/vosk-android/0.3.75/vosk-android-0.3.75.pom
+
+vosk-model-small-ko-0.22: The official Vosk Models list declares Apache 2.0.
+https://alphacephei.com/vosk/models
+https://alphacephei.com/vosk/models/vosk-model-small-ko-0.22.zip
+ZIP SHA256 (locally computed): eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989
+Official published MD5: fa8029a173787a159e0e72fe6135f890
+
+Java Native Access 5.18.1: Apache-2.0 OR LGPL-2.1-or-later.
+Apache License 2.0 is selected for this distribution.
+https://github.com/java-native-access/jna/tree/5.18.1
+
+Apache-2.0.txt and the upstream JNA license statement accompany this notice.
+Six FLEURS ko_kr/en_us test recordings and reference transcriptions (CC-BY-4.0) are bundled under one/media/KO and one/media/GO. See one/CREDITS.md and one/demos.json for per-item provenance and hashes.

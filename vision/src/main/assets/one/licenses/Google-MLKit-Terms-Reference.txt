@@ -1,0 +1,12 @@
+Google ML Kit SDK / SDK-managed model terms reference
+Official: https://developers.google.com/ml-kit/terms
+Official incorporated API terms: https://developers.google.com/terms
+Checked: 2026-10-25; ML Kit terms page last modified2025-05-14.
+
+ML Kit OCR, Face, Pose and Selfie Segmentation use the published Google AAR APIs.
+SDK-managed models are related software under the ML Kit/API terms. Do not treat
+the documentation example Apache license as the license of extracted model files.
+The APIs process supplied media on-device; Google's terms also describe SDK metrics
+and update traffic. Distribution disclosures belong in the app's information pages.
+The app keeps this reference separate from open-source runtime/model license texts.
+No SDK model extraction or reverse engineering is authorized by this notice.

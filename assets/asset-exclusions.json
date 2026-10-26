@@ -1,0 +1,46 @@
+{
+  "schema": "axsl-vision-asset-exclusions-v1",
+  "entries": [
+    {
+      "path": "vision/src/main/assets/axsl/images/hero.jpg",
+      "reason": "Small first-party category illustration retained in Git; the old site photo is not redistributed"
+    },
+    {
+      "path": "vision/src/main/assets/axsl/images/pet.jpg",
+      "reason": "Small first-party category illustration retained in Git; the old site photo is not redistributed"
+    },
+    {
+      "path": "vision/src/main/assets/axsl/images/smarthouse.jpg",
+      "reason": "Small first-party category illustration retained in Git; the old site photo is not redistributed"
+    },
+    {
+      "path": "vision/src/main/assets/axsl/images/sports.jpg",
+      "reason": "Small first-party category illustration retained in Git; the old site photo is not redistributed"
+    },
+    {
+      "path": "vision/src/main/assets/axsl/images/workplace.jpg",
+      "reason": "Small first-party category illustration retained in Git; the old site photo is not redistributed"
+    },
+    {
+      "path": "vision/src/main/assets/one/media/GO/go-coco-86.jpg",
+      "reason": "Excluded go-coco-86 and its unique thumb: No known copyright restrictions is not a verified redistribution license"
+    },
+    {
+      "path": "vision/src/main/assets/one/signage/event.png",
+      "reason": "Small first-party guide graphics and SVG retained in Git"
+    },
+    {
+      "path": "vision/src/main/assets/one/signage/offer.png",
+      "reason": "Small first-party guide graphics and SVG retained in Git"
+    },
+    {
+      "path": "vision/src/main/assets/one/signage/welcome.png",
+      "reason": "Small first-party guide graphics and SVG retained in Git"
+    },
+    {
+      "path": "vision/src/main/assets/one/thumbs/go-coco-86.jpg",
+      "reason": "Excluded go-coco-86 and its unique thumb: No known copyright restrictions is not a verified redistribution license"
+    }
+  ],
+  "corporate_branding": "Corporate logo raster and original site reference material are excluded from the new public product."
+}
