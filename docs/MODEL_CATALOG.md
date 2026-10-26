@@ -22,7 +22,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 - 설정의 auto/cpu1/cpu2/cpu4는 실행 프로필이며 모델 수에 포함하지 않습니다. SDK 내부 스케줄링은 앱이 요청한 CPU thread 수와 다를 수 있습니다.
 - `modelSha256`는 구현이 보고하는 파일 또는 조합 fingerprint입니다. ML Kit SDK 내부 가중치와 선택적 속성 head를 항상 전부 덮는 해시라고 해석하지 않습니다. 개별 포함 파일은 아래 asset binding을 기준으로 추적합니다.
 - PANNs는 가중치 CC-BY-4.0, 원본 코드 MIT입니다. ML Kit는 [별도 Google 약관](https://developers.google.com/ml-kit/terms) 대상입니다. 앱의 독자 코드 Apache-2.0을 모델·자료 전체로 확대하지 않습니다.
-- 현재 **0.1/code21**은 [검증 요약](validation-0.1-build21.json)과 [BUILD21_STATUS](BUILD21_STATUS.md)에 기록한8개 ID의24회 실행만 완료했습니다. 나머지60개 ID는 이번 기록에서 기기 미시험입니다. 아래 **이전 공개0.1/code20**·**과거4.4.0/code19** 근거는 각각 원래 버전의 관측으로 유지합니다.
+- 현재 **0.1/code21**은 [검증 요약](validation-0.1-build21.json)과 [BUILD21_STATUS](BUILD21_STATUS.md)에 기록한 8개 ID의24회 실행만 완료했습니다. 나머지 60개 ID는 이번 기록에서 기기 미시험입니다. 아래 **이전 공개 0.1/code20**·**과거 4.4.0/code19** 근거는 각각 원래 버전의 관측으로 유지합니다.
 
 ## 현재 code21 실행 범위
 
@@ -39,7 +39,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | [yamnet-classifier](#model-yamnet-classifier) | 1 | 1 | `sound` |
 | [zxing-qr](#model-zxing-qr) | 2 | 2 | `qr` |
 
-나머지60개 ID의 현재 상태는 **이번 code21 기록에서 미시험**입니다. 코드·자산의 존재와 실제 실행, 정확도 평가는 별개이며 각 카드에서 같은 기준으로 표시합니다. 이전 버전의 `historicalCase`와 `publicValidationCase`는 해당 versionCode를 유지합니다.
+나머지 60개 ID의 현재 상태는 **이번 code21 기록에서 미시험**입니다. 코드·자산의 존재와 실제 실행, 정확도 평가는 별개이며 각 카드에서 같은 기준으로 표시합니다. 이전 버전의 `historicalCase`와 `publicValidationCase`는 해당 versionCode를 유지합니다.
 
 ## 기능별 슬롯
 
@@ -507,9 +507,9 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | boxes/classes/scores/count → sparse COCO label 매핑 → 임계값/정규화 좌표 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | detect/flow가 같은 파일을 사용 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행3건 완료; 시험 기능 detect; 고유 encoded 입력3개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 3건 완료; 시험 기능 detect; 고유 encoded 입력 3개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
-**과거 실행 근거:** 4.4.0/code19, `detect/ko-scene-04`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `detect/ko-scene-04`, SM-F956N/API37. 현재 0.1/code21의 실행 증거로 대체하지 않습니다.
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -517,7 +517,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 
 복원 경로: `app/src/main/assets/models/ball-efficientdet.tflite`.
 
-**이전 공개0.1/code20 실행 근거:** `ko-scene-04` / `detect`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개 0.1/code20 실행 근거:** `ko-scene-04` / `detect`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [ObjectEngine.java](../vision/src/main/java/com/yonlab/vision/ObjectEngine.java), [OneObjectEngine.java](../vision/src/main/java/com/yonlab/vision/OneObjectEngine.java).
 
@@ -723,15 +723,15 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | text/block/bounds → 원문; doc 별칭은 날짜·금액 추출 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | ocr/document 동일 SDK 모델 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행6건 완료; 시험 기능 ocr; 고유 encoded 입력5개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 6건 완료; 시험 기능 ocr; 고유 encoded 입력 5개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님
 
-**과거 실행 근거:** 4.4.0/code19, `ocr/ko-ocr-1-normal`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `ocr/ko-ocr-1-normal`, SM-F956N/API37. 현재 0.1/code21의 실행 증거로 대체하지 않습니다.
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
-**이전 공개0.1/code20 실행 근거:** `ko-ocr-1-normal` / `ocr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개 0.1/code20 실행 근거:** `ko-ocr-1-normal` / `ocr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [OneTextEngine.java](../vision/src/main/java/com/yonlab/vision/OneTextEngine.java), [PhotoVisionEngine.java](../vision/src/main/java/com/yonlab/vision/PhotoVisionEngine.java), [DocumentWorkflow.java](../vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java).
 
@@ -850,7 +850,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | 1×1000 logits softmax → Top5 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 classify; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 1건 완료; 시험 기능 classify; 고유 encoded 입력 1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -876,9 +876,9 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | 1×1000 logits softmax → Top5 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행4건 완료; 시험 기능 classify; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 4건 완료; 시험 기능 classify; 고유 encoded 입력 4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
-**과거 실행 근거:** 4.4.0/code19, `classify/ko-scene-08`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `classify/ko-scene-08`, SM-F956N/API37. 현재 0.1/code21의 실행 증거로 대체하지 않습니다.
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -886,7 +886,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 
 복원 경로: `vision/src/main/assets/one/models/mobilenet-v4-fp32.onnx`.
 
-**이전 공개0.1/code20 실행 근거:** `ko-scene-08` / `classify`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개 0.1/code20 실행 근거:** `ko-scene-08` / `classify`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [OneOnnx.java](../vision/src/main/java/com/yonlab/vision/OneOnnx.java), [OneModelRunner.java](../vision/src/main/java/com/yonlab/vision/OneModelRunner.java).
 
@@ -1656,7 +1656,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | streaming partial/final text; 정답이 검증된 입력에서만 CER/WER 사용 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행5건 완료; 시험 기능 speech; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 5건 완료; 시험 기능 speech; 고유 encoded 입력 4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음
 
@@ -1666,7 +1666,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 
 복원 경로: `offlinevoice/src/main/assets/offlinevoice/vosk-model-small-ko-0.22.zip`.
 
-**이전 공개0.1/code20 실행 근거:** `ko-speech-fleurs-045` / `speech`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개 0.1/code20 실행 근거:** `ko-speech-fleurs-045` / `speech`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [VoiceModels.java](../offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java), [VoiceModelPolicy.java](../offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModelPolicy.java), [OfflineVoiceActivity.java](../offlinevoice/src/main/java/com/yonlab/offlinevoice/OfflineVoiceActivity.java).
 
@@ -1746,7 +1746,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개 |
 | 이용 조건 | Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 speech; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 2건 완료; 시험 기능 speech; 고유 encoded 입력 2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음
 
@@ -1774,7 +1774,7 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | 521종 window score → 전체 평균/peak/Top5; 시간축 표시 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 sound; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 1건 완료; 시험 기능 sound; 고유 encoded 입력 1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름
 
@@ -1888,15 +1888,15 @@ AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화�
 | 후처리·출력 | symbol format/payload; QR 생성은 별도 encoder 코드 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 qr; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행 2건 완료; 시험 기능 qr; 고유 encoded 입력 2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 학습 가중치가 없는 해독 엔진
 
-**과거 실행 근거:** 4.4.0/code19, `qr/qr-demo-1`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `qr/qr-demo-1`, SM-F956N/API37. 현재 0.1/code21의 실행 증거로 대체하지 않습니다.
 
 **별도 asset 파일:** 없음. 플랫폼/코드 엔진입니다.
 
-**이전 공개0.1/code20 실행 근거:** `qr-demo-1` / `qr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개 0.1/code20 실행 근거:** `qr-demo-1` / `qr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [BarcodeHelper.java](../vision/src/main/java/com/yonlab/vision/BarcodeHelper.java), [OneModelRunner.java](../vision/src/main/java/com/yonlab/vision/OneModelRunner.java).
 

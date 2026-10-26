@@ -992,7 +992,7 @@
       ],
       "sharedWeights": "detect/flow가 같은 파일을 사용",
       "notes": "",
-      "validation": "0.1/code21: 실제 release controller 실행3건 완료; 시험 기능 detect; 고유 encoded 입력3개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 3건 완료; 시험 기능 detect; 고유 encoded 입력 3개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -1363,7 +1363,7 @@
       ],
       "sharedWeights": "ocr/document 동일 SDK 모델",
       "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
-      "validation": "0.1/code21: 실제 release controller 실행6건 완료; 시험 기능 ocr; 고유 encoded 입력5개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 6건 완료; 시험 기능 ocr; 고유 encoded 입력 5개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -1609,7 +1609,7 @@
       ],
       "sharedWeights": "",
       "notes": "",
-      "validation": "0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 classify; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 1건 완료; 시험 기능 classify; 고유 encoded 입력 1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
       ],
@@ -1655,7 +1655,7 @@
       ],
       "sharedWeights": "",
       "notes": "",
-      "validation": "0.1/code21: 실제 release controller 실행4건 완료; 시험 기능 classify; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 4건 완료; 시험 기능 classify; 고유 encoded 입력 4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -3015,7 +3015,7 @@
       ],
       "sharedWeights": "",
       "notes": "언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음",
-      "validation": "0.1/code21: 실제 release controller 실행5건 완료; 시험 기능 speech; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 5건 완료; 시험 기능 speech; 고유 encoded 입력 4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/model-files.json"
@@ -3197,7 +3197,7 @@
       ],
       "sharedWeights": "",
       "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
-      "validation": "0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 speech; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 2건 완료; 시험 기능 speech; 고유 encoded 입력 2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/whisper-model-files.json"
@@ -3245,7 +3245,7 @@
       ],
       "sharedWeights": "",
       "notes": "파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름",
-      "validation": "0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 sound; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 1건 완료; 시험 기능 sound; 고유 encoded 입력 1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
       ],
@@ -3453,7 +3453,7 @@
       ],
       "sharedWeights": "",
       "notes": "학습 가중치가 없는 해독 엔진",
-      "validation": "0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 qr; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
+      "validation": "0.1/code21: 실제 release controller 실행 2건 완료; 시험 기능 qr; 고유 encoded 입력 2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,

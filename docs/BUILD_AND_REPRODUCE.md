@@ -2,7 +2,7 @@
 
 ## Environment
 
-The current model-testing build is **0.1/code21**. [Build21 results](BUILD21_STATUS.md) record279 host checks and scoped physical observations; earlier code20 evidence remains version-labelled.
+The current model-testing build is **0.1/code21**. [Build21 results](BUILD21_STATUS.md) record 279 host checks and scoped physical observations; earlier code20 evidence remains version-labelled.
 
 | Item | Pinned project contract |
 |---|---|
