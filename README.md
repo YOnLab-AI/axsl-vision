@@ -7,11 +7,12 @@ side-by-side comparison, and inspectable results in one native application.
 It is intended for developers learning how to integrate models and reproduce
 their behavior on a real device. The application UI is currently Korean.
 
-[한국어](README.ko.md) · [Releases](https://github.com/YOnLab-AI/axsl-vision/releases) · [Model testing](docs/MODEL_TESTING.md) · [Feature guide](docs/FEATURES.md) · [Model catalogue](docs/MODEL_CATALOG.md)
+[한국어](README.ko.md) · [Build21 APK](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21) · [Model testing](docs/MODEL_TESTING.md) · [Feature guide](docs/FEATURES.md) · [Model catalogue](docs/MODEL_CATALOG.md)
 
 The model-testing update keeps versionName **0.1** and uses Android **code21**.
-Its build/device evidence is recorded separately in [Validation](docs/VALIDATION.md).
-The code20 results below remain evidence for the previous public APK.
+Its completed build/device evidence is in [Build21 results](docs/BUILD21_STATUS.md)
+and [Validation](docs/VALIDATION.md). The code20 results below remain separately
+labelled evidence for the previous public APK.
 
 ## What you can explore
 
@@ -107,7 +108,31 @@ docs/          Feature/model analysis, architecture, data terms, validation
 | [Data and licenses](docs/DATA_AND_LICENSES.md) | Model, SDK, dataset, media and authored-fixture conditions |
 | [Limitations](docs/LIMITATIONS.md) | Accuracy, demographic estimates, temporal metrics, memory, device and SDK limits |
 
-## Evidence and interpretation
+## Current build21 verification
+
+The signed 0.1/code21 APK passed **279 host tests** (259 Android, 20 Python) and
+**six normal UI observations** on SM-F956N/API37 at font scale 1.5. The diverse
+matrix completed **17 model/input pairs across six IDs and 13 distinct encoded
+inputs**. Including selection-preservation and image/sound export regressions,
+**24 controller executions covered eight IDs and 16 distinct encoded inputs**.
+Two strict model-filter saved-history checks passed separately. These counts do
+not imply independent accuracy samples or validation of every model.
+
+Image/sound report JSON membership and model-bound saved events were checked.
+Normal UI actions, independent controller runs, and privately instrumented
+input-return regressions are distinguished in [the results](docs/BUILD21_STATUS.md)
+and [sanitized JSON](docs/validation-0.1-build21.json). Initial private test-tool
+errors were corrected and the exact same APK was re-tested. The private helper
+was removed and temporary phone settings were restored.
+
+APK: **1,583,020,342 bytes**; SHA-256:
+
+`fe0fed606618084d6cd153d7925ccdd26d87ab1a2fb263258780ca2869a9067e`
+
+[Source CI](https://github.com/YOnLab-AI/axsl-vision/actions/runs/40323411899) passed at the recorded implementation revision.
+The release identifier is [v0.1-build21](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21).
+
+### Previous public baseline: 0.1/code20
 
 The **0.1 / code20 release APK** passed **260 local host tests**: 244 Android
 unit tests and 16 asset-bootstrap tests. Release assembly succeeded; lint reported

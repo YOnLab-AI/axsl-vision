@@ -1,6 +1,6 @@
 # 모델·엔진 카탈로그
 
-AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모델의 권장 표시는 기능 기본값이며 측정된 우열을 뜻하지 않습니다. 각 항목의 가중치·SDK·코드 엔진과 전후 처리를 분리해 기록합니다.
+AXSL Vision **0.1 / code21**의 실행 레지스트리를 설명합니다. 화면의 **기본 선택**은 실행 기본값이며 측정된 우열을 뜻하지 않습니다. 각 항목의 가중치·SDK·코드 엔진과 전후 처리를 분리해 기록합니다.
 
 ## 무엇을 세었는가
 
@@ -22,7 +22,24 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 - 설정의 auto/cpu1/cpu2/cpu4는 실행 프로필이며 모델 수에 포함하지 않습니다. SDK 내부 스케줄링은 앱이 요청한 CPU thread 수와 다를 수 있습니다.
 - `modelSha256`는 구현이 보고하는 파일 또는 조합 fingerprint입니다. ML Kit SDK 내부 가중치와 선택적 속성 head를 항상 전부 덮는 해시라고 해석하지 않습니다. 개별 포함 파일은 아래 asset binding을 기준으로 추적합니다.
 - PANNs는 가중치 CC-BY-4.0, 원본 코드 MIT입니다. ML Kit는 [별도 Google 약관](https://developers.google.com/ml-kit/terms) 대상입니다. 앱의 독자 코드 Apache-2.0을 모델·자료 전체로 확대하지 않습니다.
-- 0.1의 기기 검증 결과는 [VALIDATION](VALIDATION.md)을 확인합니다. 아래 과거 실행 표시는 **4.4.0/code19**의 한 입력 실행을 뜻합니다.
+- 현재 **0.1/code21**은 [검증 요약](validation-0.1-build21.json)과 [BUILD21_STATUS](BUILD21_STATUS.md)에 기록한8개 ID의24회 실행만 완료했습니다. 나머지60개 ID는 이번 기록에서 기기 미시험입니다. 아래 **이전 공개0.1/code20**·**과거4.4.0/code19** 근거는 각각 원래 버전의 관측으로 유지합니다.
+
+## 현재 code21 실행 범위
+
+이번 기록의 실제 실행을 ID별로 나눈 수입니다. 같은 입력의 반복 호출과 보고서 회귀도 실행 수에 포함하며 독립 정확도 표본 수로 해석하지 않습니다. 이 ID를 쓰는 다른 기능까지 시험한 것으로 확대하지 않습니다.
+
+| 실행 ID | 완료 실행 | 고유 encoded 입력 | 실제 시험 기능 |
+|---|---:|---:|---|
+| [efficientdet-lite0](#model-efficientdet-lite0) | 3 | 3 | `detect` |
+| [mlkit-ocr-ko](#model-mlkit-ocr-ko) | 6 | 5 | `ocr` |
+| [mobilenet-v2-2022](#model-mobilenet-v2-2022) | 1 | 1 | `classify` |
+| [mobilenet-v4-fp32](#model-mobilenet-v4-fp32) | 4 | 4 | `classify` |
+| [vosk-ko-small-0.22](#model-vosk-ko-small-0.22) | 5 | 4 | `speech` |
+| [whisper-tiny-multilingual-int8](#model-whisper-tiny-multilingual-int8) | 2 | 2 | `speech` |
+| [yamnet-classifier](#model-yamnet-classifier) | 1 | 1 | `sound` |
+| [zxing-qr](#model-zxing-qr) | 2 | 2 | `qr` |
+
+나머지60개 ID의 현재 상태는 **이번 code21 기록에서 미시험**입니다. 코드·자산의 존재와 실제 실행, 정확도 평가는 별개이며 각 카드에서 같은 기준으로 표시합니다. 이전 버전의 `historicalCase`와 `publicValidationCase`는 해당 versionCode를 유지합니다.
 
 ## 기능별 슬롯
 
@@ -62,7 +79,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 순서·사진 간격·일시정지/재개·전체 화면·수명주기 제어 |
 | 이용 조건 | 앱 코드 Apache-2.0; Android SDK/platform terms 및 입력 자료 조건 별도 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** AI 추론 모델 또는 맞춤 광고 모델이 아님
 
@@ -86,7 +103,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능 |
 | 이용 조건 | YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관 |
 | 공유 관계 | faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음
 
@@ -118,7 +135,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능 |
 | 이용 조건 | YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관 |
 | 공유 관계 | faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음
 
@@ -150,7 +167,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 33점 출력 → COCO17 공통 관절 연결 → overlay/coach 기하 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 detector+landmark 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -177,7 +194,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 33점 출력 → COCO17 공통 관절 연결 → overlay/coach 기하 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 detector+landmark 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -204,7 +221,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 33점/likelihood → overlay; coach 별칭은 각도·좌우 기하 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | pose/coach가 같은 SDK 모델; Accurate는 별도 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
@@ -226,7 +243,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 33점/likelihood → overlay; coach 별칭은 각도·좌우 기하 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | pose/coach가 같은 SDK 모델; Accurate는 별도 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
@@ -248,7 +265,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -274,7 +291,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -300,7 +317,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | heatmap/offset → COCO17 → 공통 관절; coach 각도 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -326,7 +343,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | PASCAL21 per-pixel argmax/영역 overlay |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -352,7 +369,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | text/block/bounds → 원문; doc 별칭은 날짜·금액 추출 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | ocr/document 동일 SDK 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님
 
@@ -376,7 +393,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | text/block/bounds → 원문; doc 별칭은 날짜·금액 추출 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | ocr/document 동일 SDK 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님
 
@@ -400,7 +417,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님
 
@@ -430,7 +447,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님
 
@@ -460,7 +477,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님
 
@@ -490,9 +507,9 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | boxes/classes/scores/count → sparse COCO label 매핑 → 임계값/정규화 좌표 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | detect/flow가 같은 파일을 사용 |
-| 검증 범위 | 0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행3건 완료; 시험 기능 detect; 고유 encoded 입력3개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
-**과거 실행 근거:** 4.4.0/code19, `detect/ko-scene-04`, SM-F956N/API37. 현재 0.1의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `detect/ko-scene-04`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -500,7 +517,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 
 복원 경로: `app/src/main/assets/models/ball-efficientdet.tflite`.
 
-**0.1 실행 근거:** `ko-scene-04` / `detect`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개0.1/code20 실행 근거:** `ko-scene-04` / `detect`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [ObjectEngine.java](../vision/src/main/java/com/yonlab/vision/ObjectEngine.java), [OneObjectEngine.java](../vision/src/main/java/com/yonlab/vision/OneObjectEngine.java).
 
@@ -520,7 +537,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 모델별 tensor decode/NMS → COCO 검출 box와 score |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -546,7 +563,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1000개 score; 양자화 출력은 dequantize 후 Top5 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** FP32/INT8는 서로 다른 파일이며 CPU thread preset을 모델로 센 것이 아님
 
@@ -574,7 +591,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1000개 score; 양자화 출력은 dequantize 후 Top5 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** FP32/INT8는 서로 다른 파일이며 CPU thread preset을 모델로 센 것이 아님
 
@@ -602,7 +619,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 478점 → EAR·입 열림 비율·solvePnP 자세 → Drive 시간 상태 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 두 모델 모두 같은 BlazeFace short detector 사용 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 478점은 blendshape 출력이나 감정 분류 478종을 뜻하지 않음
 
@@ -631,7 +648,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 468점 → EAR·입 열림 비율·solvePnP 자세 → Drive 시간 상태 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 두 모델 모두 같은 BlazeFace short detector 사용 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 478점은 blendshape 출력이나 감정 분류 478종을 뜻하지 않음
 
@@ -660,7 +677,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 여러 코드의 payload/format/bounds; QR 정답은 실제 문자열/format과 비교 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
@@ -682,7 +699,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 눈 열림 확률·머리 각도·입 기하 → Analytics.Drive 시간 상태 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 눈 열림 확률과 EAR 기하 비율은 다른 값
 
@@ -706,15 +723,15 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | text/block/bounds → 원문; doc 별칭은 날짜·금액 추출 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | ocr/document 동일 SDK 모델 |
-| 검증 범위 | 0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행6건 완료; 시험 기능 ocr; 고유 encoded 입력5개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님
 
-**과거 실행 근거:** 4.4.0/code19, `ocr/ko-ocr-1-normal`, SM-F956N/API37. 현재 0.1의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `ocr/ko-ocr-1-normal`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
-**0.1 실행 근거:** `ko-ocr-1-normal` / `ocr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개0.1/code20 실행 근거:** `ko-ocr-1-normal` / `ocr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [OneTextEngine.java](../vision/src/main/java/com/yonlab/vision/OneTextEngine.java), [PhotoVisionEngine.java](../vision/src/main/java/com/yonlab/vision/PhotoVisionEngine.java), [DocumentWorkflow.java](../vision/src/main/java/com/yonlab/vision/DocumentWorkflow.java).
 
@@ -734,7 +751,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | text/block/bounds → 원문; doc 별칭은 날짜·금액 추출 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | ocr/document 동일 SDK 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님
 
@@ -758,7 +775,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 33점/likelihood → overlay; coach 별칭은 각도·좌우 기하 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | pose/coach가 같은 SDK 모델; Accurate는 별도 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
@@ -780,7 +797,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 33점/likelihood → overlay; coach 별칭은 각도·좌우 기하 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | pose/coach가 같은 SDK 모델; Accurate는 별도 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. SDK가 모델을 소유하며 별도 추출 파일을 배포하지 않습니다.
 
@@ -802,7 +819,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능 |
 | 이용 조건 | YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관 |
 | 공유 관계 | faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음
 
@@ -833,7 +850,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1×1000 logits softmax → Top5 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 classify; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -859,9 +876,9 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1×1000 logits softmax → Top5 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행4건 완료; 시험 기능 classify; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
-**과거 실행 근거:** 4.4.0/code19, `classify/ko-scene-08`, SM-F956N/API37. 현재 0.1의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `classify/ko-scene-08`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -869,7 +886,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 
 복원 경로: `vision/src/main/assets/one/models/mobilenet-v4-fp32.onnx`.
 
-**0.1 실행 근거:** `ko-scene-08` / `classify`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개0.1/code20 실행 근거:** `ko-scene-08` / `classify`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [OneOnnx.java](../vision/src/main/java/com/yonlab/vision/OneOnnx.java), [OneModelRunner.java](../vision/src/main/java/com/yonlab/vision/OneModelRunner.java).
 
@@ -889,7 +906,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -915,7 +932,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 1×1×17×3 → 원본 좌표 → COCO17/공통 관절 ID → coach 기하 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -941,7 +958,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 모델별 tensor decode/NMS → COCO 검출 box와 score |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -967,7 +984,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 검출된 QR의 공통 OpenCV 해독; payload/format |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 서로 다른 검출 경로와 공통 QR 해독; 두 가중치 모델이 아님 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. 플랫폼/코드 엔진입니다.
 
@@ -989,7 +1006,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 검출된 QR의 공통 OpenCV 해독; payload/format |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 서로 다른 검출 경로와 공통 QR 해독; 두 가중치 모델이 아님 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **별도 asset 파일:** 없음. 플랫폼/코드 엔진입니다.
 
@@ -1011,7 +1028,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님
 
@@ -1041,7 +1058,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님
 
@@ -1071,7 +1088,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy CTC·사전 decode → line 순서 정리; document는 날짜/금액 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님
 
@@ -1101,7 +1118,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 527종 AudioSet → window/mean/peak ranking; source/native PCM SHA 구분 |
 | 이용 조건 | 가중치 CC-BY-4.0; 원본 코드 MIT; 앱 통합 코드 Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** source catalog의 runtimeInferenceTestPerformed=false/benchmarkPerformed=false를 전체 검증 PASS로 바꾸지 않음
 
@@ -1130,7 +1147,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 527종 AudioSet → window/mean/peak ranking; source/native PCM SHA 구분 |
 | 이용 조건 | 가중치 CC-BY-4.0; 원본 코드 MIT; 앱 통합 코드 Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** source catalog의 runtimeInferenceTestPerformed=false/benchmarkPerformed=false를 전체 검증 PASS로 바꾸지 않음
 
@@ -1159,7 +1176,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | heatmap/offset → COCO17 → 공통 관절; coach 각도 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | pose/coach 동일 파일 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1185,7 +1202,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 192×192 foreground/background → 원본 크기 마스크; studio는 합성 효과 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | segment와 studio가 같은 가중치 사용 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1211,7 +1228,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1237,7 +1254,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 embedding → L2 → 동일 갤러리 cosine, 동일 픽셀 자기사본 제외 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 검색 순위는 정답률과 다름; 모델별 embedding cache 분리
 
@@ -1265,7 +1282,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 embedding → L2 → 동일 갤러리 cosine, 동일 픽셀 자기사본 제외 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 검색 순위는 정답률과 다름; 모델별 embedding cache 분리
 
@@ -1293,7 +1310,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1319,7 +1336,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1345,7 +1362,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | image_embeds512 → L2 → 동일 갤러리 cosine |
 | 이용 조건 | MIT |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 텍스트 생성/대화 모델이 아니며 이미지 인코더만 사용
 
@@ -1373,7 +1390,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** Xenova/modnet Transformers.js ONNX conversion
 
@@ -1401,7 +1418,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** ONNX Community / Xenova conversion of Google MediaPipe landscape model
 
@@ -1429,7 +1446,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | bilinear 원본 크기 alpha → segment overlay 또는 studio 교체/흐림/제거 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | segment와 studio의 동일 SDK 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** SDK 내부 가중치를 추출하지 않으며 개별 SHA를 임의로 만들지 않음
 
@@ -1453,7 +1470,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 원래 classifier logits → Top5; search ID는 추가 pooled yon_embedding 512D → L2 정규화 → cosine 검색 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1479,7 +1496,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 검출 box와 sparse COCO label; score는 정확도 지표가 아님 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | detect/flow 공통 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1505,7 +1522,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** Xenova/modnet Transformers.js ONNX conversion
 
@@ -1533,7 +1550,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 192×192 foreground/background → 원본 크기 마스크; studio는 합성 효과 후처리 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | segment와 studio가 같은 가중치 사용 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1559,7 +1576,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | bilinear 원본 크기 alpha → segment overlay 또는 studio 교체/흐림/제거 |
 | 이용 조건 | Google ML Kit/API terms; 별도 모델 파일 라이선스로 Apache-2.0을 추정하지 않음 |
 | 공유 관계 | segment와 studio의 동일 SDK 모델 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** SDK 내부 가중치를 추출하지 않으며 개별 SHA를 임의로 만들지 않음
 
@@ -1583,7 +1600,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 실제 alpha 출력 → 원본 크기 마스크 → overlay/배경 합성 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** ONNX Community / Xenova conversion of Google MediaPipe landscape model
 
@@ -1611,7 +1628,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | streaming partial/final text; 정답이 검증된 입력에서만 CER/WER 사용 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음
 
@@ -1639,7 +1656,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | streaming partial/final text; 정답이 검증된 입력에서만 CER/WER 사용 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행5건 완료; 시험 기능 speech; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음
 
@@ -1649,7 +1666,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 
 복원 경로: `offlinevoice/src/main/assets/offlinevoice/vosk-model-small-ko-0.22.zip`.
 
-**0.1 실행 근거:** `ko-speech-fleurs-045` / `speech`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개0.1/code20 실행 근거:** `ko-speech-fleurs-045` / `speech`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [VoiceModels.java](../offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModels.java), [VoiceModelPolicy.java](../offlinevoice/src/main/java/com/yonlab/offlinevoice/VoiceModelPolicy.java), [OfflineVoiceActivity.java](../offlinevoice/src/main/java/com/yonlab/offlinevoice/OfflineVoiceActivity.java).
 
@@ -1669,7 +1686,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개 |
 | 이용 조건 | Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음
 
@@ -1699,7 +1716,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개 |
 | 이용 조건 | Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음
 
@@ -1729,7 +1746,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | greedy transcribe; language 빈값 auto; 언어 검출과 KO/GO 태그는 별개 |
 | 이용 조건 | Whisper 가중치/코드 MIT; sherpa Apache-2.0; 포함 native 구성요소 고지 별도 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 speech; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음
 
@@ -1757,7 +1774,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 521종 window score → 전체 평균/peak/Top5; 시간축 표시 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 sound; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름
 
@@ -1785,7 +1802,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | 521종 window score → 전체 평균/peak/Top5; 시간축 표시 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름
 
@@ -1813,7 +1830,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | raw head decode/NMS → 원본 좌표 복원 → COCO80과 sparse label 연결 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | detect/flow 공통 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 | Android asset path | 역할 / 바이트 | SHA-256 |
 |---|---|---|
@@ -1839,7 +1856,7 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | SFace128D; compare/access/vis/선택적 signage에 서로 다른 후처리; faces/vis는 별도 expression/age 관측 가능 |
 | 이용 조건 | YuNet MIT; SFace·속성·MediaPipe Apache-2.0; ML Kit는 별도 Google 약관 |
 | 공유 관계 | faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록 |
-| 검증 범위 | 0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함 |
+| 검증 범위 | 0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음
 
@@ -1871,15 +1888,15 @@ AXSL Vision **0.1 / code20**의 실행 레지스트리를 설명합니다. 모�
 | 후처리·출력 | symbol format/payload; QR 생성은 별도 encoder 코드 |
 | 이용 조건 | Apache-2.0 |
 | 공유 관계 | 이 항목의 asset binding을 기준으로 식별 |
-| 검증 범위 | 0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분 |
+| 검증 범위 | 0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 qr; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분; [현재 검증 요약](validation-0.1-build21.json) |
 
 **해석:** 학습 가중치가 없는 해독 엔진
 
-**과거 실행 근거:** 4.4.0/code19, `qr/qr-demo-1`, SM-F956N/API37. 현재 0.1의 실행 증거로 대체하지 않습니다.
+**과거 실행 근거:** 4.4.0/code19, `qr/qr-demo-1`, SM-F956N/API37. 현재0.1/code21의 실행 증거로 대체하지 않습니다.
 
 **별도 asset 파일:** 없음. 플랫폼/코드 엔진입니다.
 
-**0.1 실행 근거:** `qr-demo-1` / `qr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
+**이전 공개0.1/code20 실행 근거:** `qr-demo-1` / `qr`의 한 입력 실행. [공개 검증 요약](validation-0.1.json)에 hash·시간·평가 범위를 기록했습니다.
 
 **구현:** [BarcodeHelper.java](../vision/src/main/java/com/yonlab/vision/BarcodeHelper.java), [OneModelRunner.java](../vision/src/main/java/com/yonlab/vision/OneModelRunner.java).
 

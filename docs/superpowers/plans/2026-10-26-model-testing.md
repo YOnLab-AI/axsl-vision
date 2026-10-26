@@ -25,8 +25,9 @@ The user requested consistent feature/model guidance and model-centered testing.
 - [x] Model test screen: unique model selector, compatible feature selector, condition/group/media filters, diverse six-case selection, explicit run actions and model-filtered history.
 - [x] Integration: home/tab/settings entry points, current-model guide in workspaces, versionCode21.
 - [x] Host verification: 259 Android unit tests,20 Python tests,release build/signature/16KB alignment and lint completed.
-- [ ] Device verification: update installed(code21); two normal UI observations passed; final regression and diverse production executions require exclusive phone access.
-- [ ] Documentation and Git: update usage/validation evidence; inspect the diff and secret/asset boundaries; publish source and an additive build21 release without replacing v0.1.
+- [x] Device verification:0.1/code21 update installed; six normal UI checks,17 matrix model/input pairs and separate retention/export/history regressions completed. Total24 controller executions across eight IDs; helper removed and temporary phone settings restored.
+- [x] Documentation: usage, build21 status and sanitized validation evidence finalized; prior code20 records preserved. See [Build21 results](../../BUILD21_STATUS.md).
+- [x] Publication readiness: verified source, documentation and the signed APK are prepared for additive release `v0.1-build21`. Actual publication and downloadable assets are tracked in [GitHub Releases](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21); `v0.1` is preserved.
 
 ## Review focus
 

@@ -1,0 +1,1200 @@
+{
+  "schema": "axsl-vision-build21-validation-v1",
+  "version": "0.1",
+  "versionCode": 21,
+  "date": "2026-10-26",
+  "apk": {
+    "sha256": "fe0fed606618084d6cd153d7925ccdd26d87ab1a2fb263258780ca2869a9067e",
+    "bytes": 1583020342,
+    "debuggable": false
+  },
+  "host": {
+    "androidUnit": {
+      "suites": 43,
+      "tests": 259,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0
+    },
+    "pythonTests": 20,
+    "totalPassed": 279,
+    "lintErrors": 0,
+    "lintWarnings": 2
+  },
+  "sourceCi": {
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/YOnLab-AI/axsl-vision/actions/runs/40323411899",
+    "headSha": "02897725c629bed9ff3aaa61764a28625980fabd",
+    "scope": "Python tests, runtime bootstrap, Android host unit tests and lint; no model inference"
+  },
+  "device": {
+    "model": "SM-F956N",
+    "api": 37,
+    "fontScale": 1.5
+  },
+  "finalDeviceState": {
+    "installedVersion": "0.1",
+    "installedVersionCode": 21,
+    "privateHelperRemoved": true,
+    "temporaryStayAwakeRestored": 0,
+    "accelerometerRotationRestored": 1,
+    "userRotationRestored": 0
+  },
+  "normalUi": {
+    "passed": 6,
+    "total": 6,
+    "cases": [
+      {
+        "test": "Five consistent guide fields and execution ID reachable at fontScale1.5",
+        "result": "PASS"
+      },
+      {
+        "test": "All-list and diverse-six filters remain reachable and display six compatible cases",
+        "result": "PASS"
+      },
+      {
+        "test": "Selected execution ID retained across landscape and portrait reflow",
+        "result": "PASS"
+      },
+      {
+        "test": "History explicitly identifies the selected model filter",
+        "result": "PASS"
+      },
+      {
+        "test": "Returning from history retains model selection",
+        "result": "PASS"
+      },
+      {
+        "test": "Home model-test entry and return work through normal UI",
+        "result": "PASS"
+      }
+    ],
+    "method": "NORMAL_OBSERVED_UI_ACTIONS"
+  },
+  "uiAutomationDiagnostic": {
+    "initialFailuresRetainedAsDiagnostics": true,
+    "verifiedCause": "Private swipe helper omitted the second x coordinate; zero-duration taps were also ignored. Gesture arguments, display 0 targeting and 220 ms presses were corrected",
+    "tapPressMs": 220,
+    "displayId": 0,
+    "sameApkRetested": "fe0fed606618084d6cd153d7925ccdd26d87ab1a2fb263258780ca2869a9067e",
+    "appSourceChangeRequiredForThisDiagnostic": false
+  },
+  "pickerAutomationDiagnostic": {
+    "initialTimeoutRetainedAsDiagnostic": true,
+    "verifiedCause": "Private input-return check waited for automatic inference, while model-test input replacement requires explicit start",
+    "correction": "After preserving the selected model, invoke the enabled public Run button while the controller is idle",
+    "sameApkRetested": "fe0fed606618084d6cd153d7925ccdd26d87ab1a2fb263258780ca2869a9067e",
+    "appSourceChangeRequiredForThisDiagnostic": false
+  },
+  "matrixAutomationDiagnostic": {
+    "initialPreControllerAssertionRetainedAsDiagnostic": true,
+    "verifiedCause": "Private voice launch did not forward the comparison flag while asserting the pinned hidden-selection contract; the assertion occurred before controller result rows",
+    "correctedMethod": "Independent production controller runs with actual visible checkbox selection of the requested model, without keep_model mode",
+    "appSourceChangeRequiredForThisDiagnostic": false
+  },
+  "diverseInputMatrix": {
+    "executionPassed": 17,
+    "total": 17,
+    "modelInputPairs": 17,
+    "distinctSourceEncodedInputs": 13,
+    "distinctModelIds": 6,
+    "method": "DIRECT_ACTUAL_RELEASE_CONTROLLERS_UNDER_PRIVATE_INSTRUMENTATION",
+    "modelSelectionMethod": "Requested model selected through actual visible controls for each independent controller invocation",
+    "usesKeepModelPinnedMode": false,
+    "pinningAcrossInputChangesIsSeparateRegression": true,
+    "cases": [
+      {
+        "demoId": "exp-person-239537",
+        "sourceInputSha256": "3352c5495d3b9981101135d4a03fa90becd1dec3da753a86874942ee85446e5a",
+        "sourceInputBytes": 137834,
+        "feature": "classify",
+        "models": [
+          {
+            "modelId": "mobilenet-v4-fp32",
+            "state": "COMPLETED",
+            "loadMs": 96,
+            "inferenceMs": 35,
+            "elapsedMs": 133,
+            "modelSha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02",
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "3352c5495d3b9981101135d4a03fa90becd1dec3da753a86874942ee85446e5a",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "top1ClassId": 752,
+              "top1Label": "racket, racquet",
+              "top1Score": 0.7418891191482544
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "01-classification-exp-person-239537",
+        "suite": "classification",
+        "datasetGroup": "GO",
+        "mediaType": "image",
+        "difficulty": "easy",
+        "conditions": [
+          "인물 한 명"
+        ],
+        "testIntent": "original person scene",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-person-239537-query-small-dim",
+        "sourceInputSha256": "251add7dc172eab26ba4ee284522474747f433df7cb0e8d1042e68942ef1c188",
+        "sourceInputBytes": 5186,
+        "feature": "classify",
+        "models": [
+          {
+            "modelId": "mobilenet-v4-fp32",
+            "state": "COMPLETED",
+            "loadMs": 43,
+            "inferenceMs": 14,
+            "elapsedMs": 58,
+            "modelSha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02",
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "251add7dc172eab26ba4ee284522474747f433df7cb0e8d1042e68942ef1c188",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "top1ClassId": 522,
+              "top1Label": "croquet ball",
+              "top1Score": 0.546290397644043
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "02-classification-exp-person-239537-query-small-dim",
+        "suite": "classification",
+        "datasetGroup": "GO",
+        "mediaType": "image",
+        "difficulty": "hard",
+        "conditions": [
+          "빛·해상도·기울기 변화"
+        ],
+        "testIntent": "same source family: reduced resolution and light",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-negative-blank",
+        "sourceInputSha256": "50945d564a8cd70d522414be64e7708444a041d0546b1960f75bc7ca0f6d94f0",
+        "sourceInputBytes": 3599,
+        "feature": "classify",
+        "models": [
+          {
+            "modelId": "mobilenet-v4-fp32",
+            "state": "COMPLETED",
+            "loadMs": 36,
+            "inferenceMs": 15,
+            "elapsedMs": 52,
+            "modelSha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02",
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "50945d564a8cd70d522414be64e7708444a041d0546b1960f75bc7ca0f6d94f0",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "top1ClassId": 499,
+              "top1Label": "cleaver, meat cleaver, chopper",
+              "top1Score": 0.005221609491854906
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "03-classification-exp-negative-blank",
+        "suite": "classification",
+        "datasetGroup": "SHARED",
+        "mediaType": "image",
+        "difficulty": "negative",
+        "conditions": [
+          "사람·글자·소리 없음"
+        ],
+        "testIntent": "negative control; classifier still emits class probabilities",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-person-239537",
+        "sourceInputSha256": "3352c5495d3b9981101135d4a03fa90becd1dec3da753a86874942ee85446e5a",
+        "sourceInputBytes": 137834,
+        "feature": "detect",
+        "models": [
+          {
+            "modelId": "efficientdet-lite0",
+            "state": "COMPLETED",
+            "loadMs": 27,
+            "inferenceMs": 26,
+            "elapsedMs": 56,
+            "modelSha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b",
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "3352c5495d3b9981101135d4a03fa90becd1dec3da753a86874942ee85446e5a",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "detectionCount": 3
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "04-detection-exp-person-239537",
+        "suite": "detection",
+        "datasetGroup": "GO",
+        "mediaType": "image",
+        "difficulty": "easy",
+        "conditions": [
+          "인물 한 명"
+        ],
+        "testIntent": "original person scene",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-person-239537-lowlight",
+        "sourceInputSha256": "ff0a7e031c010cd59b1db009948f3ef2b4d94171cfb0b2560ed2256084021728",
+        "sourceInputBytes": 13038,
+        "feature": "detect",
+        "models": [
+          {
+            "modelId": "efficientdet-lite0",
+            "state": "COMPLETED",
+            "loadMs": 16,
+            "inferenceMs": 40,
+            "elapsedMs": 59,
+            "modelSha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b",
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "ff0a7e031c010cd59b1db009948f3ef2b4d94171cfb0b2560ed2256084021728",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "detectionCount": 2
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "05-detection-exp-person-239537-lowlight",
+        "suite": "detection",
+        "datasetGroup": "GO",
+        "mediaType": "image",
+        "difficulty": "hard",
+        "conditions": [
+          "빛·해상도·기울기 변화"
+        ],
+        "testIntent": "same source family: low light",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-negative-blank",
+        "sourceInputSha256": "50945d564a8cd70d522414be64e7708444a041d0546b1960f75bc7ca0f6d94f0",
+        "sourceInputBytes": 3599,
+        "feature": "detect",
+        "models": [
+          {
+            "modelId": "efficientdet-lite0",
+            "state": "COMPLETED",
+            "loadMs": 20,
+            "inferenceMs": 31,
+            "elapsedMs": 54,
+            "modelSha256": "2e04c53bfeac0ac2a30c057c7e2a777594ce39baaac35a92f74fb1e8c4fc4e0b",
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "50945d564a8cd70d522414be64e7708444a041d0546b1960f75bc7ca0f6d94f0",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "detectionCount": 0
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "06-detection-exp-negative-blank",
+        "suite": "detection",
+        "datasetGroup": "SHARED",
+        "mediaType": "image",
+        "difficulty": "negative",
+        "conditions": [
+          "사람·글자·소리 없음"
+        ],
+        "testIntent": "negative control; detections are observations, no unverified accuracy gate",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-doc-ko-01",
+        "sourceInputSha256": "ff1a077c00428e5473968fe23f918d773b3ef610b0e826ecca88e96be4c504b4",
+        "sourceInputBytes": 69716,
+        "feature": "ocr",
+        "models": [
+          {
+            "modelId": "mlkit-ocr-ko",
+            "state": "COMPLETED",
+            "loadMs": 16,
+            "inferenceMs": 154,
+            "elapsedMs": 172,
+            "modelSha256": null,
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "ff1a077c00428e5473968fe23f918d773b3ef610b0e826ecca88e96be4c504b4",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "characters": 79,
+              "blocks": 8
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "07-korean-ocr-exp-doc-ko-01",
+        "suite": "korean-ocr",
+        "datasetGroup": "KO",
+        "mediaType": "image",
+        "difficulty": "easy",
+        "conditions": [
+          "선명한 원문"
+        ],
+        "testIntent": "clear authored Korean receipt",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-doc-ko-01-dim-blur",
+        "sourceInputSha256": "125d4537a9942c328adefbf3a8355e40d411989113ca4269637bc7c9b2a662ce",
+        "sourceInputBytes": 32149,
+        "feature": "ocr",
+        "models": [
+          {
+            "modelId": "mlkit-ocr-ko",
+            "state": "COMPLETED",
+            "loadMs": 0,
+            "inferenceMs": 129,
+            "elapsedMs": 131,
+            "modelSha256": null,
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "125d4537a9942c328adefbf3a8355e40d411989113ca4269637bc7c9b2a662ce",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "characters": 79,
+              "blocks": 8
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "08-korean-ocr-exp-doc-ko-01-dim-blur",
+        "suite": "korean-ocr",
+        "datasetGroup": "KO",
+        "mediaType": "image",
+        "difficulty": "hard",
+        "conditions": [
+          "빛·해상도·기울기 변화"
+        ],
+        "testIntent": "same authored reference family: dim and blurred",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-doc-ko-01-tilted",
+        "sourceInputSha256": "26f2770a242873d40a25302cafb99729048feb41896796ef54fb5f48d0c608f2",
+        "sourceInputBytes": 60653,
+        "feature": "ocr",
+        "models": [
+          {
+            "modelId": "mlkit-ocr-ko",
+            "state": "COMPLETED",
+            "loadMs": 1,
+            "inferenceMs": 148,
+            "elapsedMs": 151,
+            "modelSha256": null,
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "26f2770a242873d40a25302cafb99729048feb41896796ef54fb5f48d0c608f2",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "characters": 79,
+              "blocks": 8
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "09-korean-ocr-exp-doc-ko-01-tilted",
+        "suite": "korean-ocr",
+        "datasetGroup": "KO",
+        "mediaType": "image",
+        "difficulty": "hard",
+        "conditions": [
+          "빛·해상도·기울기 변화"
+        ],
+        "testIntent": "same authored reference family: perspective/tilt",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-negative-blank",
+        "sourceInputSha256": "50945d564a8cd70d522414be64e7708444a041d0546b1960f75bc7ca0f6d94f0",
+        "sourceInputBytes": 3599,
+        "feature": "ocr",
+        "models": [
+          {
+            "modelId": "mlkit-ocr-ko",
+            "state": "COMPLETED",
+            "loadMs": 0,
+            "inferenceMs": 124,
+            "elapsedMs": 125,
+            "modelSha256": null,
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "50945d564a8cd70d522414be64e7708444a041d0546b1960f75bc7ca0f6d94f0",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "characters": 0,
+              "blocks": 0
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "10-korean-ocr-exp-negative-blank",
+        "suite": "korean-ocr",
+        "datasetGroup": "SHARED",
+        "mediaType": "image",
+        "difficulty": "negative",
+        "conditions": [
+          "사람·글자·소리 없음"
+        ],
+        "testIntent": "negative control with no intended text; not a verified annotation set",
+        "referenceVerified": false,
+        "executionPassed": true
+      },
+      {
+        "demoId": "qr-demo-1",
+        "sourceInputSha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
+        "sourceInputBytes": 19323,
+        "feature": "qr",
+        "models": [
+          {
+            "modelId": "zxing-qr",
+            "state": "COMPLETED",
+            "loadMs": 0,
+            "inferenceMs": 75,
+            "elapsedMs": 76,
+            "modelSha256": null,
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "characters": 21,
+              "codeFormat": "QR_CODE",
+              "referenceVerified": true,
+              "exactMatched": true
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "qrPayloadAndFormatMatched": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "11-qr-clear-qr-demo-1",
+        "suite": "qr-clear",
+        "datasetGroup": "KO",
+        "mediaType": "image",
+        "difficulty": "easy",
+        "conditions": [
+          "원 제작 코드의 선명한 QR/바코드"
+        ],
+        "testIntent": "clear creator-encoded payload and symbology; exact match is a gate",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "exp-qr-ko-perspective",
+        "sourceInputSha256": "fdb9c2348b3fc76b2c1c7aafb34b318d14c18c05e6cfcf19647149677b8fb030",
+        "sourceInputBytes": 38247,
+        "feature": "qr",
+        "models": [
+          {
+            "modelId": "zxing-qr",
+            "state": "COMPLETED",
+            "loadMs": 0,
+            "inferenceMs": 23,
+            "elapsedMs": 24,
+            "modelSha256": null,
+            "engineCloseReturned": true,
+            "sourceEncodedSha256": "fdb9c2348b3fc76b2c1c7aafb34b318d14c18c05e6cfcf19647149677b8fb030",
+            "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+            "observation": {
+              "characters": 21,
+              "codeFormat": "QR_CODE",
+              "referenceVerified": true,
+              "exactMatched": true
+            }
+          }
+        ],
+        "controllerCleanup": {
+          "sourceOpened": true,
+          "sourceClosed": true,
+          "workerDone": true
+        },
+        "qrPayloadAndFormatMatched": true,
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "12-qr-degraded-exp-qr-ko-perspective",
+        "suite": "qr-degraded",
+        "datasetGroup": "KO",
+        "mediaType": "image",
+        "difficulty": "hard",
+        "conditions": [
+          "원근 사다리꼴 변형"
+        ],
+        "testIntent": "perspective-degraded raster; match/decode is an observation, not forced pass",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "ko-speech-2-clean",
+        "sourceInputSha256": "268af101a27409e71af03733016a769a5160a135aff4cad112cbc7bbdf500f9f",
+        "sourceInputBytes": 261096,
+        "feature": "speech",
+        "models": [
+          {
+            "modelId": "vosk-ko-small-0.22",
+            "state": "COMPLETED",
+            "loadMs": 1539,
+            "inferenceMs": 1752,
+            "elapsedMs": 3469,
+            "inputPrepareMs": 27,
+            "sampleCount": 130509,
+            "durationMs": 8156,
+            "rtf": 0.21478978461255546,
+            "cer": 0.6896551724137931,
+            "referenceCharacters": 29,
+            "resultCharacters": 59,
+            "modelManifestSha256": "c4e5597129c61ba39760a1621ace86e9b21926660d79687f9ff9b00ff0cc7f78",
+            "modelArchiveSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+            "modelWeightsFingerprint": null,
+            "modelClosed": true,
+            "recognizerClosed": true,
+            "selectedSourceClosed": true,
+            "workerDone": true,
+            "referenceVerified": true,
+            "sourceEncodedSha256": "268af101a27409e71af03733016a769a5160a135aff4cad112cbc7bbdf500f9f",
+            "pcmSha256": "32761b035c6faf61a8f2cd5f2831d67ecae56ef08213f9c1d6bc5a216e7f8fab",
+            "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+            "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+            "temporaryPcmDeleted": true
+          }
+        ],
+        "samePcmSha256": "32761b035c6faf61a8f2cd5f2831d67ecae56ef08213f9c1d6bc5a216e7f8fab",
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "13-vosk-noise-ko-speech-2-clean",
+        "suite": "vosk-noise",
+        "datasetGroup": "KO",
+        "mediaType": "audio",
+        "difficulty": "",
+        "conditions": [],
+        "testIntent": "Korean clean speech",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "ko-speech-2-noise10",
+        "sourceInputSha256": "42b4e2ff9c7e9d0a768c6e46e19df3444e8b5418dbe0fcec916fb54b721792eb",
+        "sourceInputBytes": 261062,
+        "feature": "speech",
+        "models": [
+          {
+            "modelId": "vosk-ko-small-0.22",
+            "state": "COMPLETED",
+            "loadMs": 1351,
+            "inferenceMs": 2129,
+            "elapsedMs": 3729,
+            "inputPrepareMs": 13,
+            "sampleCount": 130509,
+            "durationMs": 8156,
+            "rtf": 0.261008819315143,
+            "cer": 0.7586206896551724,
+            "referenceCharacters": 29,
+            "resultCharacters": 45,
+            "modelManifestSha256": "c4e5597129c61ba39760a1621ace86e9b21926660d79687f9ff9b00ff0cc7f78",
+            "modelArchiveSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+            "modelWeightsFingerprint": null,
+            "modelClosed": true,
+            "recognizerClosed": true,
+            "selectedSourceClosed": true,
+            "workerDone": true,
+            "referenceVerified": true,
+            "sourceEncodedSha256": "42b4e2ff9c7e9d0a768c6e46e19df3444e8b5418dbe0fcec916fb54b721792eb",
+            "pcmSha256": "39149f64d6010ebe962b10146185f95bfb0d029d553092c8124640235b363c6c",
+            "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+            "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+            "temporaryPcmDeleted": true
+          }
+        ],
+        "samePcmSha256": "39149f64d6010ebe962b10146185f95bfb0d029d553092c8124640235b363c6c",
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "14-vosk-noise-ko-speech-2-noise10",
+        "suite": "vosk-noise",
+        "datasetGroup": "KO",
+        "mediaType": "audio",
+        "difficulty": "",
+        "conditions": [],
+        "testIntent": "same reference family: labelled 10 dB noise mixture",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "ko-speech-2-noise20",
+        "sourceInputSha256": "75e16634f70804b3c607e4e0332e07ed3abb13abc9340621a9939372b1aa4c59",
+        "sourceInputBytes": 261062,
+        "feature": "speech",
+        "models": [
+          {
+            "modelId": "vosk-ko-small-0.22",
+            "state": "COMPLETED",
+            "loadMs": 1716,
+            "inferenceMs": 2196,
+            "elapsedMs": 4201,
+            "inputPrepareMs": 20,
+            "sampleCount": 130509,
+            "durationMs": 8156,
+            "rtf": 0.2692228122198469,
+            "cer": 0.6551724137931034,
+            "referenceCharacters": 29,
+            "resultCharacters": 58,
+            "modelManifestSha256": "c4e5597129c61ba39760a1621ace86e9b21926660d79687f9ff9b00ff0cc7f78",
+            "modelArchiveSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+            "modelWeightsFingerprint": null,
+            "modelClosed": true,
+            "recognizerClosed": true,
+            "selectedSourceClosed": true,
+            "workerDone": true,
+            "referenceVerified": true,
+            "sourceEncodedSha256": "75e16634f70804b3c607e4e0332e07ed3abb13abc9340621a9939372b1aa4c59",
+            "pcmSha256": "fbc50d492b22977f1f0e494cce08d5f0fe78439ee1feebb006cfa3e86059ffd9",
+            "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+            "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+            "temporaryPcmDeleted": true
+          }
+        ],
+        "samePcmSha256": "fbc50d492b22977f1f0e494cce08d5f0fe78439ee1feebb006cfa3e86059ffd9",
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "15-vosk-noise-ko-speech-2-noise20",
+        "suite": "vosk-noise",
+        "datasetGroup": "KO",
+        "mediaType": "audio",
+        "difficulty": "",
+        "conditions": [],
+        "testIntent": "same reference family: labelled 20 dB noise mixture",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "ko-speech-2-clean",
+        "sourceInputSha256": "268af101a27409e71af03733016a769a5160a135aff4cad112cbc7bbdf500f9f",
+        "sourceInputBytes": 261096,
+        "feature": "speech",
+        "models": [
+          {
+            "modelId": "whisper-tiny-multilingual-int8",
+            "state": "COMPLETED",
+            "loadMs": 553,
+            "inferenceMs": 496,
+            "elapsedMs": 1074,
+            "inputPrepareMs": 33,
+            "sampleCount": 130509,
+            "durationMs": 8156,
+            "rtf": 0.06080806687661387,
+            "cer": 0.41379310344827586,
+            "referenceCharacters": 29,
+            "resultCharacters": 36,
+            "modelManifestSha256": "c309e3ad92d59bcbcf959f59f995bf2954c337ad5fb2766ed1432ac6968047a5",
+            "modelArchiveSha256": "5001b4a0e90a068c78f079d613e91e3e58fc36be0350b19ce3dc651bdd599849",
+            "modelWeightsFingerprint": null,
+            "modelClosed": true,
+            "recognizerClosed": true,
+            "selectedSourceClosed": true,
+            "workerDone": true,
+            "referenceVerified": true,
+            "sourceEncodedSha256": "268af101a27409e71af03733016a769a5160a135aff4cad112cbc7bbdf500f9f",
+            "pcmSha256": "32761b035c6faf61a8f2cd5f2831d67ecae56ef08213f9c1d6bc5a216e7f8fab",
+            "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+            "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+            "temporaryPcmDeleted": true
+          }
+        ],
+        "samePcmSha256": "32761b035c6faf61a8f2cd5f2831d67ecae56ef08213f9c1d6bc5a216e7f8fab",
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "16-whisper-languages-ko-speech-2-clean",
+        "suite": "whisper-languages",
+        "datasetGroup": "KO",
+        "mediaType": "audio",
+        "difficulty": "",
+        "conditions": [],
+        "testIntent": "Korean input, same explicitly selected multilingual model",
+        "referenceVerified": true,
+        "executionPassed": true
+      },
+      {
+        "demoId": "go-speech-fleurs-001",
+        "sourceInputSha256": "132daff034dd011d083515c6322136adb2562b4affc5d5974b5d83b30848ae47",
+        "sourceInputBytes": 209358,
+        "feature": "speech",
+        "models": [
+          {
+            "modelId": "whisper-tiny-multilingual-int8",
+            "state": "COMPLETED",
+            "loadMs": 521,
+            "inferenceMs": 390,
+            "elapsedMs": 944,
+            "inputPrepareMs": 15,
+            "sampleCount": 104640,
+            "durationMs": 6540,
+            "rtf": 0.05963302752293578,
+            "cer": 0.0625,
+            "referenceCharacters": 64,
+            "resultCharacters": 79,
+            "modelManifestSha256": "c309e3ad92d59bcbcf959f59f995bf2954c337ad5fb2766ed1432ac6968047a5",
+            "modelArchiveSha256": "5001b4a0e90a068c78f079d613e91e3e58fc36be0350b19ce3dc651bdd599849",
+            "modelWeightsFingerprint": null,
+            "modelClosed": true,
+            "recognizerClosed": true,
+            "selectedSourceClosed": true,
+            "workerDone": true,
+            "referenceVerified": true,
+            "sourceEncodedSha256": "132daff034dd011d083515c6322136adb2562b4affc5d5974b5d83b30848ae47",
+            "pcmSha256": "c5bf543a4fb1cfcc1f6f261a3464771eb7be5f32f37c58848848eccbabff12c1",
+            "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+            "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+            "temporaryPcmDeleted": true
+          }
+        ],
+        "samePcmSha256": "c5bf543a4fb1cfcc1f6f261a3464771eb7be5f32f37c58848848eccbabff12c1",
+        "requestedCpuThreads": 1,
+        "boardOptimization": false,
+        "caseId": "17-whisper-languages-go-speech-fleurs-001",
+        "suite": "whisper-languages",
+        "datasetGroup": "GO",
+        "mediaType": "audio",
+        "difficulty": "",
+        "conditions": [],
+        "testIntent": "English input, same explicitly selected multilingual model",
+        "referenceVerified": true,
+        "executionPassed": true
+      }
+    ]
+  },
+  "regressions": [
+    {
+      "task": "modeltest",
+      "passed": true,
+      "method": "ACTUAL_SPINNER_FILTER_AND_CASE_VIEW_ACTION_TO_PRODUCTION_ROUTE_UNDER_PRIVATE_INSTRUMENTATION",
+      "modelPreservedAcrossInputGroupFilters": true,
+      "noAutomaticCompletedRunBeforeCaseClick": true,
+      "actualKeepModelForwarded": true,
+      "selectedModelRetainedOnReturn": true,
+      "displayedCompatibleDistinctInputs": 6,
+      "requestedModelId": "mobilenet-v2-2022",
+      "executions": [
+        {
+          "demoId": "exp-person-239537",
+          "sourceInputSha256": "3352c5495d3b9981101135d4a03fa90becd1dec3da753a86874942ee85446e5a",
+          "sourceInputBytes": 137834,
+          "feature": "classify",
+          "models": [
+            {
+              "modelId": "mobilenet-v2-2022",
+              "state": "COMPLETED",
+              "loadMs": 150,
+              "inferenceMs": 68,
+              "elapsedMs": 220,
+              "modelSha256": "c0c3f76d93fa3fd6580652a45618618a220fced18babf65774ed169de0432ad5",
+              "engineCloseReturned": true,
+              "sourceEncodedSha256": "3352c5495d3b9981101135d4a03fa90becd1dec3da753a86874942ee85446e5a",
+              "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+              "observation": {
+                "top1ClassId": 752,
+                "top1Label": "racket, racquet",
+                "top1Score": 0.25754934549331665
+              }
+            }
+          ],
+          "controllerCleanup": {
+            "sourceOpened": true,
+            "sourceClosed": true,
+            "workerDone": true
+          }
+        }
+      ]
+    },
+    {
+      "task": "imagepicker",
+      "passed": true,
+      "method": "PRODUCTION_ACTIVITY_RESULT_REAL_INPUT_AND_PUBLIC_RUN_BUTTON_ACTION",
+      "differentInputGroupDefaultObserved": true,
+      "sameControllerInstance": true,
+      "isNormalLibraryPickerUiTest": false,
+      "qualityScope": "Selected-ID preservation regression; cross-language completion is not recognition-quality acceptance",
+      "requestedModelId": "mlkit-ocr-ko",
+      "executions": [
+        {
+          "demoId": "exp-doc-ko-01",
+          "sourceInputSha256": "ff1a077c00428e5473968fe23f918d773b3ef610b0e826ecca88e96be4c504b4",
+          "sourceInputBytes": 69716,
+          "feature": "ocr",
+          "models": [
+            {
+              "modelId": "mlkit-ocr-ko",
+              "state": "COMPLETED",
+              "loadMs": 10,
+              "inferenceMs": 176,
+              "elapsedMs": 188,
+              "modelSha256": null,
+              "engineCloseReturned": true,
+              "sourceEncodedSha256": "ff1a077c00428e5473968fe23f918d773b3ef610b0e826ecca88e96be4c504b4",
+              "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+              "observation": {
+                "characters": 79,
+                "blocks": 8
+              }
+            }
+          ],
+          "controllerCleanup": {
+            "sourceOpened": true,
+            "sourceClosed": true,
+            "workerDone": true
+          },
+          "selectionPreserved": true
+        },
+        {
+          "demoId": "exp-doc-go-02",
+          "sourceInputSha256": "79684d3f3037742ffdfd37405bdb0b1964d207806b64f7e4801b0325b770c32b",
+          "sourceInputBytes": 64311,
+          "feature": "ocr",
+          "models": [
+            {
+              "modelId": "mlkit-ocr-ko",
+              "state": "COMPLETED",
+              "loadMs": 0,
+              "inferenceMs": 84,
+              "elapsedMs": 87,
+              "modelSha256": null,
+              "engineCloseReturned": true,
+              "sourceEncodedSha256": "79684d3f3037742ffdfd37405bdb0b1964d207806b64f7e4801b0325b770c32b",
+              "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+              "observation": {
+                "characters": 100,
+                "blocks": 8
+              }
+            }
+          ],
+          "controllerCleanup": {
+            "sourceOpened": true,
+            "sourceClosed": true,
+            "workerDone": true
+          },
+          "selectionPreserved": true
+        }
+      ]
+    },
+    {
+      "task": "voicepicker",
+      "passed": true,
+      "method": "PRODUCTION_ACTIVITY_RESULT_REAL_INPUT_AND_PUBLIC_RUN_BUTTON_ACTION",
+      "differentInputGroupDefaultObserved": true,
+      "sameControllerInstance": true,
+      "isNormalLibraryPickerUiTest": false,
+      "qualityScope": "Selected-ID preservation regression; cross-language completion is not recognition-quality acceptance",
+      "requestedModelId": "vosk-ko-small-0.22",
+      "executions": [
+        {
+          "demoId": "ko-speech-2-clean",
+          "sourceInputSha256": "268af101a27409e71af03733016a769a5160a135aff4cad112cbc7bbdf500f9f",
+          "sourceInputBytes": 261096,
+          "feature": "speech",
+          "models": [
+            {
+              "modelId": "vosk-ko-small-0.22",
+              "state": "COMPLETED",
+              "loadMs": 1573,
+              "inferenceMs": 1958,
+              "elapsedMs": 3823,
+              "inputPrepareMs": 36,
+              "sampleCount": 130509,
+              "durationMs": 8156,
+              "rtf": 0.24004474787179428,
+              "cer": 0.6551724137931034,
+              "referenceCharacters": 29,
+              "resultCharacters": 58,
+              "modelManifestSha256": "c4e5597129c61ba39760a1621ace86e9b21926660d79687f9ff9b00ff0cc7f78",
+              "modelArchiveSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+              "modelWeightsFingerprint": null,
+              "modelClosed": true,
+              "recognizerClosed": true,
+              "selectedSourceClosed": true,
+              "workerDone": true,
+              "referenceVerified": true,
+              "sourceEncodedSha256": "268af101a27409e71af03733016a769a5160a135aff4cad112cbc7bbdf500f9f",
+              "pcmSha256": "32761b035c6faf61a8f2cd5f2831d67ecae56ef08213f9c1d6bc5a216e7f8fab",
+              "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+              "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+              "temporaryPcmDeleted": true
+            }
+          ],
+          "samePcmSha256": "32761b035c6faf61a8f2cd5f2831d67ecae56ef08213f9c1d6bc5a216e7f8fab",
+          "selectionPreserved": true
+        },
+        {
+          "demoId": "go-speech-fleurs-001",
+          "sourceInputSha256": "132daff034dd011d083515c6322136adb2562b4affc5d5974b5d83b30848ae47",
+          "sourceInputBytes": 209358,
+          "feature": "speech",
+          "models": [
+            {
+              "modelId": "vosk-ko-small-0.22",
+              "state": "COMPLETED",
+              "loadMs": 1845,
+              "inferenceMs": 2675,
+              "elapsedMs": 4848,
+              "inputPrepareMs": 20,
+              "sampleCount": 104640,
+              "durationMs": 6540,
+              "rtf": 0.4090214067278288,
+              "cer": 1,
+              "referenceCharacters": 64,
+              "resultCharacters": 26,
+              "modelManifestSha256": "c4e5597129c61ba39760a1621ace86e9b21926660d79687f9ff9b00ff0cc7f78",
+              "modelArchiveSha256": "eea36124087fed26c59996a4761519458e3bd185e8ea9d9865ad8760c4a1d989",
+              "modelWeightsFingerprint": null,
+              "modelClosed": true,
+              "recognizerClosed": true,
+              "selectedSourceClosed": true,
+              "workerDone": true,
+              "referenceVerified": true,
+              "sourceEncodedSha256": "132daff034dd011d083515c6322136adb2562b4affc5d5974b5d83b30848ae47",
+              "pcmSha256": "c5bf543a4fb1cfcc1f6f261a3464771eb7be5f32f37c58848848eccbabff12c1",
+              "timingScope": "PREDECODED_SAME_PCM_ENGINE",
+              "cerPolicy": "NFC_REMOVE_UNICODE_WHITESPACE_PRESERVE_CASE_PUNCTUATION_CODEPOINTS_V1",
+              "temporaryPcmDeleted": true
+            }
+          ],
+          "samePcmSha256": "c5bf543a4fb1cfcc1f6f261a3464771eb7be5f32f37c58848848eccbabff12c1",
+          "selectionPreserved": true
+        }
+      ]
+    },
+    {
+      "task": "image",
+      "passed": true,
+      "method": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+      "executions": [
+        {
+          "demoId": "ko-scene-08",
+          "sourceInputSha256": "5da031bfe6102faae4604c07993e190ec491d12af6a6d84b41dab5cb60af9a67",
+          "sourceInputBytes": 282980,
+          "feature": "classify",
+          "models": [
+            {
+              "modelId": "mobilenet-v4-fp32",
+              "state": "COMPLETED",
+              "loadMs": 114,
+              "inferenceMs": 30,
+              "elapsedMs": 149,
+              "modelSha256": "7a003770e4f863bd8e19e20a8389c5212552e256e0dacd833afaf8d0b26cdc02",
+              "engineCloseReturned": true,
+              "sourceEncodedSha256": "5da031bfe6102faae4604c07993e190ec491d12af6a6d84b41dab5cb60af9a67",
+              "timingScope": "MODEL_PREPARATION_PREPROCESS_INFERENCE_POSTPROCESS_SOURCE_DECODE_EXCLUDED",
+              "observation": {
+                "top1ClassId": 582,
+                "top1Label": "grocery store, grocery, food market, market",
+                "top1Score": 0.3343818783760071
+              }
+            }
+          ],
+          "controllerCleanup": {
+            "sourceOpened": true,
+            "sourceClosed": true,
+            "workerDone": true
+          },
+          "requestedCpuThreads": 1,
+          "boardOptimization": false,
+          "savedReportModelMembership": {
+            "passed": true,
+            "actualModelIds": [
+              "mobilenet-v4-fp32"
+            ],
+            "artifactModelIds": [
+              "mobilenet-v4-fp32"
+            ],
+            "savedEventModelIds": [
+              "mobilenet-v4-fp32"
+            ],
+            "scope": "Actual exported JSON membership and model-bound SAVED journal events; private file paths omitted"
+          }
+        }
+      ]
+    },
+    {
+      "task": "sound",
+      "passed": true,
+      "method": "ACTUAL_RELEASE_CONTROLLER_UNDER_PRIVATE_INSTRUMENTATION",
+      "executions": [
+        {
+          "demoId": "exp-sound-chainsaw-1",
+          "sourceInputSha256": "53c8b7b8b87f38b2501b5be00a387df5e86d935648f72a3a3e0d6d8c78a3b513",
+          "sourceInputBytes": 160078,
+          "feature": "sound",
+          "models": [
+            {
+              "modelId": "yamnet-classifier",
+              "state": "COMPLETED",
+              "loadMs": 17,
+              "inferenceMs": 16,
+              "elapsedMs": 55,
+              "modelSha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+              "engineCloseReturned": true,
+              "sourceEncodedSha256": "53c8b7b8b87f38b2501b5be00a387df5e86d935648f72a3a3e0d6d8c78a3b513",
+              "timingScope": "ALL_WINDOWS_PREPARE_INFER_AND_RANK_EXCLUDING_AUDIO_DECODE_AND_MODEL_LOAD",
+              "inputPcmSha256": "bd7d6646c73a1020e09a2469125f42a3785d100ccb5f0a9e0e126f396375e0ba",
+              "observation": {
+                "soundWindows": 10,
+                "classCount": 521
+              }
+            }
+          ],
+          "controllerCleanup": {
+            "sourceClosed": true,
+            "decoderReleased": true,
+            "extractorReleased": true,
+            "temporaryInputDeleted": true,
+            "workerDone": true
+          },
+          "requestedCpuThreads": 1,
+          "boardOptimization": false,
+          "savedReportModelMembership": {
+            "passed": true,
+            "actualModelIds": [
+              "yamnet-classifier"
+            ],
+            "artifactModelIds": [
+              "yamnet-classifier"
+            ],
+            "savedEventModelIds": [
+              "yamnet-classifier"
+            ],
+            "scope": "Actual exported JSON membership and model-bound SAVED journal events; private file paths omitted"
+          },
+          "samePcmSha256": "bd7d6646c73a1020e09a2469125f42a3785d100ccb5f0a9e0e126f396375e0ba"
+        }
+      ]
+    },
+    {
+      "task": "modelreports",
+      "passed": true,
+      "requestedModelId": "mobilenet-v4-fp32",
+      "scopedRows": 33,
+      "uniqueExistingModelReportFiles": 1,
+      "actualSavedCardButtons": 1,
+      "savedReportVisibleUnderStrictModelFilter": true,
+      "externalReportViewerTested": false,
+      "method": "ACTUAL_MODEL_FILTER_ACTIVITY_AND_SAVED_FILTER_VIEW_ACTION_UNDER_PRIVATE_INSTRUMENTATION"
+    },
+    {
+      "task": "modelreports",
+      "passed": true,
+      "requestedModelId": "yamnet-classifier",
+      "scopedRows": 24,
+      "uniqueExistingModelReportFiles": 1,
+      "actualSavedCardButtons": 1,
+      "savedReportVisibleUnderStrictModelFilter": true,
+      "externalReportViewerTested": false,
+      "method": "ACTUAL_MODEL_FILTER_ACTIVITY_AND_SAVED_FILTER_VIEW_ACTION_UNDER_PRIVATE_INSTRUMENTATION"
+    }
+  ],
+  "controllerExecutionCoverage": {
+    "modelInputExecutions": 24,
+    "distinctModelIds": [
+      "efficientdet-lite0",
+      "mlkit-ocr-ko",
+      "mobilenet-v2-2022",
+      "mobilenet-v4-fp32",
+      "vosk-ko-small-0.22",
+      "whisper-tiny-multilingual-int8",
+      "yamnet-classifier",
+      "zxing-qr"
+    ],
+    "distinctSourceEncodedInputs": 16,
+    "scope": "Matrix and regression controller executions together; repeated model/input pairs remain separate invocations, not independent accuracy samples"
+  },
+  "limits": [
+    "Execution completion is separate from recognition accuracy",
+    "Only clear QR payload/symbology exact match is an accuracy-related acceptance gate in the matrix",
+    "Speech CER is per clip under the stated application normalization policy, not corpus accuracy",
+    "Noise dB labels come from the existing fixtures; no new independent SNR measurement",
+    "Private instrumentation and callback tests are distinct from normal library-picker UI actions",
+    "Private helper and raw logs are not published; exact harness is not independently reproducible from this summary",
+    "No full19-feature/all68-ID accuracy sweep, repeated benchmark, NPU, other-device or long-term acceptance"
+  ],
+  "privacy": {
+    "privatePathsIncluded": false,
+    "deviceSerialIncluded": false,
+    "runIdsIncluded": false,
+    "transcriptsIncluded": false,
+    "referenceTextIncluded": false
+  }
+}

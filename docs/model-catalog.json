@@ -1,7 +1,7 @@
 {
   "schema": "axsl-vision-model-catalog-v1",
   "productVersion": "0.1",
-  "versionCode": 20,
+  "versionCode": 21,
   "featureCount": 19,
   "featureModelSlotCount": 87,
   "distinctExecutableIdCount": 68,
@@ -159,10 +159,20 @@
       ],
       "sharedWeights": "",
       "notes": "AI 추론 모델 또는 맞춤 광고 모델이 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "blazeface-full-sface",
@@ -230,12 +240,22 @@
       ],
       "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
       "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json",
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "blazeface-short-sface",
@@ -303,12 +323,22 @@
       ],
       "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
       "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json",
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "blazepose-full",
@@ -349,10 +379,20 @@
       ],
       "sharedWeights": "pose/coach 동일 detector+landmark 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "coach-blazepose",
@@ -393,10 +433,20 @@
       ],
       "sharedWeights": "pose/coach 동일 detector+landmark 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "coach-mlkit",
@@ -420,10 +470,20 @@
       ],
       "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "coach-mlkit-accurate",
@@ -447,10 +507,20 @@
       ],
       "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "coach-movenet-lightning",
@@ -481,10 +551,20 @@
       ],
       "sharedWeights": "pose/coach 동일 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "coach-movenet-thunder",
@@ -515,10 +595,20 @@
       ],
       "sharedWeights": "pose/coach 동일 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "coach-posenet",
@@ -551,10 +641,20 @@
       ],
       "sharedWeights": "pose/coach 동일 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "deeplab-v3",
@@ -585,10 +685,20 @@
       ],
       "sharedWeights": "",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "doc-ocr-ko",
@@ -613,10 +723,20 @@
       ],
       "sharedWeights": "ocr/document 동일 SDK 모델",
       "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "doc-ocr-latin",
@@ -641,10 +761,20 @@
       ],
       "sharedWeights": "ocr/document 동일 SDK 모델",
       "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "doc-paddle-v5-ko",
@@ -693,10 +823,20 @@
       ],
       "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
       "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/ocr/source-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "doc-paddle-v6-ko",
@@ -745,10 +885,20 @@
       ],
       "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
       "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/ocr/source-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "doc-paddle-v6-tiny",
@@ -797,10 +947,20 @@
       ],
       "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
       "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/ocr/source-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "efficientdet-lite0",
@@ -832,7 +992,7 @@
       ],
       "sharedWeights": "detect/flow가 같은 파일을 사용",
       "notes": "",
-      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "validation": "0.1/code21: 실제 release controller 실행3건 완료; 시험 기능 detect; 고유 encoded 입력3개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -850,6 +1010,18 @@
         "feature": "detect",
         "sourceInputSha256": "debe6dae8ed14cad1a534104b9071a5d42e76c45449f29192f2deea2ba26c447",
         "evidence": "docs/validation-0.1.json"
+      },
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 3,
+        "distinctEncodedInputCount": 3,
+        "testedFeatureIds": [
+          "detect"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
       }
     },
     {
@@ -883,10 +1055,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "efficientnet-lite0-f32",
@@ -917,10 +1099,20 @@
       ],
       "sharedWeights": "",
       "notes": "FP32/INT8는 서로 다른 파일이며 CPU thread preset을 모델로 센 것이 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "efficientnet-lite0-i8",
@@ -951,10 +1143,20 @@
       ],
       "sharedWeights": "",
       "notes": "FP32/INT8는 서로 다른 파일이며 CPU thread preset을 모델로 센 것이 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "face-landmarker-478",
@@ -995,10 +1197,20 @@
       ],
       "sharedWeights": "두 모델 모두 같은 BlazeFace short detector 사용",
       "notes": "478점은 blendshape 출력이나 감정 분류 478종을 뜻하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "face-mesh-468",
@@ -1039,10 +1251,20 @@
       ],
       "sharedWeights": "두 모델 모두 같은 BlazeFace short detector 사용",
       "notes": "478점은 blendshape 출력이나 감정 분류 478종을 뜻하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mlkit-barcode",
@@ -1066,10 +1288,20 @@
       ],
       "sharedWeights": "",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mlkit-face-contours",
@@ -1093,10 +1325,20 @@
       ],
       "sharedWeights": "",
       "notes": "눈 열림 확률과 EAR 기하 비율은 다른 값",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mlkit-ocr-ko",
@@ -1121,7 +1363,7 @@
       ],
       "sharedWeights": "ocr/document 동일 SDK 모델",
       "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
-      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "validation": "0.1/code21: 실제 release controller 실행6건 완료; 시험 기능 ocr; 고유 encoded 입력5개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -1139,6 +1381,18 @@
         "feature": "ocr",
         "sourceInputSha256": "87630da840b2c5cade4690cf14bd27346ec93588897e68a757692d3c27234589",
         "evidence": "docs/validation-0.1.json"
+      },
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 6,
+        "distinctEncodedInputCount": 5,
+        "testedFeatureIds": [
+          "ocr"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
       }
     },
     {
@@ -1164,10 +1418,20 @@
       ],
       "sharedWeights": "ocr/document 동일 SDK 모델",
       "notes": "KO/GO는 자료·언어 맥락이며 사람의 국적 추정이 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mlkit-pose",
@@ -1191,10 +1455,20 @@
       ],
       "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mlkit-pose-accurate",
@@ -1218,10 +1492,20 @@
       ],
       "sharedWeights": "pose/coach가 같은 SDK 모델; Accurate는 별도 모델",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mlkit-sface-2023",
@@ -1280,11 +1564,21 @@
       ],
       "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
       "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mobilenet-v2-2022",
@@ -1315,10 +1609,22 @@
       ],
       "sharedWeights": "",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 classify; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 1,
+        "distinctEncodedInputCount": 1,
+        "testedFeatureIds": [
+          "classify"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "mobilenet-v4-fp32",
@@ -1349,7 +1655,7 @@
       ],
       "sharedWeights": "",
       "notes": "",
-      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "validation": "0.1/code21: 실제 release controller 실행4건 완료; 시험 기능 classify; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -1367,6 +1673,18 @@
         "feature": "classify",
         "sourceInputSha256": "5da031bfe6102faae4604c07993e190ec491d12af6a6d84b41dab5cb60af9a67",
         "evidence": "docs/validation-0.1.json"
+      },
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 4,
+        "distinctEncodedInputCount": 4,
+        "testedFeatureIds": [
+          "classify"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
       }
     },
     {
@@ -1398,10 +1716,20 @@
       ],
       "sharedWeights": "pose/coach 동일 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "movenet-thunder",
@@ -1432,10 +1760,20 @@
       ],
       "sharedWeights": "pose/coach 동일 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "nanodet-plus",
@@ -1468,10 +1806,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "opencv-qr",
@@ -1494,10 +1842,20 @@
       ],
       "sharedWeights": "서로 다른 검출 경로와 공통 QR 해독; 두 가중치 모델이 아님",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "opencv-qr-aruco",
@@ -1520,10 +1878,20 @@
       ],
       "sharedWeights": "서로 다른 검출 경로와 공통 QR 해독; 두 가중치 모델이 아님",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "paddle-ocr-v5-ko",
@@ -1572,10 +1940,20 @@
       ],
       "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
       "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/ocr/source-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "paddle-ocr-v6-ko",
@@ -1624,10 +2002,20 @@
       ],
       "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
       "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/ocr/source-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "paddle-ocr-v6-tiny",
@@ -1676,10 +2064,20 @@
       ],
       "sharedWeights": "ocr/document 동일 detector+recognizer+alphabet; v6-ko와 v5-ko는 한국어 v5 인식기 공유",
       "notes": "v6-ko는 v6 detector + 한국어 v5 recognizer. v6-tiny는 영문·중문 비교용이며 한국어 전용 인식기 아님",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/ocr/source-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "panns-cnn10",
@@ -1719,10 +2117,20 @@
       ],
       "sharedWeights": "",
       "notes": "source catalog의 runtimeInferenceTestPerformed=false/benchmarkPerformed=false를 전체 검증 PASS로 바꾸지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/audio/audio-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "panns-cnn6",
@@ -1762,10 +2170,20 @@
       ],
       "sharedWeights": "",
       "notes": "source catalog의 runtimeInferenceTestPerformed=false/benchmarkPerformed=false를 전체 검증 PASS로 바꾸지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/audio/audio-models.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "posenet-mobilenet",
@@ -1798,10 +2216,20 @@
       ],
       "sharedWeights": "pose/coach 동일 파일",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/facepose/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "pphumanseg-2023",
@@ -1832,10 +2260,20 @@
       ],
       "sharedWeights": "segment와 studio가 같은 가중치 사용",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "resnet18-v1",
@@ -1869,10 +2307,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "search-mobilenet-v3-large",
@@ -1902,10 +2350,20 @@
       ],
       "sharedWeights": "",
       "notes": "검색 순위는 정답률과 다름; 모델별 embedding cache 분리",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "search-mobilenet-v3-small",
@@ -1935,10 +2393,20 @@
       ],
       "sharedWeights": "",
       "notes": "검색 순위는 정답률과 다름; 모델별 embedding cache 분리",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "search-resnet18",
@@ -1972,10 +2440,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "search-squeezenet",
@@ -2009,10 +2487,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "search-tinyclip-q8",
@@ -2042,10 +2530,20 @@
       ],
       "sharedWeights": "",
       "notes": "텍스트 생성/대화 모델이 아니며 이미지 인코더만 사용",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "segment-modnet",
@@ -2078,10 +2576,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "Xenova/modnet Transformers.js ONNX conversion",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "segment-selfie-landscape",
@@ -2114,10 +2622,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "ONNX Community / Xenova conversion of Google MediaPipe landscape model",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "selfie-segmentation",
@@ -2140,10 +2658,20 @@
       ],
       "sharedWeights": "segment와 studio의 동일 SDK 모델",
       "notes": "SDK 내부 가중치를 추출하지 않으며 개별 SHA를 임의로 만들지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "squeezenet1-1",
@@ -2177,10 +2705,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "ssd-mobilenet-v1",
@@ -2212,10 +2750,20 @@
       ],
       "sharedWeights": "detect/flow 공통",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "studio-modnet",
@@ -2248,10 +2796,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "Xenova/modnet Transformers.js ONNX conversion",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "studio-pphuman",
@@ -2282,10 +2840,20 @@
       ],
       "sharedWeights": "segment와 studio가 같은 가중치 사용",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "studio-selfie",
@@ -2308,10 +2876,20 @@
       ],
       "sharedWeights": "segment와 studio의 동일 SDK 모델",
       "notes": "SDK 내부 가중치를 추출하지 않으며 개별 SHA를 임의로 만들지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "studio-selfie-landscape",
@@ -2344,10 +2922,20 @@
       ],
       "sharedWeights": "동일 asset을 사용하는 기능별 별칭을 따로 모델 가중치로 세지 않음",
       "notes": "ONNX Community / Xenova conversion of Google MediaPipe landscape model",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/modelplus/vision/catalog.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "vosk-en-us-small-0.15",
@@ -2380,11 +2968,21 @@
       ],
       "sharedWeights": "",
       "notes": "언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/english-model-files.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "vosk-ko-small-0.22",
@@ -2417,7 +3015,7 @@
       ],
       "sharedWeights": "",
       "notes": "언어별 서로 다른 모델 집합; upstream WER을 이 앱의 실측으로 옮기지 않음",
-      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "validation": "0.1/code21: 실제 release controller 실행5건 완료; 시험 기능 speech; 고유 encoded 입력4개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/model-files.json"
@@ -2429,6 +3027,18 @@
         "feature": "speech",
         "sourceInputSha256": "f4442b98ae2d82253d2b083ed31fe2aa8f653b9a7a7e7aaa3f01d5076b29a43f",
         "evidence": "docs/validation-0.1.json"
+      },
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 5,
+        "distinctEncodedInputCount": 4,
+        "testedFeatureIds": [
+          "speech"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
       }
     },
     {
@@ -2477,11 +3087,21 @@
       ],
       "sharedWeights": "",
       "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/whisper-modelplus.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "whisper-small-multilingual-int8",
@@ -2529,11 +3149,21 @@
       ],
       "sharedWeights": "",
       "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/whisper-modelplus.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "whisper-tiny-multilingual-int8",
@@ -2567,11 +3197,23 @@
       ],
       "sharedWeights": "",
       "notes": "다국어 공통 가중치이며 KO/GO 별도 모델로 중복 계산하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 speech; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "offlinevoice/src/main/assets/offlinevoice/notices/ASR-NOTICES.md",
         "offlinevoice/src/main/assets/offlinevoice/whisper-model-files.json"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 2,
+        "distinctEncodedInputCount": 2,
+        "testedFeatureIds": [
+          "speech"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "yamnet-classifier",
@@ -2603,10 +3245,22 @@
       ],
       "sharedWeights": "",
       "notes": "파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 실제 release controller 실행1건 완료; 시험 기능 sound; 고유 encoded 입력1개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 1,
+        "distinctEncodedInputCount": 1,
+        "testedFeatureIds": [
+          "sound"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "yamnet-original",
@@ -2638,10 +3292,20 @@
       ],
       "sharedWeights": "",
       "notes": "파일명 INT8는 내부 가중치 모델 특성; 실행 입력/출력은 FLOAT32. PANNs와 클래스 체계가 다름",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "yolox-nano",
@@ -2673,10 +3337,20 @@
       ],
       "sharedWeights": "detect/flow 공통",
       "notes": "",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "yunet-2026-sface",
@@ -2742,11 +3416,21 @@
       ],
       "sharedWeights": "faces/compare/access/vis가 동일 파이프라인 ID를 재사용; BlazeFace 두 ID는 signage에도 등록",
       "notes": "모든 asset이 매 실행에 무조건 사용된다는 뜻이 아님. SDK 가중치 SHA는 별도 노출하지 않음. modelSha256 하나가 모든 SDK/선택적 head를 덮는다고 해석하지 않음",
-      "validation": "0.1/code20 기기 검증 대기; 아래 historicalCase가 있으면 4.4.0/code19의 단일 입력 실행 근거만 의미함",
+      "validation": "0.1/code21: 현재 검증 기록에서 이 ID의 기기 실행은 미시험. 과거 버전의 근거가 있으면 해당 버전으로 별도 해석하며 미실행을 실패로 표시하지 않음",
       "provenanceFiles": [
         "vision/src/main/assets/one/licenses/Google-MLKit-Terms-Reference.txt",
         "vision/src/main/assets/one/licenses/01-MODEL-FILE-NOTICES.txt"
-      ]
+      ],
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "NOT_EXECUTED_IN_THIS_RECORD",
+        "completedModelInputExecutions": 0,
+        "distinctEncodedInputCount": 0,
+        "testedFeatureIds": [],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
+      }
     },
     {
       "id": "zxing-qr",
@@ -2769,7 +3453,7 @@
       ],
       "sharedWeights": "",
       "notes": "학습 가중치가 없는 해독 엔진",
-      "validation": "0.1/code20 단일 공개 입력 실제 release controller 실행 PASS; 전체 모델 정확도 검증 범위와 구분",
+      "validation": "0.1/code21: 실제 release controller 실행2건 완료; 시험 기능 qr; 고유 encoded 입력2개. 요청 ID·입력 SHA·정리 확인이며 전체 기능·정확도 수락과 구분",
       "historicalCase": {
         "version": "4.4.0",
         "versionCode": 19,
@@ -2787,7 +3471,29 @@
         "feature": "qr",
         "sourceInputSha256": "60abfcb72ba402eb0b98860d0a1d58bf2115fe2136d20df729abea8a68eb8643",
         "evidence": "docs/validation-0.1.json"
+      },
+      "build21Validation": {
+        "version": "0.1",
+        "versionCode": 21,
+        "state": "EXECUTED",
+        "completedModelInputExecutions": 2,
+        "distinctEncodedInputCount": 2,
+        "testedFeatureIds": [
+          "qr"
+        ],
+        "evidence": "docs/validation-0.1-build21.json",
+        "scope": "Actual controller execution and identity/cleanup checks; not all-feature or corpus accuracy acceptance"
       }
     }
-  ]
+  ],
+  "currentValidation": {
+    "version": "0.1",
+    "versionCode": 21,
+    "evidence": "docs/validation-0.1-build21.json",
+    "completedModelInputExecutions": 24,
+    "testedExecutionIds": 8,
+    "notExecutedInThisRecordIds": 60,
+    "distinctSourceEncodedInputs": 16,
+    "scope": "Model/input invocations include repeated inputs and regression checks; no all-ID accuracy sweep"
+  }
 }

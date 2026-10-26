@@ -2,6 +2,8 @@
 
 ## Environment
 
+The current model-testing build is **0.1/code21**. [Build21 results](BUILD21_STATUS.md) record279 host checks and scoped physical observations; earlier code20 evidence remains version-labelled.
+
 | Item | Pinned project contract |
 |---|---|
 | Gradle runtime | JDK 21 |
@@ -75,8 +77,8 @@ APK cannot be installed until it is signed. The published reference APK uses
 the maintainer's development certificate and has `debuggable=false`.
 
 Android requires the same package and certificate for an update. VersionName is
-`0.1`; versionCode is `20`, preserving upgrade order from the previous local
-code19 build. The legacy package and persisted schema identifiers remain for
+`0.1`; versionCode is `21`, preserving upgrade order from previous
+code19 and public code20 builds. The legacy package and persisted schema identifiers remain for
 data compatibility. A fork that changes its applicationId must review provider
 authorities, intent routes, and integrations. Avoid uninstalling an app with
 valuable local data merely to resolve a signing mismatch.

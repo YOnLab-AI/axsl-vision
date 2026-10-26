@@ -4,9 +4,9 @@
 
 이 저장소는 앱의 독자 코드를 Apache-2.0으로 공개합니다. 모델·SDK·데모 자료는 각각의 원래 조건을 유지합니다. 특히 작성 예제 33개는 **이 무료 앱 배포에 함께 포함하는 범위**로 제공되며 Apache-2.0 대상이 아닙니다. [자료와 이용 조건](docs/DATA_AND_LICENSES.md)을 먼저 확인하세요.
 
-[English](README.md) · [모델 시험 안내](docs/MODEL_TESTING.md) · [기능별 설명](docs/FEATURES.md) · [모델 카탈로그](docs/MODEL_CATALOG.md) · [구조](docs/ARCHITECTURE.md) · [검증 범위](docs/VALIDATION.md)
+[English](README.md) · [Build21 APK](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21) · [모델 시험 안내](docs/MODEL_TESTING.md) · [기능별 설명](docs/FEATURES.md) · [모델 카탈로그](docs/MODEL_CATALOG.md) · [구조](docs/ARCHITECTURE.md) · [검증 범위](docs/VALIDATION.md)
 
-모델 시험 업데이트는 표시 버전 **0.1**, 내부 **code21**입니다. 새 빌드의 실제 시험 기록은 [버전별 검증](docs/VALIDATION.md)에서 확인합니다. 아래 code20 수치는 이전 공개 APK의 근거로 유지합니다.
+모델 시험 업데이트는 표시 버전 **0.1**, 내부 **code21**입니다. 완료한 실제 시험 기록은 [Build21 결과](docs/BUILD21_STATUS.md)와 [버전별 검증](docs/VALIDATION.md)에서 확인합니다. 아래 code20 수치는 이전 공개 APK의 근거로 유지합니다.
 
 ## 모델을 중심으로 시험하기
 
@@ -51,7 +51,29 @@ python tools/fetch_assets.py --all
 
 공개 소스에 개인 서명키를 포함하지 않습니다. 기본 debug 빌드는 로컬 debug 서명을 사용합니다. release 서명은 외부 환경의 `AXSL_SIGNING_STORE_FILE`, `AXSL_SIGNING_STORE_PASSWORD`, `AXSL_SIGNING_KEY_ALIAS`, `AXSL_SIGNING_KEY_PASSWORD`로 제공합니다. 동일 applicationId의 기존 설치본을 업데이트하려면 인증서가 일치해야 합니다. 저장소를 복제했다는 사실만으로 이전 배포본의 서명 권한이 생기지 않습니다.
 
-## 검증 결과와 범위
+## 최신 build21 검증 결과
+
+서명된 **0.1/code21** APK에서 호스트 **279개**(Android259·Python20)와
+일반 UI **6건**을 통과했습니다. 다양한 입력 행렬은 **6개 ID·13개 고유 encoded
+입력의 모델·입력 조합17건**을 완료했습니다. 선택 유지와 이미지·소리 보고서
+생성 회귀를 포함하면 **8개 ID·16개 고유 입력에서 controller 실행24건**입니다.
+저장 보고서의 엄격한 모델 필터2건은 별도 관측이며 실행 수에 더하지 않습니다.
+
+기기는 SM-F956N/API37·글자 배율1.5입니다. 실제 가로·세로 전환과 기록 화면
+복귀를 확인했습니다. 이미지·소리 보고서의 실제 모델 집합과 SAVED 이벤트의
+귀속도 확인했습니다. 초기 비공개 도구 오류를 수정한 뒤 같은 APK로 다시
+검증했으며 앱 소스의 결함이나 전체 모델 정확도와 혼동하지 않았습니다.
+시험 helper는 제거하고 임시 화면 켜짐·회전 설정은 원래 값으로 되돌렸습니다.
+
+[자세한 결과와 관측표](docs/BUILD21_STATUS.md), [공개 요약 JSON](docs/validation-0.1-build21.json),
+[성공한 소스 CI](https://github.com/YOnLab-AI/axsl-vision/actions/runs/40323411899)에서 각 방법의 범위를 확인합니다.
+배포 식별자는 [v0.1-build21](https://github.com/YOnLab-AI/axsl-vision/releases/tag/v0.1-build21)입니다.
+
+APK **1,583,020,342바이트**, SHA-256:
+
+`fe0fed606618084d6cd153d7925ccdd26d87ab1a2fb263258780ca2869a9067e`
+
+### 이전 공개 기준:0.1/code20
 
 공개 **0.1/code20 release**에서 Android 단위시험244개와 자산 bootstrap16개, 총 **호스트260개**가 통과했습니다. release 빌드 성공, lint 오류0·MonochromeLauncherIcon 경고2입니다. SM-F956N/API37·글자 배율1.5에서 **실제 engine 실행5건**과 **UI 관측5건**을 각각 통과했습니다. 기기 관측은 호스트260개와 별도로 셉니다.
 
